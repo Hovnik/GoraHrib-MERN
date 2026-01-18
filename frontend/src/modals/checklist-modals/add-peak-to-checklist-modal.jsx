@@ -17,9 +17,9 @@ const AddPeakToChecklistModal = ({ isOpen, onClose }) => {
         const token = localStorage.getItem("token");
 
         const [peaksRes, checklistRes] = await Promise.all([
-          api.get("/peaks"),
+          api.get("/api/peaks"),
           token
-            ? api.get("/checklist", {
+            ? api.get("/api/checklist", {
                 headers: { Authorization: `Bearer ${token}` },
               })
             : Promise.resolve({ data: { checklist: [] } }),
@@ -44,16 +44,12 @@ const AddPeakToChecklistModal = ({ isOpen, onClose }) => {
   const handleAddPeak = async () => {
     if (selectedPeaks.length === 0) return;
 
-    const token = localStorage.getItem("token");
     setAdding(true);
 
     try {
       // Add peaks sequentially to avoid write conflicts
       for (const peak of selectedPeaks) {
-        await api.post(
-          `/api/checklist/${peak._id}`,
-          {}
-        );
+        await api.post(`/api/checklist/${peak._id}`, {});
       }
 
       setSearchTerm("");
@@ -95,7 +91,7 @@ const AddPeakToChecklistModal = ({ isOpen, onClose }) => {
   };
 
   const filteredPeaks = peaks.filter((peak) =>
-    peak.name.toLowerCase().includes(searchTerm.toLowerCase())
+    peak.name.toLowerCase().includes(searchTerm.toLowerCase()),
   );
 
   if (!isOpen) return null;
@@ -113,10 +109,10 @@ const AddPeakToChecklistModal = ({ isOpen, onClose }) => {
               {selectedPeaks.length === 1
                 ? "vrh"
                 : selectedPeaks.length === 2
-                ? "vrhova"
-                : selectedPeaks.length === 3 || selectedPeaks.length === 4
-                ? "vrhovi"
-                : "vrhov"}
+                  ? "vrhova"
+                  : selectedPeaks.length === 3 || selectedPeaks.length === 4
+                    ? "vrhovi"
+                    : "vrhov"}
             </span>
           </div>
         )}
@@ -154,8 +150,8 @@ const AddPeakToChecklistModal = ({ isOpen, onClose }) => {
                     isInChecklist
                       ? "bg-gray-100 border-gray-300 cursor-not-allowed opacity-60"
                       : isSelected
-                      ? "bg-primary text-primary-content border-primary cursor-pointer"
-                      : "hover:bg-base-200 cursor-pointer"
+                        ? "bg-primary text-primary-content border-primary cursor-pointer"
+                        : "hover:bg-base-200 cursor-pointer"
                   }`}
                 >
                   <div className="flex justify-between items-start gap-2">

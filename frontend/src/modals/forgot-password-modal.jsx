@@ -11,7 +11,7 @@ const ForgotPasswordModal = ({ isOpen, onClose }) => {
     setLoading(true);
     try {
       console.log("Sending forgot password request for:", email);
-      const response = await api.post("/auth/forgot-password", {
+      const response = await api.post("/api/auth/forgot-password", {
         email,
       });
       console.log("Forgot password response:", response.data);

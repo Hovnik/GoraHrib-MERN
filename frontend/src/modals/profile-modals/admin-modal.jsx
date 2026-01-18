@@ -26,12 +26,9 @@ const AdminModal = ({ isOpen, onClose }) => {
     setLoading(true);
     try {
       const token = localStorage.getItem("token");
-      const response = await api.get(
-        "/api/admin/users",
-        {
-          headers: { Authorization: `Bearer ${token}` },
-        }
-      );
+      const response = await api.get("/api/admin/users", {
+        headers: { Authorization: `Bearer ${token}` },
+      });
       setUsers(response.data.users || []);
     } catch (error) {
       console.error("Error fetching users:", error);
@@ -45,12 +42,9 @@ const AdminModal = ({ isOpen, onClose }) => {
     setLoading(true);
     try {
       const token = localStorage.getItem("token");
-      const response = await api.get(
-        "/api/admin/statistics",
-        {
-          headers: { Authorization: `Bearer ${token}` },
-        }
-      );
+      const response = await api.get("/api/admin/statistics", {
+        headers: { Authorization: `Bearer ${token}` },
+      });
       setStatistics(response.data);
     } catch (error) {
       console.error("Error fetching statistics:", error);
@@ -62,11 +56,7 @@ const AdminModal = ({ isOpen, onClose }) => {
 
   const handleToggleBanUser = async (userId, username, currentStatus) => {
     try {
-      const token = localStorage.getItem("token");
-      await api.put(
-        `/api/admin/users/${userId}/ban`,
-        {}
-      );
+      await api.put(`/api/admin/users/${userId}/ban`, {});
       const message =
         currentStatus === "ACTIVE"
           ? `Uporabnik ${username} je blokiran`
@@ -76,7 +66,7 @@ const AdminModal = ({ isOpen, onClose }) => {
     } catch (error) {
       console.error("Error unbanning user:", error);
       toast.error(
-        error.response?.data?.message || "Napaka pri odblokiranju uporabnika"
+        error.response?.data?.message || "Napaka pri odblokiranju uporabnika",
       );
     }
   };
@@ -92,7 +82,7 @@ const AdminModal = ({ isOpen, onClose }) => {
     } catch (error) {
       console.error("Error deleting user:", error);
       toast.error(
-        error.response?.data?.message || "Napaka pri brisanju uporabnika"
+        error.response?.data?.message || "Napaka pri brisanju uporabnika",
       );
     }
   };
@@ -100,7 +90,7 @@ const AdminModal = ({ isOpen, onClose }) => {
   const filteredUsers = users.filter(
     (user) =>
       user.username?.toLowerCase().includes(searchQuery.toLowerCase()) ||
-      user.email?.toLowerCase().includes(searchQuery.toLowerCase())
+      user.email?.toLowerCase().includes(searchQuery.toLowerCase()),
   );
 
   if (!isOpen) return null;
@@ -206,7 +196,7 @@ const AdminModal = ({ isOpen, onClose }) => {
                                   handleToggleBanUser(
                                     user._id,
                                     user.username,
-                                    user.status
+                                    user.status,
                                   )
                                 }
                                 className={`btn btn-xs gap-1 ${

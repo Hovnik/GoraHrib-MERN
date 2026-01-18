@@ -16,12 +16,9 @@ const FriendProfileForumPosts = ({ userId }) => {
         const token = localStorage.getItem("token");
 
         // Fetch posts from friends (which includes posts from all friends)
-        const postsResponse = await api.get(
-          "/api/forum/friends",
-          {
-            headers: { Authorization: `Bearer ${token}` },
-          }
-        );
+        const postsResponse = await api.get("/api/forum/friends", {
+          headers: { Authorization: `Bearer ${token}` },
+        });
 
         if (token) {
           const decoded = jwtDecode(token);
@@ -47,12 +44,9 @@ const FriendProfileForumPosts = ({ userId }) => {
   const fetchComments = async (postId) => {
     try {
       const token = localStorage.getItem("token");
-      const response = await api.get(
-        `/api/forum/${postId}/comments`,
-        {
-          headers: { Authorization: `Bearer ${token}` },
-        }
-      );
+      const response = await api.get(`/api/forum/${postId}/comments`, {
+        headers: { Authorization: `Bearer ${token}` },
+      });
       setComments((prev) => ({
         ...prev,
         [postId]: response.data.comments,
@@ -63,8 +57,8 @@ const FriendProfileForumPosts = ({ userId }) => {
         prevPosts.map((post) =>
           post._id === postId
             ? { ...post, commentCount: response.data.comments.length }
-            : post
-        )
+            : post,
+        ),
       );
     } catch (error) {
       console.error("Error fetching comments:", error);
@@ -79,7 +73,7 @@ const FriendProfileForumPosts = ({ userId }) => {
         {},
         {
           headers: { Authorization: `Bearer ${token}` },
-        }
+        },
       );
 
       // Update local state
@@ -96,7 +90,7 @@ const FriendProfileForumPosts = ({ userId }) => {
             };
           }
           return post;
-        })
+        }),
       );
     } catch (error) {
       console.error("Error toggling like:", error);

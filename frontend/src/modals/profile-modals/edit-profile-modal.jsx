@@ -21,7 +21,7 @@ const EditProfileModal = ({ isOpen, onClose }) => {
   useEffect(() => {
     if (isOpen) {
       const token = localStorage.getItem("token");
-      axios
+      api
         .get("/api/user", {
           headers: { Authorization: `Bearer ${token}` },
         })
@@ -79,7 +79,7 @@ const EditProfileModal = ({ isOpen, onClose }) => {
   const handleDeleteProfilePicture = async () => {
     const token = localStorage.getItem("token");
     try {
-      await api.delete("/user/profile-picture", {
+      await api.delete("/api/user/profile-picture", {
         headers: {
           Authorization: `Bearer ${token}`,
         },
@@ -88,7 +88,7 @@ const EditProfileModal = ({ isOpen, onClose }) => {
       setCropData(null);
 
       // Refresh user data
-      const userRes = await api.get("/user", {
+      const userRes = await api.get("/api/user", {
         headers: { Authorization: `Bearer ${token}` },
       });
       localStorage.setItem("user", JSON.stringify(userRes.data.user));
@@ -108,16 +108,12 @@ const EditProfileModal = ({ isOpen, onClose }) => {
         formData.append("profilePicture", profilePicture);
         formData.append("crop", JSON.stringify(cropData));
 
-        await api.put(
-          "/api/user/profile-picture",
-          formData,
-          {
-            headers: {
-              Authorization: `Bearer ${token}`,
-              "Content-Type": "multipart/form-data",
-            },
+        await api.put("/api/user/profile-picture", formData, {
+          headers: {
+            Authorization: `Bearer ${token}`,
+            "Content-Type": "multipart/form-data",
           },
-        );
+        });
       }
 
       if (formData.username && formData.username.length > 20) {
@@ -132,9 +128,7 @@ const EditProfileModal = ({ isOpen, onClose }) => {
         // If username changed, check availability
         if (newUsername !== storedUser?.username) {
           const searchRes = await api.get(
-            `/api/user/search?q=${encodeURIComponent(
-              newUsername,
-            )}`,
+            `/api/user/search?q=${encodeURIComponent(newUsername)}`,
             {
               headers: { Authorization: `Bearer ${token}` },
             },
@@ -158,7 +152,7 @@ const EditProfileModal = ({ isOpen, onClose }) => {
       }
 
       // Refresh user data
-      const userRes = await api.get("/user", {
+      const userRes = await api.get("/api/user", {
         headers: { Authorization: `Bearer ${token}` },
       });
       localStorage.setItem("user", JSON.stringify(userRes.data.user));

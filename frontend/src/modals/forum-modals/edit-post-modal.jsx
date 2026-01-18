@@ -2,9 +2,9 @@ import { useState, useEffect } from "react";
 
 const EditPostModal = ({ isOpen, onClose, onSave, post }) => {
   const [formData, setFormData] = useState({
-    title: "",
-    content: "",
-    category: "Hike",
+    title: post?.title || "",
+    content: post?.content || "",
+    category: post?.category || "Hike",
   });
 
   useEffect(() => {

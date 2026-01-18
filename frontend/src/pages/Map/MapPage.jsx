@@ -40,7 +40,7 @@ const MapPage = () => {
         const token = localStorage.getItem("token");
 
         const [peaksRes, checklistRes, friendsPeaksRes] = await Promise.all([
-          api.get("/peaks"),
+          api.get("/api/peaks"),
           token
             ? api
                 .get("/api/checklist")
@@ -111,7 +111,7 @@ const MapPage = () => {
       await api.post(`/api/checklist/${peakId}`);
 
       // Refresh checklist
-      const checklistRes = await api.get("/checklist");
+      const checklistRes = await api.get("/api/checklist");
       setChecklist(checklistRes.data.checklist);
     } catch (error) {
       if (error.response?.data?.message) {

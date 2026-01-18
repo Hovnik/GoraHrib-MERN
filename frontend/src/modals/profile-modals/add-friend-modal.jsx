@@ -23,21 +23,19 @@ const AddFriendModal = ({ isOpen, onClose, onFriendAdded }) => {
       const token = localStorage.getItem("token");
       console.log("Searching for:", searchQuery);
       const response = await api.get(
-        `/api/user/search?q=${encodeURIComponent(
-          searchQuery
-        )}`,
+        `/api/user/search?q=${encodeURIComponent(searchQuery)}`,
         {
           headers: {
             Authorization: `Bearer ${token}`,
           },
-        }
+        },
       );
       console.log("Search response:", response.data);
       setSearchResults(response.data.users || []);
 
       // Check friend status for each user
       const statusPromises = response.data.users.map((user) =>
-        checkFriendStatus(user._id)
+        checkFriendStatus(user._id),
       );
       const statuses = await Promise.all(statusPromises);
 
@@ -71,7 +69,7 @@ const AddFriendModal = ({ isOpen, onClose, onFriendAdded }) => {
   const checkFriendStatus = async (userId) => {
     try {
       const token = localStorage.getItem("token");
-      const response = await api.get("/friends", {
+      const response = await api.get("/api/friends", {
         headers: {
           Authorization: `Bearer ${token}`,
         },
@@ -101,7 +99,7 @@ const AddFriendModal = ({ isOpen, onClose, onFriendAdded }) => {
           headers: {
             Authorization: `Bearer ${token}`,
           },
-        }
+        },
       );
 
       // Update the friend status for this user

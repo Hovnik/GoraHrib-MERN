@@ -25,7 +25,7 @@ const FriendsModal = ({ isOpen, onClose }) => {
     if (typeof profile === "string") return profile;
     const name = username ?? obj?.user?.username ?? obj?.username ?? "";
     return `https://ui-avatars.com/api/?name=${encodeURIComponent(
-      name
+      name,
     )}&size=40&background=22c55e&color=fff`;
   };
 
@@ -36,24 +36,18 @@ const FriendsModal = ({ isOpen, onClose }) => {
       try {
         setLoading(true);
         const token = localStorage.getItem("token");
-        const friendsResponse = await api.get(
-          "/api/friends?status=Accepted",
-          {
-            headers: {
-              Authorization: `Bearer ${token}`,
-            },
-          }
-        );
+        const friendsResponse = await api.get("/api/friends?status=Accepted", {
+          headers: {
+            Authorization: `Bearer ${token}`,
+          },
+        });
         setFriends(friendsResponse.data.friends || []);
 
-        const requestsResponse = await api.get(
-          "/api/friends?status=Pending",
-          {
-            headers: {
-              Authorization: `Bearer ${token}`,
-            },
-          }
-        );
+        const requestsResponse = await api.get("/api/friends?status=Pending", {
+          headers: {
+            Authorization: `Bearer ${token}`,
+          },
+        });
         setRequests(requestsResponse.data.friends || []);
       } catch (error) {
         console.error("Error fetching friends or requests:", error);
@@ -73,10 +67,10 @@ const FriendsModal = ({ isOpen, onClose }) => {
       setLoading(true);
       const token = localStorage.getItem("token");
       const [friendsResponse, requestsResponse] = await Promise.all([
-        api.get("/friends?status=Accepted", {
+        api.get("/api/friends?status=Accepted", {
           headers: { Authorization: `Bearer ${token}` },
         }),
-        api.get("/friends?status=Pending", {
+        api.get("/api/friends?status=Pending", {
           headers: { Authorization: `Bearer ${token}` },
         }),
       ]);
@@ -106,14 +100,11 @@ const FriendsModal = ({ isOpen, onClose }) => {
         },
       });
       // Refresh friends list
-      const friendsResponse = await api.get(
-        "/api/friends?status=Accepted",
-        {
-          headers: {
-            Authorization: `Bearer ${token}`,
-          },
-        }
-      );
+      const friendsResponse = await api.get("/api/friends?status=Accepted", {
+        headers: {
+          Authorization: `Bearer ${token}`,
+        },
+      });
       setFriends(friendsResponse.data.friends);
       setShowRemoveModal(false);
       setFriendToRemove(null);
@@ -133,14 +124,14 @@ const FriendsModal = ({ isOpen, onClose }) => {
           headers: {
             Authorization: `Bearer ${token}`,
           },
-        }
+        },
       );
       // Refresh both friends and requests
       const [friendsResponse, requestsResponse] = await Promise.all([
-        api.get("/friends?status=Accepted", {
+        api.get("/api/friends?status=Accepted", {
           headers: { Authorization: `Bearer ${token}` },
         }),
-        api.get("/friends?status=Pending", {
+        api.get("/api/friends?status=Pending", {
           headers: { Authorization: `Bearer ${token}` },
         }),
       ]);
@@ -155,23 +146,17 @@ const FriendsModal = ({ isOpen, onClose }) => {
   const handleRejectRequest = async (requestId) => {
     try {
       const token = localStorage.getItem("token");
-      await api.delete(
-        `/api/friends/request/${requestId}`,
-        {
-          headers: {
-            Authorization: `Bearer ${token}`,
-          },
-        }
-      );
+      await api.delete(`/api/friends/request/${requestId}`, {
+        headers: {
+          Authorization: `Bearer ${token}`,
+        },
+      });
       // Refresh requests
-      const requestsResponse = await api.get(
-        "/api/friends?status=Pending",
-        {
-          headers: {
-            Authorization: `Bearer ${token}`,
-          },
-        }
-      );
+      const requestsResponse = await api.get("/api/friends?status=Pending", {
+        headers: {
+          Authorization: `Bearer ${token}`,
+        },
+      });
       setRequests(requestsResponse.data.friends);
     } catch (error) {
       console.error("Error rejecting friend request:", error);
@@ -251,7 +236,7 @@ const FriendsModal = ({ isOpen, onClose }) => {
                                 <img
                                   src={getAvatarSrc(
                                     friend,
-                                    friend.user?.username
+                                    friend.user?.username,
                                   )}
                                   alt={friend.user?.username}
                                 />
@@ -307,7 +292,7 @@ const FriendsModal = ({ isOpen, onClose }) => {
                                 <img
                                   src={getAvatarSrc(
                                     request.user,
-                                    request.user?.username
+                                    request.user?.username,
                                   )}
                                   alt={request.user?.username}
                                 />
