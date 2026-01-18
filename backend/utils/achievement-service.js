@@ -6,6 +6,26 @@ import Peak from "../models/Peak.js";
 import ForumPost from "../models/ForumPost.js";
 
 /**
+ * Normalize Slovenian region names to handle different grammatical cases
+ * @param {string} regionName - Region name in any case
+ * @returns {string} - Normalized region name for matching
+ */
+function normalizeRegionName(regionName) {
+  const normalized = regionName.toLowerCase().trim();
+
+  // Map of locative/genitive forms to base forms for matching
+  const regionMappings = {
+    "julijskih alpah": "julijske alpe",
+    karavankah: "karavanke",
+    "kamniško-savinjskih alpah": "kamniško-savinjske alpe",
+    pohorju: "pohorje",
+  };
+
+  // Return mapped value or original normalized
+  return regionMappings[normalized] || normalized;
+}
+
+/**
  * Create an automatic forum post when user unlocks an achievement
  * @param {string} userId - The user ID
  * @param {Object} achievement - The achievement object
@@ -26,7 +46,7 @@ async function createAchievementPost(userId, achievement, session = null) {
 
     await ForumPost.create([newPost], { session });
     console.log(
-      `Created achievement post for user ${userId}, achievement: ${achievement.title}`
+      `Created achievement post for user ${userId}, achievement: ${achievement.title}`,
     );
   } catch (error) {
     console.error("Error creating achievement post:", error);
@@ -57,7 +77,7 @@ export async function checkAndAwardAchievements(userId, session = null) {
       .session(session);
 
     const existingAchievementIds = userAchievements.map((ua) =>
-      ua.achievementId._id.toString()
+      ua.achievementId._id.toString(),
     );
 
     // Check each achievement
@@ -74,20 +94,17 @@ export async function checkAndAwardAchievements(userId, session = null) {
       // Parse criteria to determine if achievement should be awarded
       const criteria = achievement.criteria.toLowerCase();
 
-      if (criteria.includes("obišči") && criteria.includes("vrh")) {
-        // Extract number from criteria like "Obišči 5 vrhov" or "Obišči 1 vrh"
-        // Matches both singular (vrh) and plural (vrhov)
-        const match = criteria.match(/obišči (\d+) vrho?v?/);
-        if (match) {
-          const requiredCount = parseInt(match[1]);
-          if (visitedPeaksCount >= requiredCount) {
-            shouldAward = true;
-          }
+      // General peak count: "Obišči N vrhov" (no qualifiers)
+      const match = criteria.match(/^obišči\s+(\d+)\s+vrh(?:ov)?$/);
+      if (match) {
+        const requiredCount = parseInt(match[1]);
+        if (visitedPeaksCount >= requiredCount) {
+          shouldAward = true;
         }
       }
 
+      // Award if the user has visited the peak named Triglav
       if (criteria.includes("triglav")) {
-        // Award if the user has visited the peak named Triglav
         const peakObj = await Peak.findOne({
           name: { $regex: /^triglav$/i },
         }).session(session);
@@ -103,8 +120,62 @@ export async function checkAndAwardAchievements(userId, session = null) {
         }
       }
 
+      // Region-specific achievements: "Obišči X vrhov v [Region]"
+      const regionMatch = criteria.match(
+        /obišči\s+(\d+)\s+vrhov\s+(?:v|na)\s+(.+)/,
+      );
+      if (regionMatch && !shouldAward) {
+        const requiredCount = parseInt(regionMatch[1]);
+        const regionName = regionMatch[2].trim();
+        const normalizedRegion = normalizeRegionName(regionName);
+
+        // Find all peaks in this region - match against normalized region name
+        const regionPeaks = await Peak.find({
+          range: { $regex: new RegExp(normalizedRegion, "i") },
+        }).session(session);
+
+        if (regionPeaks.length > 0) {
+          const peakIds = regionPeaks.map((p) => p._id);
+          const visitedCount = await Checklist.countDocuments({
+            userId,
+            peakId: { $in: peakIds },
+            status: "Visited",
+          }).session(session);
+
+          if (visitedCount >= requiredCount) {
+            shouldAward = true;
+          }
+        }
+      }
+
+      // Region completion: "Obišči vse vrhove v [Region]"
+      const allRegionMatch = criteria.match(/obišči vse vrhove v (.+)/);
+      if (allRegionMatch && !shouldAward) {
+        const regionName = allRegionMatch[1].trim();
+        const normalizedRegion = normalizeRegionName(regionName);
+
+        // Find all peaks in this region
+        const regionPeaks = await Peak.find({
+          range: { $regex: new RegExp(normalizedRegion, "i") },
+        }).session(session);
+
+        if (regionPeaks.length > 0) {
+          const peakIds = regionPeaks.map((p) => p._id);
+          const visitedCount = await Checklist.countDocuments({
+            userId,
+            peakId: { $in: peakIds },
+            status: "Visited",
+          }).session(session);
+
+          // All peaks in region must be visited
+          if (visitedCount === regionPeaks.length) {
+            shouldAward = true;
+          }
+        }
+      }
+
       // Add more criteria checks here as needed
-      // For example: specific mountain ranges, consecutive days, etc.
+      // For example: altitude-based, seasonal, etc.
 
       if (shouldAward) {
         newAchievements.push(achievement);
@@ -125,7 +196,7 @@ export async function checkAndAwardAchievements(userId, session = null) {
       await User.updateOne(
         { _id: userId },
         { $inc: { achievementsCount: newAchievements.length } },
-        { session }
+        { session },
       );
 
       // Create forum posts for each new achievement
@@ -134,7 +205,7 @@ export async function checkAndAwardAchievements(userId, session = null) {
       }
 
       console.log(
-        `Awarded ${newAchievements.length} achievements to user ${userId}`
+        `Awarded ${newAchievements.length} achievements to user ${userId}`,
       );
     }
 
@@ -192,14 +263,21 @@ export async function revokeAchievementsIfNeeded(userId, session = null) {
     for (const achievement of achievements) {
       const criteria = (achievement.criteria || "").toLowerCase();
 
-      // Numeric "Obišči N vrhov" achievements
-      const match = criteria.match(/obišči (\d+) vrho?v?/);
-      if (match) {
-        const requiredCount = parseInt(match[1]);
-        if (visitedPeaksCount < requiredCount) {
-          achievementsToRevoke.push(achievement._id);
+      // Numeric "Obišči N vrhov" achievements (exclude region, altitude, etc.)
+      if (
+        !criteria.includes(" v ") &&
+        !criteria.includes("nad") &&
+        !criteria.includes("pod") &&
+        !criteria.includes("na")
+      ) {
+        const match = criteria.match(/^obišči\s+(\d+)\s+vrh(?:ov)?$/);
+        if (match) {
+          const requiredCount = parseInt(match[1]);
+          if (visitedPeaksCount < requiredCount) {
+            achievementsToRevoke.push(achievement._id);
+          }
+          continue;
         }
-        continue;
       }
 
       // Specific peak achievements (e.g., "Obišči Triglav")
@@ -215,6 +293,58 @@ export async function revokeAchievementsIfNeeded(userId, session = null) {
             status: "Visited",
           }).session(session);
           if (!stillVisited) {
+            achievementsToRevoke.push(achievement._id);
+          }
+        }
+      }
+
+      // Region-specific achievements: "Obišči X vrhov v [Region]"
+      const regionMatch = criteria.match(
+        /obišči\s+(\d+)\s+vrh(?:ov)?\s+(?:v|na)\s+(.+)/,
+      );
+      if (regionMatch) {
+        const requiredCount = parseInt(regionMatch[1]);
+        const regionName = regionMatch[2].trim();
+        const normalizedRegion = normalizeRegionName(regionName);
+
+        const regionPeaks = await Peak.find({
+          range: { $regex: new RegExp(normalizedRegion, "i") },
+        }).session(session);
+
+        if (regionPeaks.length > 0) {
+          const peakIds = regionPeaks.map((p) => p._id);
+          const visitedCount = await Checklist.countDocuments({
+            userId,
+            peakId: { $in: peakIds },
+            status: "Visited",
+          }).session(session);
+
+          if (visitedCount < requiredCount) {
+            achievementsToRevoke.push(achievement._id);
+          }
+        }
+        continue;
+      }
+
+      // Region completion: "Obišči vse vrhove v [Region]"
+      const allRegionMatch = criteria.match(/obišči vse vrhove v (.+)/);
+      if (allRegionMatch) {
+        const regionName = allRegionMatch[1].trim();
+        const normalizedRegion = normalizeRegionName(regionName);
+
+        const regionPeaks = await Peak.find({
+          range: { $regex: new RegExp(normalizedRegion, "i") },
+        }).session(session);
+
+        if (regionPeaks.length > 0) {
+          const peakIds = regionPeaks.map((p) => p._id);
+          const visitedCount = await Checklist.countDocuments({
+            userId,
+            peakId: { $in: peakIds },
+            status: "Visited",
+          }).session(session);
+
+          if (visitedCount < regionPeaks.length) {
             achievementsToRevoke.push(achievement._id);
           }
         }
@@ -235,12 +365,12 @@ export async function revokeAchievementsIfNeeded(userId, session = null) {
 
     const idsToRemove = userAchievements.map((ua) => ua._id);
     const achievementIdsToRemove = userAchievements.map(
-      (ua) => ua.achievementId._id
+      (ua) => ua.achievementId._id,
     );
 
     // Remove them
     await UserAchievement.deleteMany({ _id: { $in: idsToRemove } }).session(
-      session
+      session,
     );
 
     // Delete corresponding forum posts
@@ -253,11 +383,11 @@ export async function revokeAchievementsIfNeeded(userId, session = null) {
     await User.updateOne(
       { _id: userId },
       { $inc: { achievementsCount: -userAchievements.length } },
-      { session }
+      { session },
     );
 
     console.log(
-      `Revoked ${userAchievements.length} achievements and deleted corresponding forum posts for user ${userId}`
+      `Revoked ${userAchievements.length} achievements and deleted corresponding forum posts for user ${userId}`,
     );
 
     return userAchievements.map((ua) => ua.achievementId);

@@ -1,7 +1,5 @@
 ## TODOs
 
-- when scrolling on mobile hide the sidebar to maximize screen space
-
 **Achievements**
 
 - add logic for unlocking other achievements
@@ -13,3 +11,5 @@
 # Future features
 
 - notifications when someone likes or comments on your forum post
+- user can save 3 images at once
+- user can climb a peak mutiple times and track progress
