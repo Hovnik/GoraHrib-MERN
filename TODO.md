@@ -11,5 +11,4 @@
 # Future features
 
 - notifications when someone likes or comments on your forum post
-- user can save 3 images at once
 - user can climb a peak mutiple times and track progress

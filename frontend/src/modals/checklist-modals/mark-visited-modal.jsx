@@ -9,13 +9,6 @@ const MarkVisitedModal = ({ isOpen, onClose, onConfirm, peakName }) => {
   const handleFileSelect = (event) => {
     const files = Array.from(event.target.files);
 
-    // Limit to 3 files total
-    const totalFiles = selectedFiles.length + files.length;
-    if (totalFiles > 3) {
-      alert("Lahko naložite največ 3 slike");
-      return;
-    }
-
     // Filter for allowed image types (JPEG, PNG, WebP)
     const allowedTypes = ["image/jpeg", "image/jpg", "image/png", "image/webp"];
     const validFiles = files.filter((file) => allowedTypes.includes(file.type));
@@ -34,10 +27,16 @@ const MarkVisitedModal = ({ isOpen, onClose, onConfirm, peakName }) => {
       return;
     }
 
-    setSelectedFiles((prev) => [...prev, ...validFiles]);
+    // Calculate how many slots are available
+    const availableSlots = 3 - selectedFiles.length;
+
+    // Take only the first N files that fit in available slots
+    const filesToAdd = validFiles.slice(0, availableSlots);
+
+    setSelectedFiles((prev) => [...prev, ...filesToAdd]);
 
     // Create previews
-    const newPreviews = validFiles.map((file) => URL.createObjectURL(file));
+    const newPreviews = filesToAdd.map((file) => URL.createObjectURL(file));
     setPreviews((prev) => [...prev, ...newPreviews]);
   };
 
