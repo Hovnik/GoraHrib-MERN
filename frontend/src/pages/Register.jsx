@@ -33,7 +33,7 @@ const Register = () => {
   useEffect(() => {
     const fetchStats = async () => {
       try {
-        const peaksRes = await api.get("/peaks");
+        const peaksRes = await api.get("/api/peaks");
         const peaksCount = peaksRes.data.peaks?.length || 0;
 
         setStats({

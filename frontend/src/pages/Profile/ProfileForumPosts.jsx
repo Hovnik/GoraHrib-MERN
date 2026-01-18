@@ -16,7 +16,7 @@ const ProfileForumPosts = () => {
         const token = localStorage.getItem("token");
 
         // Fetch all posts from friends
-        const posts = await api.get("/forum", {
+        const posts = await api.get("/api/forum", {
           headers: { Authorization: `Bearer ${token}` },
         });
 
@@ -40,12 +40,9 @@ const ProfileForumPosts = () => {
   const fetchComments = async (postId) => {
     try {
       const token = localStorage.getItem("token");
-      const response = await api.get(
-        `/api/forum/${postId}/comments`,
-        {
-          headers: { Authorization: `Bearer ${token}` },
-        }
-      );
+      const response = await api.get(`/api/forum/${postId}/comments`, {
+        headers: { Authorization: `Bearer ${token}` },
+      });
       setComments((prev) => ({
         ...prev,
         [postId]: response.data.comments,
@@ -56,8 +53,8 @@ const ProfileForumPosts = () => {
         prevPosts.map((post) =>
           post._id === postId
             ? { ...post, commentCount: response.data.comments.length }
-            : post
-        )
+            : post,
+        ),
       );
     } catch (error) {
       console.error("Error fetching comments:", error);
@@ -72,7 +69,7 @@ const ProfileForumPosts = () => {
         {},
         {
           headers: { Authorization: `Bearer ${token}` },
-        }
+        },
       );
 
       // Update local state
@@ -89,7 +86,7 @@ const ProfileForumPosts = () => {
             };
           }
           return post;
-        })
+        }),
       );
     } catch (error) {
       console.error("Error toggling like:", error);
