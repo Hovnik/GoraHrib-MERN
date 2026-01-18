@@ -17,9 +17,9 @@ const AddPeakToChecklistModal = ({ isOpen, onClose }) => {
         const token = localStorage.getItem("token");
 
         const [peaksRes, checklistRes] = await Promise.all([
-          api.get("/api/peaks"),
+          api.get("/peaks"),
           token
-            ? api.get("/api/checklist", {
+            ? api.get("/checklist", {
                 headers: { Authorization: `Bearer ${token}` },
               })
             : Promise.resolve({ data: { checklist: [] } }),

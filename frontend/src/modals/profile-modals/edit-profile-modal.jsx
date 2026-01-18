@@ -79,7 +79,7 @@ const EditProfileModal = ({ isOpen, onClose }) => {
   const handleDeleteProfilePicture = async () => {
     const token = localStorage.getItem("token");
     try {
-      await api.delete("/api/user/profile-picture", {
+      await api.delete("/user/profile-picture", {
         headers: {
           Authorization: `Bearer ${token}`,
         },
@@ -88,7 +88,7 @@ const EditProfileModal = ({ isOpen, onClose }) => {
       setCropData(null);
 
       // Refresh user data
-      const userRes = await api.get("/api/user", {
+      const userRes = await api.get("/user", {
         headers: { Authorization: `Bearer ${token}` },
       });
       localStorage.setItem("user", JSON.stringify(userRes.data.user));
@@ -158,7 +158,7 @@ const EditProfileModal = ({ isOpen, onClose }) => {
       }
 
       // Refresh user data
-      const userRes = await api.get("/api/user", {
+      const userRes = await api.get("/user", {
         headers: { Authorization: `Bearer ${token}` },
       });
       localStorage.setItem("user", JSON.stringify(userRes.data.user));

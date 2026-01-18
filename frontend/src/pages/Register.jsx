@@ -33,7 +33,7 @@ const Register = () => {
   useEffect(() => {
     const fetchStats = async () => {
       try {
-        const peaksRes = await api.get("/api/peaks");
+        const peaksRes = await api.get("/peaks");
         const peaksCount = peaksRes.data.peaks?.length || 0;
 
         setStats({
@@ -67,7 +67,7 @@ const Register = () => {
 
     try {
       setLoading(true);
-      const response = await api.post("/api/auth/register", {
+      const response = await api.post("/auth/register", {
         username: formData.username,
         email: formData.email,
         password: formData.password,

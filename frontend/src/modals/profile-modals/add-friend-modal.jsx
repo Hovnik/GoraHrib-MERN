@@ -71,7 +71,7 @@ const AddFriendModal = ({ isOpen, onClose, onFriendAdded }) => {
   const checkFriendStatus = async (userId) => {
     try {
       const token = localStorage.getItem("token");
-      const response = await api.get("/api/friends", {
+      const response = await api.get("/friends", {
         headers: {
           Authorization: `Bearer ${token}`,
         },

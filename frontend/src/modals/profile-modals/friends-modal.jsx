@@ -73,10 +73,10 @@ const FriendsModal = ({ isOpen, onClose }) => {
       setLoading(true);
       const token = localStorage.getItem("token");
       const [friendsResponse, requestsResponse] = await Promise.all([
-        api.get("/api/friends?status=Accepted", {
+        api.get("/friends?status=Accepted", {
           headers: { Authorization: `Bearer ${token}` },
         }),
-        api.get("/api/friends?status=Pending", {
+        api.get("/friends?status=Pending", {
           headers: { Authorization: `Bearer ${token}` },
         }),
       ]);
@@ -137,10 +137,10 @@ const FriendsModal = ({ isOpen, onClose }) => {
       );
       // Refresh both friends and requests
       const [friendsResponse, requestsResponse] = await Promise.all([
-        api.get("/api/friends?status=Accepted", {
+        api.get("/friends?status=Accepted", {
           headers: { Authorization: `Bearer ${token}` },
         }),
-        api.get("/api/friends?status=Pending", {
+        api.get("/friends?status=Pending", {
           headers: { Authorization: `Bearer ${token}` },
         }),
       ]);

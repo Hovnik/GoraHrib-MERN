@@ -91,7 +91,7 @@ const ShareVisitedPeakModal = ({ isOpen, onClose, peakId, peakName }) => {
         pictures: picturesToShare,
       };
 
-      await api.post("/api/forum", postData, {
+      await api.post("/forum", postData, {
         headers: { Authorization: `Bearer ${token}` },
       });
 

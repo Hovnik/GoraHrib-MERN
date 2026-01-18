@@ -16,7 +16,7 @@ const ProfileForumPosts = () => {
         const token = localStorage.getItem("token");
 
         // Fetch all posts from friends
-        const posts = await api.get("/api/forum", {
+        const posts = await api.get("/forum", {
           headers: { Authorization: `Bearer ${token}` },
         });
 

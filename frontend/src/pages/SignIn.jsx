@@ -34,7 +34,7 @@ const SignIn = () => {
   useEffect(() => {
     const fetchStats = async () => {
       try {
-        const peaksRes = await api.get("/api/peaks");
+        const peaksRes = await api.get("/peaks");
         const peaksCount = peaksRes.data.peaks?.length || 0;
 
         setStats({
@@ -63,7 +63,7 @@ const SignIn = () => {
 
     try {
       setLoading(true);
-      const response = await api.post("/api/auth/login", {
+      const response = await api.post("/auth/login", {
         email: formData.email,
         password: formData.password,
       });
