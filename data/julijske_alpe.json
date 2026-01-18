@@ -1,0 +1,2529 @@
+[
+  {
+    "name": "Triglav",
+    "elevation": 2864,
+    "mountain_range": "Julijske Alpe",
+    "latitude": 46.37832,
+    "longitude": 13.83648
+  },
+  {
+    "name": "Montaž",
+    "elevation": 2753,
+    "mountain_range": "Julijske Alpe",
+    "latitude": 46.43577,
+    "longitude": 13.43405
+  },
+  {
+    "name": "Škrlatica",
+    "elevation": 2740,
+    "mountain_range": "Julijske Alpe",
+    "latitude": 46.43277,
+    "longitude": 13.82114
+  },
+  {
+    "name": "Mali Triglav",
+    "elevation": 2725,
+    "mountain_range": "Julijske Alpe",
+    "latitude": 46.37683,
+    "longitude": 13.84315
+  },
+  {
+    "name": "Mangart",
+    "elevation": 2679,
+    "mountain_range": "Julijske Alpe",
+    "latitude": 46.43948,
+    "longitude": 13.65457
+  },
+  {
+    "name": "Viš",
+    "elevation": 2666,
+    "mountain_range": "Julijske Alpe",
+    "latitude": 46.42996,
+    "longitude": 13.49155
+  },
+  {
+    "name": "Vrh Brda",
+    "elevation": 2661,
+    "mountain_range": "Julijske Alpe",
+    "latitude": 46.43329,
+    "longitude": 13.44233
+  },
+  {
+    "name": "Visoki Rokav",
+    "elevation": 2646,
+    "mountain_range": "Julijske Alpe",
+    "latitude": 46.43547,
+    "longitude": 13.8283
+  },
+  {
+    "name": "Jalovec",
+    "elevation": 2645,
+    "mountain_range": "Julijske Alpe",
+    "latitude": 46.42154,
+    "longitude": 13.68002
+  },
+  {
+    "name": "Veliki Oltar",
+    "elevation": 2621,
+    "mountain_range": "Julijske Alpe",
+    "latitude": 46.43919,
+    "longitude": 13.82995
+  },
+  {
+    "name": "Velika Martuljška Ponca",
+    "elevation": 2602,
+    "mountain_range": "Julijske Alpe",
+    "latitude": 46.44179,
+    "longitude": 13.82419
+  },
+  {
+    "name": "Razor",
+    "elevation": 2601,
+    "mountain_range": "Julijske Alpe",
+    "latitude": 46.41194,
+    "longitude": 13.79138
+  },
+  {
+    "name": "Dolkova špica",
+    "elevation": 2591,
+    "mountain_range": "Julijske Alpe",
+    "latitude": 46.42574,
+    "longitude": 13.81467
+  },
+  {
+    "name": "Visoki Kanin",
+    "elevation": 2587,
+    "mountain_range": "Julijske Alpe",
+    "latitude": 46.36018,
+    "longitude": 13.439
+  },
+  {
+    "name": "Rjavec",
+    "elevation": 2571,
+    "mountain_range": "Julijske Alpe",
+    "latitude": 46.37179,
+    "longitude": 13.83921
+  },
+  {
+    "name": "Mali Kanin",
+    "elevation": 2571,
+    "mountain_range": "Julijske Alpe",
+    "latitude": 46.35727,
+    "longitude": 13.43765
+  },
+  {
+    "name": "Kanjavec (Zahodni vrh)",
+    "elevation": 2569,
+    "mountain_range": "Julijske Alpe",
+    "latitude": 46.3601,
+    "longitude": 13.8073
+  },
+  {
+    "name": "Kanjavec",
+    "elevation": 2569,
+    "mountain_range": "Julijske Alpe",
+    "latitude": 46.3602,
+    "longitude": 13.80966
+  },
+  {
+    "name": "Glava v Zaplanji",
+    "elevation": 2556,
+    "mountain_range": "Julijske Alpe",
+    "latitude": 46.37731,
+    "longitude": 13.82801
+  },
+  {
+    "name": "Rogljica",
+    "elevation": 2547,
+    "mountain_range": "Julijske Alpe",
+    "latitude": 46.42769,
+    "longitude": 13.81231
+  },
+  {
+    "name": "Prisank",
+    "elevation": 2547,
+    "mountain_range": "Julijske Alpe",
+    "latitude": 46.42464,
+    "longitude": 13.76974
+  },
+  {
+    "name": "Rakova Špica",
+    "elevation": 2545,
+    "mountain_range": "Julijske Alpe",
+    "latitude": 46.43008,
+    "longitude": 13.81379
+  },
+  {
+    "name": "Dovški križ",
+    "elevation": 2542,
+    "mountain_range": "Julijske Alpe",
+    "latitude": 46.44081,
+    "longitude": 13.8422
+  },
+  {
+    "name": "Kredarica",
+    "elevation": 2541,
+    "mountain_range": "Julijske Alpe",
+    "latitude": 46.3801,
+    "longitude": 13.8524
+  },
+  {
+    "name": "Rž",
+    "elevation": 2538,
+    "mountain_range": "Julijske Alpe",
+    "latitude": 46.38155,
+    "longitude": 13.8591
+  },
+  {
+    "name": "Rjavina",
+    "elevation": 2532,
+    "mountain_range": "Julijske Alpe",
+    "latitude": 46.39185,
+    "longitude": 13.88088
+  },
+  {
+    "name": "Špik nad Nosom",
+    "elevation": 2531,
+    "mountain_range": "Julijske Alpe",
+    "latitude": 46.41788,
+    "longitude": 13.46558
+  },
+  {
+    "name": "Triglavska vojašnica Viktorja Emanuela III",
+    "elevation": 2520,
+    "mountain_range": "Julijske Alpe",
+    "latitude": 46.37661,
+    "longitude": 13.82681
+  },
+  {
+    "name": "Triglavski dom na Kredarici",
+    "elevation": 2515,
+    "mountain_range": "Julijske Alpe",
+    "latitude": 46.37891,
+    "longitude": 13.84928
+  },
+  {
+    "name": "Divja koza",
+    "elevation": 2507,
+    "mountain_range": "Julijske Alpe",
+    "latitude": 46.43031,
+    "longitude": 13.50306
+  },
+  {
+    "name": "Koštrunove špice",
+    "elevation": 2502,
+    "mountain_range": "Julijske Alpe",
+    "latitude": 46.42243,
+    "longitude": 13.48655
+  },
+  {
+    "name": "Mala Martuljška Ponca",
+    "elevation": 2501,
+    "mountain_range": "Julijske Alpe",
+    "latitude": 46.44339,
+    "longitude": 13.82059
+  },
+  {
+    "name": "Stenar",
+    "elevation": 2501,
+    "mountain_range": "Julijske Alpe",
+    "latitude": 46.40795,
+    "longitude": 13.81896
+  },
+  {
+    "name": "Spodnji Rokav",
+    "elevation": 2500,
+    "mountain_range": "Julijske Alpe",
+    "latitude": 46.43063,
+    "longitude": 13.82878
+  },
+  {
+    "name": "Prestreljenik",
+    "elevation": 2499,
+    "mountain_range": "Julijske Alpe",
+    "latitude": 46.36214,
+    "longitude": 13.47237
+  },
+  {
+    "name": "Široka peč",
+    "elevation": 2497,
+    "mountain_range": "Julijske Alpe",
+    "latitude": 46.44378,
+    "longitude": 13.84228
+  },
+  {
+    "name": "Poprovec",
+    "elevation": 2496,
+    "mountain_range": "Julijske Alpe",
+    "latitude": 46.35583,
+    "longitude": 13.80273
+  },
+  {
+    "name": "Teme (Hribarice)",
+    "elevation": 2495,
+    "mountain_range": "Julijske Alpe",
+    "latitude": 46.3575,
+    "longitude": 13.8044
+  },
+  {
+    "name": "Veliki Ozebnik",
+    "elevation": 2480,
+    "mountain_range": "Julijske Alpe",
+    "latitude": 46.41572,
+    "longitude": 13.67936
+  },
+  {
+    "name": "Vrh Zelenic",
+    "elevation": 2478,
+    "mountain_range": "Julijske Alpe",
+    "latitude": 46.37798,
+    "longitude": 13.82222
+  },
+  {
+    "name": "Špik",
+    "elevation": 2472,
+    "mountain_range": "Julijske Alpe",
+    "latitude": 46.44872,
+    "longitude": 13.81432
+  },
+  {
+    "name": "Mišeljski Konec",
+    "elevation": 2464,
+    "mountain_range": "Julijske Alpe",
+    "latitude": 46.35458,
+    "longitude": 13.81831
+  },
+  {
+    "name": "Begunjski vrh",
+    "elevation": 2461,
+    "mountain_range": "Julijske Alpe",
+    "latitude": 46.39032,
+    "longitude": 13.85436
+  },
+  {
+    "name": "Planja",
+    "elevation": 2453,
+    "mountain_range": "Julijske Alpe",
+    "latitude": 46.40712,
+    "longitude": 13.78739
+  },
+  {
+    "name": "Vrh Laške Planje",
+    "elevation": 2448,
+    "mountain_range": "Julijske Alpe",
+    "latitude": 46.3441,
+    "longitude": 13.44424
+  },
+  {
+    "name": "Vršaki (Vzhodni vrh)",
+    "elevation": 2448,
+    "mountain_range": "Julijske Alpe",
+    "latitude": 46.3507,
+    "longitude": 13.808
+  },
+  {
+    "name": "Vrh Krnice",
+    "elevation": 2441,
+    "mountain_range": "Julijske Alpe",
+    "latitude": 46.3652,
+    "longitude": 13.43339
+  },
+  {
+    "name": "Vršaki (Južni vrh)",
+    "elevation": 2431,
+    "mountain_range": "Julijske Alpe",
+    "latitude": 46.3475,
+    "longitude": 13.8024
+  },
+  {
+    "name": "Kukova špica",
+    "elevation": 2427,
+    "mountain_range": "Julijske Alpe",
+    "latitude": 46.44726,
+    "longitude": 13.85481
+  },
+  {
+    "name": "Vršaki (Srednji vrh)",
+    "elevation": 2424,
+    "mountain_range": "Julijske Alpe",
+    "latitude": 46.3496,
+    "longitude": 13.8053
+  },
+  {
+    "name": "Črni Vogel",
+    "elevation": 2422,
+    "mountain_range": "Julijske Alpe",
+    "latitude": 46.34819,
+    "longitude": 13.44256
+  },
+  {
+    "name": "Vršaki (Vrh za Koritami)",
+    "elevation": 2422,
+    "mountain_range": "Julijske Alpe",
+    "latitude": 46.3488,
+    "longitude": 13.8029
+  },
+  {
+    "name": "Špik Hude police",
+    "elevation": 2420,
+    "mountain_range": "Julijske Alpe",
+    "latitude": 46.4266,
+    "longitude": 13.45217
+  },
+  {
+    "name": "Pihavec",
+    "elevation": 2419,
+    "mountain_range": "Julijske Alpe",
+    "latitude": 46.39254,
+    "longitude": 13.80664
+  },
+  {
+    "name": "Špik nad Planjo",
+    "elevation": 2411,
+    "mountain_range": "Julijske Alpe",
+    "latitude": 46.41479,
+    "longitude": 13.48343
+  },
+  {
+    "name": "Križ",
+    "elevation": 2410,
+    "mountain_range": "Julijske Alpe",
+    "latitude": 46.41006,
+    "longitude": 13.81101
+  },
+  {
+    "name": "Visoka Vrbanova špica",
+    "elevation": 2408,
+    "mountain_range": "Julijske Alpe",
+    "latitude": 46.39132,
+    "longitude": 13.86163
+  },
+  {
+    "name": "Lopa",
+    "elevation": 2406,
+    "mountain_range": "Julijske Alpe",
+    "latitude": 46.3703,
+    "longitude": 13.49434
+  },
+  {
+    "name": "Gubno",
+    "elevation": 2403,
+    "mountain_range": "Julijske Alpe",
+    "latitude": 46.41718,
+    "longitude": 13.80836
+  },
+  {
+    "name": "Veliko Špičje",
+    "elevation": 2398,
+    "mountain_range": "Julijske Alpe",
+    "latitude": 46.34382,
+    "longitude": 13.7672
+  },
+  {
+    "name": "Cmir",
+    "elevation": 2393,
+    "mountain_range": "Julijske Alpe",
+    "latitude": 46.40065,
+    "longitude": 13.86007
+  },
+  {
+    "name": "Bovški Gamsovec",
+    "elevation": 2392,
+    "mountain_range": "Julijske Alpe",
+    "latitude": 46.3983,
+    "longitude": 13.81286
+  },
+  {
+    "name": "Prestreljeniško okno",
+    "elevation": 2391,
+    "mountain_range": "Julijske Alpe",
+    "latitude": 46.36112,
+    "longitude": 13.46989
+  },
+  {
+    "name": "Debeli vrh",
+    "elevation": 2390,
+    "mountain_range": "Julijske Alpe",
+    "latitude": 46.3408,
+    "longitude": 13.81513
+  },
+  {
+    "name": "Vrh Hribaric",
+    "elevation": 2388,
+    "mountain_range": "Julijske Alpe",
+    "latitude": 46.34948,
+    "longitude": 13.8178
+  },
+  {
+    "name": "Šplevta (Indijanec)",
+    "elevation": 2382,
+    "mountain_range": "Julijske Alpe",
+    "latitude": 46.4137,
+    "longitude": 13.79895
+  },
+  {
+    "name": "Strma peč",
+    "elevation": 2380,
+    "mountain_range": "Julijske Alpe",
+    "latitude": 46.42387,
+    "longitude": 13.38607
+  },
+  {
+    "name": "Travnik (pri Mojstrovkah)",
+    "elevation": 2379,
+    "mountain_range": "Julijske Alpe",
+    "latitude": 46.42902,
+    "longitude": 13.71316
+  },
+  {
+    "name": "Kucelj (Julijske Alpe)",
+    "elevation": 2372,
+    "mountain_range": "Julijske Alpe",
+    "latitude": 46.4273,
+    "longitude": 13.81923
+  },
+  {
+    "name": "Vrh Osojnic",
+    "elevation": 2371,
+    "mountain_range": "Julijske Alpe",
+    "latitude": 46.3584,
+    "longitude": 13.4651
+  },
+  {
+    "name": "Kriški rob",
+    "elevation": 2366,
+    "mountain_range": "Julijske Alpe",
+    "latitude": 46.40943,
+    "longitude": 13.80196
+  },
+  {
+    "name": "Velika Mojstrovka",
+    "elevation": 2366,
+    "mountain_range": "Julijske Alpe",
+    "latitude": 46.43601,
+    "longitude": 13.7272
+  },
+  {
+    "name": "Šmarjetna glava",
+    "elevation": 2358,
+    "mountain_range": "Julijske Alpe",
+    "latitude": 46.36433,
+    "longitude": 13.82715
+  },
+  {
+    "name": "Spodnji Stenar",
+    "elevation": 2356,
+    "mountain_range": "Julijske Alpe",
+    "latitude": 46.40552,
+    "longitude": 13.81764
+  },
+  {
+    "name": "Zadnja Mojstrovka",
+    "elevation": 2354,
+    "mountain_range": "Julijske Alpe",
+    "latitude": 46.43084,
+    "longitude": 13.72004
+  },
+  {
+    "name": "Vrh Krnega dola",
+    "elevation": 2351,
+    "mountain_range": "Julijske Alpe",
+    "latitude": 46.41377,
+    "longitude": 13.48543
+  },
+  {
+    "name": "Kol",
+    "elevation": 2350,
+    "mountain_range": "Julijske Alpe",
+    "latitude": 46.42756,
+    "longitude": 13.70943
+  },
+  {
+    "name": "Mišelj vrh",
+    "elevation": 2350,
+    "mountain_range": "Julijske Alpe",
+    "latitude": 46.3565,
+    "longitude": 13.83745
+  },
+  {
+    "name": "Plaski Vogel",
+    "elevation": 2348,
+    "mountain_range": "Julijske Alpe",
+    "latitude": 46.33771,
+    "longitude": 13.75064
+  },
+  {
+    "name": "Bavški Grintavec",
+    "elevation": 2347,
+    "mountain_range": "Julijske Alpe",
+    "latitude": 46.36899,
+    "longitude": 13.67025
+  },
+  {
+    "name": "Briceljk",
+    "elevation": 2346,
+    "mountain_range": "Julijske Alpe",
+    "latitude": 46.39508,
+    "longitude": 13.63191
+  },
+  {
+    "name": "Vevnica",
+    "elevation": 2342,
+    "mountain_range": "Julijske Alpe",
+    "latitude": 46.43963,
+    "longitude": 13.68566
+  },
+  {
+    "name": "Vrh Snežne konte",
+    "elevation": 2342,
+    "mountain_range": "Julijske Alpe",
+    "latitude": 46.37691,
+    "longitude": 13.85545
+  },
+  {
+    "name": "Vrh Žlebi",
+    "elevation": 2339,
+    "mountain_range": "Julijske Alpe",
+    "latitude": 46.3402,
+    "longitude": 13.44461
+  },
+  {
+    "name": "Velika Črnelska špica",
+    "elevation": 2332,
+    "mountain_range": "Julijske Alpe",
+    "latitude": 46.37654,
+    "longitude": 13.51567
+  },
+  {
+    "name": "Mala Mojstrovka",
+    "elevation": 2332,
+    "mountain_range": "Julijske Alpe",
+    "latitude": 46.43725,
+    "longitude": 13.73111
+  },
+  {
+    "name": "Zadnji Vogel",
+    "elevation": 2327,
+    "mountain_range": "Julijske Alpe",
+    "latitude": 46.3402,
+    "longitude": 13.7978
+  },
+  {
+    "name": "Mali Ozebnik",
+    "elevation": 2324,
+    "mountain_range": "Julijske Alpe",
+    "latitude": 46.4072,
+    "longitude": 13.6686
+  },
+  {
+    "name": "Žrd",
+    "elevation": 2324,
+    "mountain_range": "Julijske Alpe",
+    "latitude": 46.38215,
+    "longitude": 13.39984
+  },
+  {
+    "name": "Velika Zelnarica",
+    "elevation": 2320,
+    "mountain_range": "Julijske Alpe",
+    "latitude": 46.34246,
+    "longitude": 13.79081
+  },
+  {
+    "name": "Veliki Nabojs",
+    "elevation": 2313,
+    "mountain_range": "Julijske Alpe",
+    "latitude": 46.43913,
+    "longitude": 13.48831
+  },
+  {
+    "name": "Malo Špičje",
+    "elevation": 2312,
+    "mountain_range": "Julijske Alpe",
+    "latitude": 46.35139,
+    "longitude": 13.78335
+  },
+  {
+    "name": "Mala Zelnarica",
+    "elevation": 2310,
+    "mountain_range": "Julijske Alpe",
+    "latitude": 46.33808,
+    "longitude": 13.78967
+  },
+  {
+    "name": "Škednjovec",
+    "elevation": 2309,
+    "mountain_range": "Julijske Alpe",
+    "latitude": 46.34948,
+    "longitude": 13.82337
+  },
+  {
+    "name": "Spodnja Vrbanova špica",
+    "elevation": 2299,
+    "mountain_range": "Julijske Alpe",
+    "latitude": 46.39655,
+    "longitude": 13.86906
+  },
+  {
+    "name": "Konjc",
+    "elevation": 2289,
+    "mountain_range": "Julijske Alpe",
+    "latitude": 46.35223,
+    "longitude": 13.46995
+  },
+  {
+    "name": "Frdamane police",
+    "elevation": 2284,
+    "mountain_range": "Julijske Alpe",
+    "latitude": 46.45296,
+    "longitude": 13.80735
+  },
+  {
+    "name": "Tosc",
+    "elevation": 2275,
+    "mountain_range": "Julijske Alpe",
+    "latitude": 46.35672,
+    "longitude": 13.8684
+  },
+  {
+    "name": "Visoka Ponca",
+    "elevation": 2274,
+    "mountain_range": "Julijske Alpe",
+    "latitude": 46.46014,
+    "longitude": 13.6974
+  },
+  {
+    "name": "Šplevta",
+    "elevation": 2272,
+    "mountain_range": "Julijske Alpe",
+    "latitude": 46.43571,
+    "longitude": 13.84014
+  },
+  {
+    "name": "Strug",
+    "elevation": 2265,
+    "mountain_range": "Julijske Alpe",
+    "latitude": 46.4441,
+    "longitude": 13.6939
+  },
+  {
+    "name": "Visoka Bela Špica",
+    "elevation": 2257,
+    "mountain_range": "Julijske Alpe",
+    "latitude": 46.423,
+    "longitude": 13.5187
+  },
+  {
+    "name": "Travnik",
+    "elevation": 2252,
+    "mountain_range": "Julijske Alpe",
+    "latitude": 46.33751,
+    "longitude": 13.74382
+  },
+  {
+    "name": "Krn",
+    "elevation": 2244,
+    "mountain_range": "Julijske Alpe",
+    "latitude": 46.26607,
+    "longitude": 13.65862
+  },
+  {
+    "name": "Veliki Draški vrh",
+    "elevation": 2243,
+    "mountain_range": "Julijske Alpe",
+    "latitude": 46.36017,
+    "longitude": 13.87584
+  },
+  {
+    "name": "Zadnja Ponca",
+    "elevation": 2242,
+    "mountain_range": "Julijske Alpe",
+    "latitude": 46.45048,
+    "longitude": 13.69495
+  },
+  {
+    "name": "Vrh Grubje",
+    "elevation": 2240,
+    "mountain_range": "Julijske Alpe",
+    "latitude": 46.37203,
+    "longitude": 13.41694
+  },
+  {
+    "name": "Srednja Ponca",
+    "elevation": 2228,
+    "mountain_range": "Julijske Alpe",
+    "latitude": 46.45676,
+    "longitude": 13.69881
+  },
+  {
+    "name": "Čelo",
+    "elevation": 2228,
+    "mountain_range": "Julijske Alpe",
+    "latitude": 46.32912,
+    "longitude": 13.74117
+  },
+  {
+    "name": "Srednji Vogel",
+    "elevation": 2226,
+    "mountain_range": "Julijske Alpe",
+    "latitude": 46.33414,
+    "longitude": 13.79845
+  },
+  {
+    "name": "Vernar",
+    "elevation": 2225,
+    "mountain_range": "Julijske Alpe",
+    "latitude": 46.36116,
+    "longitude": 13.86152
+  },
+  {
+    "name": "Rombon",
+    "elevation": 2208,
+    "mountain_range": "Julijske Alpe",
+    "latitude": 46.3672,
+    "longitude": 13.5544
+  },
+  {
+    "name": "Vodnikov Vršac (Vršac nad Zadnjico)",
+    "elevation": 2194,
+    "mountain_range": "Julijske Alpe",
+    "latitude": 46.36306,
+    "longitude": 13.79715
+  },
+  {
+    "name": "Kopica",
+    "elevation": 2190,
+    "mountain_range": "Julijske Alpe",
+    "latitude": 46.33257,
+    "longitude": 13.78765
+  },
+  {
+    "name": "Plešivec (Loška stena)",
+    "elevation": 2184,
+    "mountain_range": "Julijske Alpe",
+    "latitude": 46.4102,
+    "longitude": 13.66046
+  },
+  {
+    "name": "Prvi Vogel",
+    "elevation": 2181,
+    "mountain_range": "Julijske Alpe",
+    "latitude": 46.33004,
+    "longitude": 13.79969
+  },
+  {
+    "name": "Vrh nad Peski",
+    "elevation": 2176,
+    "mountain_range": "Julijske Alpe",
+    "latitude": 46.2643,
+    "longitude": 13.67794
+  },
+  {
+    "name": "Batognica",
+    "elevation": 2164,
+    "mountain_range": "Julijske Alpe",
+    "latitude": 46.26349,
+    "longitude": 13.66837
+  },
+  {
+    "name": "Velika Baba (Kanin)",
+    "elevation": 2148,
+    "mountain_range": "Julijske Alpe",
+    "latitude": 46.3329,
+    "longitude": 13.4494
+  },
+  {
+    "name": "Bela peč",
+    "elevation": 2146,
+    "mountain_range": "Julijske Alpe",
+    "latitude": 46.37497,
+    "longitude": 13.45582
+  },
+  {
+    "name": "Krnčica",
+    "elevation": 2142,
+    "mountain_range": "Julijske Alpe",
+    "latitude": 46.28178,
+    "longitude": 13.65087
+  },
+  {
+    "name": "Teme",
+    "elevation": 2136,
+    "mountain_range": "Julijske Alpe",
+    "latitude": 46.38747,
+    "longitude": 13.88754
+  },
+  {
+    "name": "Srednji vrh (pri Krnu)",
+    "elevation": 2134,
+    "mountain_range": "Julijske Alpe",
+    "latitude": 46.27524,
+    "longitude": 13.65428
+  },
+  {
+    "name": "Mali Draški vrh",
+    "elevation": 2132,
+    "mountain_range": "Julijske Alpe",
+    "latitude": 46.36324,
+    "longitude": 13.89252
+  },
+  {
+    "name": "Glava za Bajto",
+    "elevation": 2131,
+    "mountain_range": "Julijske Alpe",
+    "latitude": 46.32571,
+    "longitude": 13.74176
+  },
+  {
+    "name": "Jerebica",
+    "elevation": 2126,
+    "mountain_range": "Julijske Alpe",
+    "latitude": 46.39843,
+    "longitude": 13.56475
+  },
+  {
+    "name": "Veliki Babanski Skedenj",
+    "elevation": 2121,
+    "mountain_range": "Julijske Alpe",
+    "latitude": 46.3336,
+    "longitude": 13.4612
+  },
+  {
+    "name": "Šmihelovec",
+    "elevation": 2118,
+    "mountain_range": "Julijske Alpe",
+    "latitude": 46.37561,
+    "longitude": 13.66734
+  },
+  {
+    "name": "Trentski Pelc",
+    "elevation": 2116,
+    "mountain_range": "Julijske Alpe",
+    "latitude": 46.38609,
+    "longitude": 13.70958
+  },
+  {
+    "name": "Vršac (nad Zadnjo Trento)",
+    "elevation": 2113,
+    "mountain_range": "Julijske Alpe",
+    "latitude": 46.40038,
+    "longitude": 13.68168
+  },
+  {
+    "name": "Suhi vrh",
+    "elevation": 2109,
+    "mountain_range": "Julijske Alpe",
+    "latitude": 46.42901,
+    "longitude": 13.7281
+  },
+  {
+    "name": "Goličica",
+    "elevation": 2101,
+    "mountain_range": "Julijske Alpe",
+    "latitude": 46.39976,
+    "longitude": 13.77074
+  },
+  {
+    "name": "Cesar",
+    "elevation": 2098,
+    "mountain_range": "Julijske Alpe",
+    "latitude": 46.36653,
+    "longitude": 13.85913
+  },
+  {
+    "name": "Velika Tičarica",
+    "elevation": 2091,
+    "mountain_range": "Julijske Alpe",
+    "latitude": 46.32285,
+    "longitude": 13.78576
+  },
+  {
+    "name": "Zagorelec",
+    "elevation": 2090,
+    "mountain_range": "Julijske Alpe",
+    "latitude": 46.3791,
+    "longitude": 13.67051
+  },
+  {
+    "name": "Poldašnja špica",
+    "elevation": 2087,
+    "mountain_range": "Julijske Alpe",
+    "latitude": 46.47667,
+    "longitude": 13.45366
+  },
+  {
+    "name": "Ogradi",
+    "elevation": 2087,
+    "mountain_range": "Julijske Alpe",
+    "latitude": 46.33469,
+    "longitude": 13.83342
+  },
+  {
+    "name": "Šitna glava",
+    "elevation": 2087,
+    "mountain_range": "Julijske Alpe",
+    "latitude": 46.43914,
+    "longitude": 13.73879
+  },
+  {
+    "name": "Tolminski Kuk",
+    "elevation": 2085,
+    "mountain_range": "Julijske Alpe",
+    "latitude": 46.2605,
+    "longitude": 13.7568
+  },
+  {
+    "name": "Zadnjiški Ozebnik",
+    "elevation": 2084,
+    "mountain_range": "Julijske Alpe",
+    "latitude": 46.36917,
+    "longitude": 13.78205
+  },
+  {
+    "name": "Sleme",
+    "elevation": 2077,
+    "mountain_range": "Julijske Alpe",
+    "latitude": 46.45172,
+    "longitude": 13.87177
+  },
+  {
+    "name": "Slatna",
+    "elevation": 2077,
+    "mountain_range": "Julijske Alpe",
+    "latitude": 46.32859,
+    "longitude": 13.80486
+  },
+  {
+    "name": "Prevalski Stog",
+    "elevation": 2075,
+    "mountain_range": "Julijske Alpe",
+    "latitude": 46.34432,
+    "longitude": 13.8373
+  },
+  {
+    "name": "Rigljica",
+    "elevation": 2074,
+    "mountain_range": "Julijske Alpe",
+    "latitude": 46.4581,
+    "longitude": 13.80653
+  },
+  {
+    "name": "Kamniti lovec",
+    "elevation": 2071,
+    "mountain_range": "Julijske Alpe",
+    "latitude": 46.46466,
+    "longitude": 13.52795
+  },
+  {
+    "name": "Zasavska koča na Prehodavcih",
+    "elevation": 2071,
+    "mountain_range": "Julijske Alpe",
+    "latitude": 46.35856,
+    "longitude": 13.79209
+  },
+  {
+    "name": "Mala Tičarica",
+    "elevation": 2071,
+    "mountain_range": "Julijske Alpe",
+    "latitude": 46.3202,
+    "longitude": 13.78512
+  },
+  {
+    "name": "Visoki Pipar",
+    "elevation": 2069,
+    "mountain_range": "Julijske Alpe",
+    "latitude": 46.4732,
+    "longitude": 13.43532
+  },
+  {
+    "name": "Poldnik (Kopa)",
+    "elevation": 2063,
+    "mountain_range": "Julijske Alpe",
+    "latitude": 46.45951,
+    "longitude": 13.63677
+  },
+  {
+    "name": "Podrta gora",
+    "elevation": 2061,
+    "mountain_range": "Julijske Alpe",
+    "latitude": 46.26114,
+    "longitude": 13.76907
+  },
+  {
+    "name": "Veliki Pršivec",
+    "elevation": 2056,
+    "mountain_range": "Julijske Alpe",
+    "latitude": 46.38125,
+    "longitude": 13.88672
+  },
+  {
+    "name": "Vrh nad Škrbino",
+    "elevation": 2054,
+    "mountain_range": "Julijske Alpe",
+    "latitude": 46.2544,
+    "longitude": 13.78
+  },
+  {
+    "name": "Zeleni vrh",
+    "elevation": 2052,
+    "mountain_range": "Julijske Alpe",
+    "latitude": 46.2608,
+    "longitude": 13.7635
+  },
+  {
+    "name": "Pogačnikov dom na Kriških podih",
+    "elevation": 2050,
+    "mountain_range": "Julijske Alpe",
+    "latitude": 46.40273,
+    "longitude": 13.80077
+  },
+  {
+    "name": "Viševnik",
+    "elevation": 2050,
+    "mountain_range": "Julijske Alpe",
+    "latitude": 46.35901,
+    "longitude": 13.89829
+  },
+  {
+    "name": "Jelenk",
+    "elevation": 2049,
+    "mountain_range": "Julijske Alpe",
+    "latitude": 46.36421,
+    "longitude": 13.51103
+  },
+  {
+    "name": "Cima Alta (Dve špici)",
+    "elevation": 2046,
+    "mountain_range": "Julijske Alpe",
+    "latitude": 46.47645,
+    "longitude": 13.42029
+  },
+  {
+    "name": "Veliki Lemež",
+    "elevation": 2042,
+    "mountain_range": "Julijske Alpe",
+    "latitude": 46.2882,
+    "longitude": 13.6721
+  },
+  {
+    "name": "Jezerski Stog",
+    "elevation": 2040,
+    "mountain_range": "Julijske Alpe",
+    "latitude": 46.33838,
+    "longitude": 13.8449
+  },
+  {
+    "name": "Na Pečeh",
+    "elevation": 2039,
+    "mountain_range": "Julijske Alpe",
+    "latitude": 46.44889,
+    "longitude": 13.82604
+  },
+  {
+    "name": "Srednji vrh (nad jezerom v Lužnici)",
+    "elevation": 2032,
+    "mountain_range": "Julijske Alpe",
+    "latitude": 46.2609,
+    "longitude": 13.6767
+  },
+  {
+    "name": "Drobeče Sleme",
+    "elevation": 2029,
+    "mountain_range": "Julijske Alpe",
+    "latitude": 46.45453,
+    "longitude": 13.87242
+  },
+  {
+    "name": "Kreda",
+    "elevation": 2025,
+    "mountain_range": "Julijske Alpe",
+    "latitude": 46.32648,
+    "longitude": 13.80956
+  },
+  {
+    "name": "Eva",
+    "elevation": 2019,
+    "mountain_range": "Julijske Alpe",
+    "latitude": 46.34135,
+    "longitude": 13.84004
+  },
+  {
+    "name": "Velika Baba",
+    "elevation": 2016,
+    "mountain_range": "Julijske Alpe",
+    "latitude": 46.29478,
+    "longitude": 13.70854
+  },
+  {
+    "name": "Debela peč",
+    "elevation": 2014,
+    "mountain_range": "Julijske Alpe",
+    "latitude": 46.39071,
+    "longitude": 13.93316
+  },
+  {
+    "name": "Lopatnik",
+    "elevation": 2012,
+    "mountain_range": "Julijske Alpe",
+    "latitude": 46.2868,
+    "longitude": 13.6493
+  },
+  {
+    "name": "Adam",
+    "elevation": 2012,
+    "mountain_range": "Julijske Alpe",
+    "latitude": 46.3406,
+    "longitude": 13.83849
+  },
+  {
+    "name": "Cima Vildiver (Dve špici)",
+    "elevation": 2008,
+    "mountain_range": "Julijske Alpe",
+    "latitude": 46.47694,
+    "longitude": 13.423
+  },
+  {
+    "name": "Mahavšček",
+    "elevation": 2008,
+    "mountain_range": "Julijske Alpe",
+    "latitude": 46.27747,
+    "longitude": 13.73621
+  },
+  {
+    "name": "Brda",
+    "elevation": 2008,
+    "mountain_range": "Julijske Alpe",
+    "latitude": 46.38497,
+    "longitude": 13.92546
+  },
+  {
+    "name": "Ablanca",
+    "elevation": 2004,
+    "mountain_range": "Julijske Alpe",
+    "latitude": 46.35294,
+    "longitude": 13.88419
+  },
+  {
+    "name": "Lanževica",
+    "elevation": 2003,
+    "mountain_range": "Julijske Alpe",
+    "latitude": 46.29681,
+    "longitude": 13.72491
+  },
+  {
+    "name": "Kal (nad Komno)",
+    "elevation": 2001,
+    "mountain_range": "Julijske Alpe",
+    "latitude": 46.31074,
+    "longitude": 13.74403
+  },
+  {
+    "name": "Meja",
+    "elevation": 1996,
+    "mountain_range": "Julijske Alpe",
+    "latitude": 46.25076,
+    "longitude": 13.78727
+  },
+  {
+    "name": "Vrh nad Vodeno Rupo",
+    "elevation": 1995,
+    "mountain_range": "Julijske Alpe",
+    "latitude": 46.3261,
+    "longitude": 13.7915
+  },
+  {
+    "name": "Vratni vrh",
+    "elevation": 1983,
+    "mountain_range": "Julijske Alpe",
+    "latitude": 46.36069,
+    "longitude": 13.51135
+  },
+  {
+    "name": "Vogel (nad Lepeno)",
+    "elevation": 1980,
+    "mountain_range": "Julijske Alpe",
+    "latitude": 46.28518,
+    "longitude": 13.66587
+  },
+  {
+    "name": "Velika Bavha",
+    "elevation": 1980,
+    "mountain_range": "Julijske Alpe",
+    "latitude": 46.38591,
+    "longitude": 13.5137
+  },
+  {
+    "name": "Draški rob",
+    "elevation": 1979,
+    "mountain_range": "Julijske Alpe",
+    "latitude": 46.3659,
+    "longitude": 13.8971
+  },
+  {
+    "name": "Bogatin",
+    "elevation": 1977,
+    "mountain_range": "Julijske Alpe",
+    "latitude": 46.28163,
+    "longitude": 13.73508
+  },
+  {
+    "name": "Pri Banderi",
+    "elevation": 1974,
+    "mountain_range": "Julijske Alpe",
+    "latitude": 46.35512,
+    "longitude": 13.64484
+  },
+  {
+    "name": "Lipanski vrh",
+    "elevation": 1974,
+    "mountain_range": "Julijske Alpe",
+    "latitude": 46.37901,
+    "longitude": 13.92016
+  },
+  {
+    "name": "Vrh Planje",
+    "elevation": 1971,
+    "mountain_range": "Julijske Alpe",
+    "latitude": 46.2663,
+    "longitude": 13.7508
+  },
+  {
+    "name": "Monte Gosadon",
+    "elevation": 1968,
+    "mountain_range": "Julijske Alpe",
+    "latitude": 46.47276,
+    "longitude": 13.41588
+  },
+  {
+    "name": "Raskovec",
+    "elevation": 1967,
+    "mountain_range": "Julijske Alpe",
+    "latitude": 46.22906,
+    "longitude": 13.88543
+  },
+  {
+    "name": "Rodica",
+    "elevation": 1966,
+    "mountain_range": "Julijske Alpe",
+    "latitude": 46.22774,
+    "longitude": 13.86519
+  },
+  {
+    "name": "Vrh Ovčje planje",
+    "elevation": 1965,
+    "mountain_range": "Julijske Alpe",
+    "latitude": 46.35453,
+    "longitude": 13.64104
+  },
+  {
+    "name": "Okroglež",
+    "elevation": 1965,
+    "mountain_range": "Julijske Alpe",
+    "latitude": 46.3861,
+    "longitude": 13.93119
+  },
+  {
+    "name": "Mrežce",
+    "elevation": 1965,
+    "mountain_range": "Julijske Alpe",
+    "latitude": 46.37759,
+    "longitude": 13.91953
+  },
+  {
+    "name": "Plešivec",
+    "elevation": 1962,
+    "mountain_range": "Julijske Alpe",
+    "latitude": 46.36113,
+    "longitude": 13.51611
+  },
+  {
+    "name": "Debeli vrh nad Lipanco",
+    "elevation": 1962,
+    "mountain_range": "Julijske Alpe",
+    "latitude": 46.37324,
+    "longitude": 13.91123
+  },
+  {
+    "name": "Velika Montura",
+    "elevation": 1958,
+    "mountain_range": "Julijske Alpe",
+    "latitude": 46.287,
+    "longitude": 13.7116
+  },
+  {
+    "name": "Lopič",
+    "elevation": 1958,
+    "mountain_range": "Julijske Alpe",
+    "latitude": 46.3592,
+    "longitude": 13.1959
+  },
+  {
+    "name": "Vrh Leh",
+    "elevation": 1958,
+    "mountain_range": "Julijske Alpe",
+    "latitude": 46.35786,
+    "longitude": 13.64824
+  },
+  {
+    "name": "Veliki Selišnik",
+    "elevation": 1952,
+    "mountain_range": "Julijske Alpe",
+    "latitude": 46.36606,
+    "longitude": 13.90324
+  },
+  {
+    "name": "Mali Raskovec",
+    "elevation": 1946,
+    "mountain_range": "Julijske Alpe",
+    "latitude": 46.23133,
+    "longitude": 13.88013
+  },
+  {
+    "name": "Suha Rodica (Novi vrh)",
+    "elevation": 1944,
+    "mountain_range": "Julijske Alpe",
+    "latitude": 46.22596,
+    "longitude": 13.87618
+  },
+  {
+    "name": "Veliki Šmohor",
+    "elevation": 1944,
+    "mountain_range": "Julijske Alpe",
+    "latitude": 46.27427,
+    "longitude": 13.68549
+  },
+  {
+    "name": "Prednje Robičje",
+    "elevation": 1941,
+    "mountain_range": "Julijske Alpe",
+    "latitude": 46.44441,
+    "longitude": 13.74514
+  },
+  {
+    "name": "Mali Šmohor",
+    "elevation": 1939,
+    "mountain_range": "Julijske Alpe",
+    "latitude": 46.27923,
+    "longitude": 13.68712
+  },
+  {
+    "name": "Matajurski vrh",
+    "elevation": 1936,
+    "mountain_range": "Julijske Alpe",
+    "latitude": 46.22633,
+    "longitude": 13.89726
+  },
+  {
+    "name": "Vrh Škrli",
+    "elevation": 1926,
+    "mountain_range": "Julijske Alpe",
+    "latitude": 46.27426,
+    "longitude": 13.74549
+  },
+  {
+    "name": "Macesnovec",
+    "elevation": 1926,
+    "mountain_range": "Julijske Alpe",
+    "latitude": 46.40378,
+    "longitude": 13.90672
+  },
+  {
+    "name": "Bela glava",
+    "elevation": 1926,
+    "mountain_range": "Julijske Alpe",
+    "latitude": 46.31811,
+    "longitude": 13.79378
+  },
+  {
+    "name": "Mala Ponca",
+    "elevation": 1925,
+    "mountain_range": "Julijske Alpe",
+    "latitude": 46.46818,
+    "longitude": 13.6932
+  },
+  {
+    "name": "Vogel",
+    "elevation": 1922,
+    "mountain_range": "Julijske Alpe",
+    "latitude": 46.23829,
+    "longitude": 13.8125
+  },
+  {
+    "name": "Rušnati vrh",
+    "elevation": 1915,
+    "mountain_range": "Julijske Alpe",
+    "latitude": 46.24681,
+    "longitude": 13.7957
+  },
+  {
+    "name": "Rdeči rob",
+    "elevation": 1913,
+    "mountain_range": "Julijske Alpe",
+    "latitude": 46.25016,
+    "longitude": 13.69624
+  },
+  {
+    "name": "Kraljevska špica",
+    "elevation": 1912,
+    "mountain_range": "Julijske Alpe",
+    "latitude": 46.45596,
+    "longitude": 13.55719
+  },
+  {
+    "name": "Slemenova špica",
+    "elevation": 1911,
+    "mountain_range": "Julijske Alpe",
+    "latitude": 46.44584,
+    "longitude": 13.7266
+  },
+  {
+    "name": "Mala Rodica",
+    "elevation": 1901,
+    "mountain_range": "Julijske Alpe",
+    "latitude": 46.23085,
+    "longitude": 13.86239
+  },
+  {
+    "name": "Kser",
+    "elevation": 1900,
+    "mountain_range": "Julijske Alpe",
+    "latitude": 46.27221,
+    "longitude": 13.74742
+  },
+  {
+    "name": "Rušnata glava",
+    "elevation": 1899,
+    "mountain_range": "Julijske Alpe",
+    "latitude": 46.31315,
+    "longitude": 13.78467
+  },
+  {
+    "name": "Vrtaški vrh",
+    "elevation": 1898,
+    "mountain_range": "Julijske Alpe",
+    "latitude": 46.45531,
+    "longitude": 13.88788
+  },
+  {
+    "name": "Poljanski vrh",
+    "elevation": 1897,
+    "mountain_range": "Julijske Alpe",
+    "latitude": 46.23023,
+    "longitude": 13.90303
+  },
+  {
+    "name": "Vrh Krnic",
+    "elevation": 1896,
+    "mountain_range": "Julijske Alpe",
+    "latitude": 46.23958,
+    "longitude": 13.80994
+  },
+  {
+    "name": "Vrh Razora",
+    "elevation": 1893,
+    "mountain_range": "Julijske Alpe",
+    "latitude": 46.37598,
+    "longitude": 13.91362
+  },
+  {
+    "name": "Srednji Selišnik",
+    "elevation": 1890,
+    "mountain_range": "Julijske Alpe",
+    "latitude": 46.36393,
+    "longitude": 13.90285
+  },
+  {
+    "name": "Krniška glavica",
+    "elevation": 1889,
+    "mountain_range": "Julijske Alpe",
+    "latitude": 46.45313,
+    "longitude": 13.43918
+  },
+  {
+    "name": "Klečica",
+    "elevation": 1889,
+    "mountain_range": "Julijske Alpe",
+    "latitude": 46.3973,
+    "longitude": 13.9413
+  },
+  {
+    "name": "Velika Glava",
+    "elevation": 1883,
+    "mountain_range": "Julijske Alpe",
+    "latitude": 46.36286,
+    "longitude": 13.77096
+  },
+  {
+    "name": "Šija",
+    "elevation": 1880,
+    "mountain_range": "Julijske Alpe",
+    "latitude": 46.23863,
+    "longitude": 13.83413
+  },
+  {
+    "name": "Krsteniški Stog",
+    "elevation": 1879,
+    "mountain_range": "Julijske Alpe",
+    "latitude": 46.33102,
+    "longitude": 13.84955
+  },
+  {
+    "name": "Konjski vrh",
+    "elevation": 1879,
+    "mountain_range": "Julijske Alpe",
+    "latitude": 46.2302,
+    "longitude": 13.90863
+  },
+  {
+    "name": "Velika Kuhinja",
+    "elevation": 1878,
+    "mountain_range": "Julijske Alpe",
+    "latitude": 46.32835,
+    "longitude": 13.45096
+  },
+  {
+    "name": "Čisti vrh",
+    "elevation": 1875,
+    "mountain_range": "Julijske Alpe",
+    "latitude": 46.3556,
+    "longitude": 13.7523
+  },
+  {
+    "name": "Vrh Muzcev (vzhodni vrh)",
+    "elevation": 1873,
+    "mountain_range": "Julijske Alpe",
+    "latitude": 46.32598,
+    "longitude": 13.30097
+  },
+  {
+    "name": "Tolminski Migovec",
+    "elevation": 1868,
+    "mountain_range": "Julijske Alpe",
+    "latitude": 46.24629,
+    "longitude": 13.76239
+  },
+  {
+    "name": "Požgana Mlinarica",
+    "elevation": 1868,
+    "mountain_range": "Julijske Alpe",
+    "latitude": 46.4079,
+    "longitude": 13.8794
+  },
+  {
+    "name": "Vrh Muzcev (zahodni vrh)",
+    "elevation": 1864,
+    "mountain_range": "Julijske Alpe",
+    "latitude": 46.32665,
+    "longitude": 13.29437
+  },
+  {
+    "name": "Vrh Planje (nad Globokim)",
+    "elevation": 1863,
+    "mountain_range": "Julijske Alpe",
+    "latitude": 46.24408,
+    "longitude": 13.80321
+  },
+  {
+    "name": "Skutnik",
+    "elevation": 1860,
+    "mountain_range": "Julijske Alpe",
+    "latitude": 46.43403,
+    "longitude": 13.59007
+  },
+  {
+    "name": "Vrh Dlani",
+    "elevation": 1852,
+    "mountain_range": "Julijske Alpe",
+    "latitude": 46.239,
+    "longitude": 13.8298
+  },
+  {
+    "name": "Šober",
+    "elevation": 1845,
+    "mountain_range": "Julijske Alpe",
+    "latitude": 46.45037,
+    "longitude": 13.59921
+  },
+  {
+    "name": "Žabiški Kuk",
+    "elevation": 1844,
+    "mountain_range": "Julijske Alpe",
+    "latitude": 46.23029,
+    "longitude": 13.80493
+  },
+  {
+    "name": "Črna prst",
+    "elevation": 1844,
+    "mountain_range": "Julijske Alpe",
+    "latitude": 46.23062,
+    "longitude": 13.93184
+  },
+  {
+    "name": "Četrt",
+    "elevation": 1832,
+    "mountain_range": "Julijske Alpe",
+    "latitude": 46.23067,
+    "longitude": 13.91666
+  },
+  {
+    "name": "Kovačičeva glava",
+    "elevation": 1827,
+    "mountain_range": "Julijske Alpe",
+    "latitude": 46.31981,
+    "longitude": 13.8023
+  },
+  {
+    "name": "Visoka glava",
+    "elevation": 1822,
+    "mountain_range": "Julijske Alpe",
+    "latitude": 46.3152,
+    "longitude": 13.8012
+  },
+  {
+    "name": "Zajavor",
+    "elevation": 1815,
+    "mountain_range": "Julijske Alpe",
+    "latitude": 46.32049,
+    "longitude": 13.32632
+  },
+  {
+    "name": "Stara koča na Kaninu",
+    "elevation": 1814,
+    "mountain_range": "Julijske Alpe",
+    "latitude": 46.3436,
+    "longitude": 13.47597
+  },
+  {
+    "name": "Vrtec",
+    "elevation": 1809,
+    "mountain_range": "Julijske Alpe",
+    "latitude": 46.30517,
+    "longitude": 13.8063
+  },
+  {
+    "name": "Visoki Orlov rob",
+    "elevation": 1800,
+    "mountain_range": "Julijske Alpe",
+    "latitude": 46.2415,
+    "longitude": 13.8365
+  },
+  {
+    "name": "Škraplja",
+    "elevation": 1794,
+    "mountain_range": "Julijske Alpe",
+    "latitude": 46.3853,
+    "longitude": 13.5335
+  },
+  {
+    "name": "Plesišče",
+    "elevation": 1790,
+    "mountain_range": "Julijske Alpe",
+    "latitude": 46.353,
+    "longitude": 13.905
+  },
+  {
+    "name": "Kumlehova glava",
+    "elevation": 1788,
+    "mountain_range": "Julijske Alpe",
+    "latitude": 46.45375,
+    "longitude": 13.75866
+  },
+  {
+    "name": "Rušni vrh",
+    "elevation": 1786,
+    "mountain_range": "Julijske Alpe",
+    "latitude": 46.2326,
+    "longitude": 13.9373
+  },
+  {
+    "name": "Stadorski Orliči",
+    "elevation": 1782,
+    "mountain_range": "Julijske Alpe",
+    "latitude": 46.30215,
+    "longitude": 13.80323
+  },
+  {
+    "name": "Rušnata Mlinarica",
+    "elevation": 1777,
+    "mountain_range": "Julijske Alpe",
+    "latitude": 46.41265,
+    "longitude": 13.87945
+  },
+  {
+    "name": "Krasji vrh",
+    "elevation": 1773,
+    "mountain_range": "Julijske Alpe",
+    "latitude": 46.2892,
+    "longitude": 13.59277
+  },
+  {
+    "name": "Rigeljc",
+    "elevation": 1768,
+    "mountain_range": "Julijske Alpe",
+    "latitude": 46.30152,
+    "longitude": 13.79966
+  },
+  {
+    "name": "Veliki vrh (Polovnik)",
+    "elevation": 1768,
+    "mountain_range": "Julijske Alpe",
+    "latitude": 46.29498,
+    "longitude": 13.57129
+  },
+  {
+    "name": "Čukla",
+    "elevation": 1767,
+    "mountain_range": "Julijske Alpe",
+    "latitude": 46.35878,
+    "longitude": 13.54751
+  },
+  {
+    "name": "Svete Višarje",
+    "elevation": 1766,
+    "mountain_range": "Julijske Alpe",
+    "latitude": 46.47998,
+    "longitude": 13.523
+  },
+  {
+    "name": "Kurji vrh",
+    "elevation": 1762,
+    "mountain_range": "Julijske Alpe",
+    "latitude": 46.46596,
+    "longitude": 13.80579
+  },
+  {
+    "name": "Pršivec",
+    "elevation": 1761,
+    "mountain_range": "Julijske Alpe",
+    "latitude": 46.2973,
+    "longitude": 13.82122
+  },
+  {
+    "name": "Glave",
+    "elevation": 1760,
+    "mountain_range": "Julijske Alpe",
+    "latitude": 46.46647,
+    "longitude": 13.70185
+  },
+  {
+    "name": "Sovna glava",
+    "elevation": 1750,
+    "mountain_range": "Julijske Alpe",
+    "latitude": 46.42703,
+    "longitude": 13.75107
+  },
+  {
+    "name": "Zavitar",
+    "elevation": 1750,
+    "mountain_range": "Julijske Alpe",
+    "latitude": 46.24881,
+    "longitude": 13.84507
+  },
+  {
+    "name": "Visoka peč",
+    "elevation": 1749,
+    "mountain_range": "Julijske Alpe",
+    "latitude": 46.4668,
+    "longitude": 13.7353
+  },
+  {
+    "name": "Ciprnik",
+    "elevation": 1745,
+    "mountain_range": "Julijske Alpe",
+    "latitude": 46.46923,
+    "longitude": 13.74031
+  },
+  {
+    "name": "Vršič vrh",
+    "elevation": 1737,
+    "mountain_range": "Julijske Alpe",
+    "latitude": 46.4341,
+    "longitude": 13.74667
+  },
+  {
+    "name": "Skutnik",
+    "elevation": 1721,
+    "mountain_range": "Julijske Alpe",
+    "latitude": 46.32246,
+    "longitude": 13.43927
+  },
+  {
+    "name": "Veliki Karman",
+    "elevation": 1713,
+    "mountain_range": "Julijske Alpe",
+    "latitude": 46.2946,
+    "longitude": 13.1815
+  },
+  {
+    "name": "Kal (greben Krnčice)",
+    "elevation": 1699,
+    "mountain_range": "Julijske Alpe",
+    "latitude": 46.30316,
+    "longitude": 13.61883
+  },
+  {
+    "name": "Rutarski Vršič",
+    "elevation": 1699,
+    "mountain_range": "Julijske Alpe",
+    "latitude": 46.4648,
+    "longitude": 13.84688
+  },
+  {
+    "name": "Gradovec",
+    "elevation": 1692,
+    "mountain_range": "Julijske Alpe",
+    "latitude": 46.2396,
+    "longitude": 13.8857
+  },
+  {
+    "name": "Orlove glave",
+    "elevation": 1682,
+    "mountain_range": "Julijske Alpe",
+    "latitude": 46.2494,
+    "longitude": 13.8372
+  },
+  {
+    "name": "Stol (Julijske Alpe)",
+    "elevation": 1673,
+    "mountain_range": "Julijske Alpe",
+    "latitude": 46.27827,
+    "longitude": 13.45413
+  },
+  {
+    "name": "Na Glavi",
+    "elevation": 1666,
+    "mountain_range": "Julijske Alpe",
+    "latitude": 46.38446,
+    "longitude": 13.72422
+  },
+  {
+    "name": "Jehlc (Špičasta kupa)",
+    "elevation": 1662,
+    "mountain_range": "Julijske Alpe",
+    "latitude": 46.22019,
+    "longitude": 13.86219
+  },
+  {
+    "name": "Lisc (Lisec)",
+    "elevation": 1653,
+    "mountain_range": "Julijske Alpe",
+    "latitude": 46.24028,
+    "longitude": 13.92782
+  },
+  {
+    "name": "Florjanka",
+    "elevation": 1653,
+    "mountain_range": "Julijske Alpe",
+    "latitude": 46.4853,
+    "longitude": 13.5471
+  },
+  {
+    "name": "Svinjak",
+    "elevation": 1653,
+    "mountain_range": "Julijske Alpe",
+    "latitude": 46.35041,
+    "longitude": 13.61174
+  },
+  {
+    "name": "Matajur",
+    "elevation": 1642,
+    "mountain_range": "Julijske Alpe",
+    "latitude": 46.21211,
+    "longitude": 13.52945
+  },
+  {
+    "name": "Gabrovec (Veliki Muzec)",
+    "elevation": 1630,
+    "mountain_range": "Julijske Alpe",
+    "latitude": 46.28907,
+    "longitude": 13.41061
+  },
+  {
+    "name": "Bivak Dino Brollo",
+    "elevation": 1621,
+    "mountain_range": "Julijske Alpe",
+    "latitude": 46.32193,
+    "longitude": 13.29229
+  },
+  {
+    "name": "Vošni vrh",
+    "elevation": 1621,
+    "mountain_range": "Julijske Alpe",
+    "latitude": 46.4128,
+    "longitude": 13.9439
+  },
+  {
+    "name": "Breški Jalovec",
+    "elevation": 1613,
+    "mountain_range": "Julijske Alpe",
+    "latitude": 46.28461,
+    "longitude": 13.36944
+  },
+  {
+    "name": "Muzec - Musc (Mali Muzec)",
+    "elevation": 1612,
+    "mountain_range": "Julijske Alpe",
+    "latitude": 46.28734,
+    "longitude": 13.41855
+  },
+  {
+    "name": "Slatnik (severozahodni vrh)",
+    "elevation": 1609,
+    "mountain_range": "Julijske Alpe",
+    "latitude": 46.23708,
+    "longitude": 13.99341
+  },
+  {
+    "name": "Možic",
+    "elevation": 1602,
+    "mountain_range": "Julijske Alpe",
+    "latitude": 46.24182,
+    "longitude": 13.99482
+  },
+  {
+    "name": "Slatnik (jugovzhodni vrh)",
+    "elevation": 1597,
+    "mountain_range": "Julijske Alpe",
+    "latitude": 46.23455,
+    "longitude": 13.99907
+  },
+  {
+    "name": "Nemške glave",
+    "elevation": 1597,
+    "mountain_range": "Julijske Alpe",
+    "latitude": 46.40844,
+    "longitude": 13.57477
+  },
+  {
+    "name": "Jerebikovec",
+    "elevation": 1593,
+    "mountain_range": "Julijske Alpe",
+    "latitude": 46.44318,
+    "longitude": 13.95553
+  },
+  {
+    "name": "Brinova glava",
+    "elevation": 1586,
+    "mountain_range": "Julijske Alpe",
+    "latitude": 46.42819,
+    "longitude": 13.85417
+  },
+  {
+    "name": "Šavnik",
+    "elevation": 1574,
+    "mountain_range": "Julijske Alpe",
+    "latitude": 46.24208,
+    "longitude": 13.98469
+  },
+  {
+    "name": "Grušnica",
+    "elevation": 1570,
+    "mountain_range": "Julijske Alpe",
+    "latitude": 46.2391,
+    "longitude": 13.7504
+  },
+  {
+    "name": "Visoki Mavrinc",
+    "elevation": 1562,
+    "mountain_range": "Julijske Alpe",
+    "latitude": 46.45009,
+    "longitude": 13.76556
+  },
+  {
+    "name": "Javoršček",
+    "elevation": 1557,
+    "mountain_range": "Julijske Alpe",
+    "latitude": 46.3141,
+    "longitude": 13.5976
+  },
+  {
+    "name": "Planja (nad Mangartsko planino)",
+    "elevation": 1553,
+    "mountain_range": "Julijske Alpe",
+    "latitude": 46.4263,
+    "longitude": 13.6154
+  },
+  {
+    "name": "Lajnar",
+    "elevation": 1549,
+    "mountain_range": "Julijske Alpe",
+    "latitude": 46.23017,
+    "longitude": 14.00632
+  },
+  {
+    "name": "Dravh",
+    "elevation": 1547,
+    "mountain_range": "Julijske Alpe",
+    "latitude": 46.23268,
+    "longitude": 14.0138
+  },
+  {
+    "name": "Požar",
+    "elevation": 1543,
+    "mountain_range": "Julijske Alpe",
+    "latitude": 46.42047,
+    "longitude": 13.88618
+  },
+  {
+    "name": "Kravja Črna gora",
+    "elevation": 1541,
+    "mountain_range": "Julijske Alpe",
+    "latitude": 46.2401,
+    "longitude": 13.96039
+  },
+  {
+    "name": "Visoka glava (na Matajurju)",
+    "elevation": 1540,
+    "mountain_range": "Julijske Alpe",
+    "latitude": 46.218,
+    "longitude": 13.5255
+  },
+  {
+    "name": "Mesnovec",
+    "elevation": 1538,
+    "mountain_range": "Julijske Alpe",
+    "latitude": 46.3372,
+    "longitude": 13.9446
+  },
+  {
+    "name": "Lovska koča na Glinu",
+    "elevation": 1527,
+    "mountain_range": "Julijske Alpe",
+    "latitude": 46.2411,
+    "longitude": 13.8684
+  },
+  {
+    "name": "Krevl",
+    "elevation": 1515,
+    "mountain_range": "Julijske Alpe",
+    "latitude": 46.23596,
+    "longitude": 13.96068
+  },
+  {
+    "name": "Lengarjeva glava",
+    "elevation": 1498,
+    "mountain_range": "Julijske Alpe",
+    "latitude": 46.42482,
+    "longitude": 13.89332
+  },
+  {
+    "name": "Kobla",
+    "elevation": 1498,
+    "mountain_range": "Julijske Alpe",
+    "latitude": 46.23387,
+    "longitude": 13.96483
+  },
+  {
+    "name": "Nizki vrh",
+    "elevation": 1488,
+    "mountain_range": "Julijske Alpe",
+    "latitude": 46.2916,
+    "longitude": 13.3902
+  },
+  {
+    "name": "Črni vrh",
+    "elevation": 1486,
+    "mountain_range": "Julijske Alpe",
+    "latitude": 46.475,
+    "longitude": 13.6534
+  },
+  {
+    "name": "Javorov vrh (Pokljuka)",
+    "elevation": 1482,
+    "mountain_range": "Julijske Alpe",
+    "latitude": 46.32423,
+    "longitude": 13.95066
+  },
+  {
+    "name": "Kobilja glava",
+    "elevation": 1475,
+    "mountain_range": "Julijske Alpe",
+    "latitude": 46.19015,
+    "longitude": 13.79541
+  },
+  {
+    "name": "Jalovnik",
+    "elevation": 1452,
+    "mountain_range": "Julijske Alpe",
+    "latitude": 46.18723,
+    "longitude": 13.80083
+  },
+  {
+    "name": "Risnati rob (Polevec)",
+    "elevation": 1438,
+    "mountain_range": "Julijske Alpe",
+    "latitude": 46.44325,
+    "longitude": 13.94608
+  },
+  {
+    "name": "Mali vrh (na Mežakli)",
+    "elevation": 1389,
+    "mountain_range": "Julijske Alpe",
+    "latitude": 46.4485,
+    "longitude": 13.9511
+  },
+  {
+    "name": "Planica (pod Krnom)",
+    "elevation": 1376,
+    "mountain_range": "Julijske Alpe",
+    "latitude": 46.2485,
+    "longitude": 13.64
+  },
+  {
+    "name": "Lipenšči hrib",
+    "elevation": 1375,
+    "mountain_range": "Julijske Alpe",
+    "latitude": 46.354,
+    "longitude": 13.9572
+  },
+  {
+    "name": "Javor (nad Tolminskimi Ravnami)",
+    "elevation": 1363,
+    "mountain_range": "Julijske Alpe",
+    "latitude": 46.234,
+    "longitude": 13.7592
+  },
+  {
+    "name": "Mrzli vrh nad planino Pretovč",
+    "elevation": 1359,
+    "mountain_range": "Julijske Alpe",
+    "latitude": 46.2188,
+    "longitude": 13.69596
+  },
+  {
+    "name": "Mrzli vrh (na Matajurju)",
+    "elevation": 1358,
+    "mountain_range": "Julijske Alpe",
+    "latitude": 46.20958,
+    "longitude": 13.56234
+  },
+  {
+    "name": "Črna gora",
+    "elevation": 1350,
+    "mountain_range": "Julijske Alpe",
+    "latitude": 46.43525,
+    "longitude": 13.91178
+  },
+  {
+    "name": "Škrbinjek",
+    "elevation": 1341,
+    "mountain_range": "Julijske Alpe",
+    "latitude": 46.46621,
+    "longitude": 13.77279
+  },
+  {
+    "name": "Srednji vrh (na Matajurju)",
+    "elevation": 1320,
+    "mountain_range": "Julijske Alpe",
+    "latitude": 46.2088,
+    "longitude": 13.5655
+  },
+  {
+    "name": "Kota 1313",
+    "elevation": 1313,
+    "mountain_range": "Julijske Alpe",
+    "latitude": 46.36066,
+    "longitude": 13.57516
+  },
+  {
+    "name": "Galetovec",
+    "elevation": 1265,
+    "mountain_range": "Julijske Alpe",
+    "latitude": 46.33145,
+    "longitude": 14.03875
+  },
+  {
+    "name": "Berjanca",
+    "elevation": 1264,
+    "mountain_range": "Julijske Alpe",
+    "latitude": 46.3546,
+    "longitude": 14.0203
+  },
+  {
+    "name": "Nizki vrh (Monte Nischiuarch)",
+    "elevation": 1260,
+    "mountain_range": "Julijske Alpe",
+    "latitude": 46.31715,
+    "longitude": 13.37713
+  },
+  {
+    "name": "Turn (nad Bohinjsko Belo)",
+    "elevation": 1249,
+    "mountain_range": "Julijske Alpe",
+    "latitude": 46.3392,
+    "longitude": 14.0366
+  },
+  {
+    "name": "Mija",
+    "elevation": 1237,
+    "mountain_range": "Julijske Alpe",
+    "latitude": 46.2217,
+    "longitude": 13.4785
+  },
+  {
+    "name": "Škrbina (Mežakla)",
+    "elevation": 1210,
+    "mountain_range": "Julijske Alpe",
+    "latitude": 46.42439,
+    "longitude": 14.04422
+  },
+  {
+    "name": "Lovska koča Mali Vokel",
+    "elevation": 1193,
+    "mountain_range": "Julijske Alpe",
+    "latitude": 46.353,
+    "longitude": 14.0259
+  },
+  {
+    "name": "Lovčev bivak Pri Koucah",
+    "elevation": 1192,
+    "mountain_range": "Julijske Alpe",
+    "latitude": 46.2306,
+    "longitude": 13.9959
+  },
+  {
+    "name": "Police",
+    "elevation": 1184,
+    "mountain_range": "Julijske Alpe",
+    "latitude": 46.4016,
+    "longitude": 14.0128
+  },
+  {
+    "name": "Gozdarska koča Mali Vokel",
+    "elevation": 1145,
+    "mountain_range": "Julijske Alpe",
+    "latitude": 46.3525,
+    "longitude": 14.0287
+  },
+  {
+    "name": "Snežna jama na Mežakli",
+    "elevation": 1130,
+    "mountain_range": "Julijske Alpe",
+    "latitude": 46.4156,
+    "longitude": 14.0566
+  },
+  {
+    "name": "Hotunjski vrh",
+    "elevation": 1107,
+    "mountain_range": "Julijske Alpe",
+    "latitude": 46.3652,
+    "longitude": 14.0407
+  },
+  {
+    "name": "Kobala",
+    "elevation": 1080,
+    "mountain_range": "Julijske Alpe",
+    "latitude": 46.18139,
+    "longitude": 13.77967
+  },
+  {
+    "name": "Kup",
+    "elevation": 1046,
+    "mountain_range": "Julijske Alpe",
+    "latitude": 46.22006,
+    "longitude": 13.99055
+  },
+  {
+    "name": "Vodnikov razglednik",
+    "elevation": 1017,
+    "mountain_range": "Julijske Alpe",
+    "latitude": 46.3023,
+    "longitude": 13.977
+  },
+  {
+    "name": "Studor",
+    "elevation": 1002,
+    "mountain_range": "Julijske Alpe",
+    "latitude": 46.29553,
+    "longitude": 13.90745
+  },
+  {
+    "name": "Poloje",
+    "elevation": 981,
+    "mountain_range": "Julijske Alpe",
+    "latitude": 46.19171,
+    "longitude": 13.76214
+  },
+  {
+    "name": "Ožarjeni kamen",
+    "elevation": 960,
+    "mountain_range": "Julijske Alpe",
+    "latitude": 46.28955,
+    "longitude": 13.83164
+  },
+  {
+    "name": "Gulj",
+    "elevation": 954,
+    "mountain_range": "Julijske Alpe",
+    "latitude": 46.31668,
+    "longitude": 13.46243
+  },
+  {
+    "name": "Rudnica",
+    "elevation": 946,
+    "mountain_range": "Julijske Alpe",
+    "latitude": 46.28545,
+    "longitude": 13.92079
+  },
+  {
+    "name": "Boršt",
+    "elevation": 931,
+    "mountain_range": "Julijske Alpe",
+    "latitude": 46.4011,
+    "longitude": 14.0829
+  },
+  {
+    "name": "Kres nad Kočno",
+    "elevation": 890,
+    "mountain_range": "Julijske Alpe",
+    "latitude": 46.419,
+    "longitude": 14.0789
+  },
+  {
+    "name": "Vrše",
+    "elevation": 850,
+    "mountain_range": "Julijske Alpe",
+    "latitude": 46.4077,
+    "longitude": 14.0882
+  },
+  {
+    "name": "Grančišče",
+    "elevation": 844,
+    "mountain_range": "Julijske Alpe",
+    "latitude": 46.4589,
+    "longitude": 13.9328
+  },
+  {
+    "name": "Hom pri Bledu",
+    "elevation": 834,
+    "mountain_range": "Julijske Alpe",
+    "latitude": 46.39476,
+    "longitude": 14.0931
+  },
+  {
+    "name": "Pokljuška soteska (luknja)",
+    "elevation": 830,
+    "mountain_range": "Julijske Alpe",
+    "latitude": 46.3766,
+    "longitude": 14.0326
+  },
+  {
+    "name": "Poljanska baba",
+    "elevation": 830,
+    "mountain_range": "Julijske Alpe",
+    "latitude": 46.4176,
+    "longitude": 14.0779
+  },
+  {
+    "name": "Žerjavec (Kavče)",
+    "elevation": 805,
+    "mountain_range": "Julijske Alpe",
+    "latitude": 46.4159,
+    "longitude": 14.0853
+  },
+  {
+    "name": "Gogalova lipa",
+    "elevation": 725,
+    "mountain_range": "Julijske Alpe",
+    "latitude": 46.4319,
+    "longitude": 13.9533
+  },
+  {
+    "name": "Dolina Škratov",
+    "elevation": 700,
+    "mountain_range": "Julijske Alpe",
+    "latitude": 46.30936,
+    "longitude": 13.58408
+  },
+  {
+    "name": "Mala Osojnica",
+    "elevation": 691,
+    "mountain_range": "Julijske Alpe",
+    "latitude": 46.35703,
+    "longitude": 14.08113
+  },
+  {
+    "name": "Peč (razgledišče)",
+    "elevation": 650,
+    "mountain_range": "Julijske Alpe",
+    "latitude": 46.27562,
+    "longitude": 13.91005
+  },
+  {
+    "name": "Straža",
+    "elevation": 646,
+    "mountain_range": "Julijske Alpe",
+    "latitude": 46.35971,
+    "longitude": 14.1035
+  },
+  {
+    "name": "Marija Snežna v Breginjskem kotu",
+    "elevation": 645,
+    "mountain_range": "Julijske Alpe",
+    "latitude": 46.26577,
+    "longitude": 13.42156
+  },
+  {
+    "name": "Dobra gora",
+    "elevation": 620,
+    "mountain_range": "Julijske Alpe",
+    "latitude": 46.3542,
+    "longitude": 14.1095
+  },
+  {
+    "name": "Ribenska gora",
+    "elevation": 588,
+    "mountain_range": "Julijske Alpe",
+    "latitude": null,
+    "longitude": null
+  },
+  {
+    "name": "Ajdovski gradec",
+    "elevation": 580,
+    "mountain_range": "Julijske Alpe",
+    "latitude": 46.27941,
+    "longitude": 13.96267
+  },
+  {
+    "name": "Iglica",
+    "elevation": 550,
+    "mountain_range": "Julijske Alpe",
+    "latitude": 46.34817,
+    "longitude": 14.05965
+  },
+  {
+    "name": "Mlina peč",
+    "elevation": 506,
+    "mountain_range": "Julijske Alpe",
+    "latitude": 46.351,
+    "longitude": 14.0657
+  },
+  {
+    "name": "Tonovcov grad pri Kobaridu",
+    "elevation": 500,
+    "mountain_range": "Julijske Alpe",
+    "latitude": 46.25763,
+    "longitude": 13.58033
+  },
+  {
+    "name": "Gradišče (Bodešče)",
+    "elevation": 499,
+    "mountain_range": "Julijske Alpe",
+    "latitude": 46.3435,
+    "longitude": 14.1392
+  },
+  {
+    "name": "Velika korita Soče",
+    "elevation": 480,
+    "mountain_range": "Julijske Alpe",
+    "latitude": 46.33706,
+    "longitude": 13.6459
+  },
+  {
+    "name": "Kozlov rob",
+    "elevation": 426,
+    "mountain_range": "Julijske Alpe",
+    "latitude": 46.1893,
+    "longitude": 13.7254
+  }
+]

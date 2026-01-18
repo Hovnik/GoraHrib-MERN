@@ -1,0 +1,1605 @@
+[
+  {
+    "name": "Snežnik",
+    "elevation": 1796,
+    "mountain_range": "Goriško, Notranjsko in Snežniško hribovje",
+    "latitude": 45.5885,
+    "longitude": 14.4476
+  },
+  {
+    "name": "Mali Snežnik",
+    "elevation": 1694,
+    "mountain_range": "Goriško, Notranjsko in Snežniško hribovje",
+    "latitude": 45.5898,
+    "longitude": 14.4359
+  },
+  {
+    "name": "Mali Golak",
+    "elevation": 1495,
+    "mountain_range": "Goriško, Notranjsko in Snežniško hribovje",
+    "latitude": 45.9785,
+    "longitude": 13.8644
+  },
+  {
+    "name": "Srednji Golak",
+    "elevation": 1480,
+    "mountain_range": "Goriško, Notranjsko in Snežniško hribovje",
+    "latitude": 45.97448,
+    "longitude": 13.87294
+  },
+  {
+    "name": "Smrekov vrh",
+    "elevation": 1449,
+    "mountain_range": "Goriško, Notranjsko in Snežniško hribovje",
+    "latitude": null,
+    "longitude": null
+  },
+  {
+    "name": "Mrzovec",
+    "elevation": 1410,
+    "mountain_range": "Goriško, Notranjsko in Snežniško hribovje",
+    "latitude": 45.97825,
+    "longitude": 13.80575
+  },
+  {
+    "name": "Veliki Modrasovec",
+    "elevation": 1353,
+    "mountain_range": "Goriško, Notranjsko in Snežniško hribovje",
+    "latitude": 45.93638,
+    "longitude": 13.85005
+  },
+  {
+    "name": "Bukov Vrh (Trnovski gozd)",
+    "elevation": 1314,
+    "mountain_range": "Goriško, Notranjsko in Snežniško hribovje",
+    "latitude": 45.99013,
+    "longitude": 13.88505
+  },
+  {
+    "name": "Suhi vrh (Nanos)",
+    "elevation": 1313,
+    "mountain_range": "Goriško, Notranjsko in Snežniško hribovje",
+    "latitude": 45.79828,
+    "longitude": 14.0671
+  },
+  {
+    "name": "Mali Modrasovec",
+    "elevation": 1305,
+    "mountain_range": "Goriško, Notranjsko in Snežniško hribovje",
+    "latitude": 45.93035,
+    "longitude": 13.85385
+  },
+  {
+    "name": "Poldanovec",
+    "elevation": 1299,
+    "mountain_range": "Goriško, Notranjsko in Snežniško hribovje",
+    "latitude": 46.00953,
+    "longitude": 13.83299
+  },
+  {
+    "name": "Goteniški Snežnik",
+    "elevation": 1289,
+    "mountain_range": "Goriško, Notranjsko in Snežniško hribovje",
+    "latitude": 45.59193,
+    "longitude": 14.73624
+  },
+  {
+    "name": "Srednja gora (Hrušica)",
+    "elevation": 1275,
+    "mountain_range": "Goriško, Notranjsko in Snežniško hribovje",
+    "latitude": 45.8712,
+    "longitude": 14.07192
+  },
+  {
+    "name": "Veliki Javornik (Javorniki)",
+    "elevation": 1268,
+    "mountain_range": "Goriško, Notranjsko in Snežniško hribovje",
+    "latitude": 45.758,
+    "longitude": 14.29508
+  },
+  {
+    "name": "Streliški vrh (Hrušica)",
+    "elevation": 1266,
+    "mountain_range": "Goriško, Notranjsko in Snežniško hribovje",
+    "latitude": 45.87302,
+    "longitude": 14.08718
+  },
+  {
+    "name": "Turn",
+    "elevation": 1254,
+    "mountain_range": "Goriško, Notranjsko in Snežniško hribovje",
+    "latitude": 45.68736,
+    "longitude": 14.70814
+  },
+  {
+    "name": "Kuk (Kolovrat)",
+    "elevation": 1243,
+    "mountain_range": "Goriško, Notranjsko in Snežniško hribovje",
+    "latitude": 46.19568,
+    "longitude": 13.61946
+  },
+  {
+    "name": "Javornik nad Črnim Vrhom",
+    "elevation": 1240,
+    "mountain_range": "Goriško, Notranjsko in Snežniško hribovje",
+    "latitude": 45.89589,
+    "longitude": 14.07173
+  },
+  {
+    "name": "Vojkova koča na Nanosu",
+    "elevation": 1240,
+    "mountain_range": "Goriško, Notranjsko in Snežniško hribovje",
+    "latitude": 45.77204,
+    "longitude": 14.05306
+  },
+  {
+    "name": "Veliki Rob",
+    "elevation": 1237,
+    "mountain_range": "Goriško, Notranjsko in Snežniško hribovje",
+    "latitude": 45.93438,
+    "longitude": 13.80292
+  },
+  {
+    "name": "Kucelj (na Čavnu)",
+    "elevation": 1237,
+    "mountain_range": "Goriško, Notranjsko in Snežniško hribovje",
+    "latitude": 45.92873,
+    "longitude": 13.82502
+  },
+  {
+    "name": "Rezinski vrh",
+    "elevation": 1231,
+    "mountain_range": "Goriško, Notranjsko in Snežniško hribovje",
+    "latitude": 45.68818,
+    "longitude": 14.7138
+  },
+  {
+    "name": "Sveti Duh (Hrušica)",
+    "elevation": 1221,
+    "mountain_range": "Goriško, Notranjsko in Snežniško hribovje",
+    "latitude": 45.87179,
+    "longitude": 14.06257
+  },
+  {
+    "name": "Mali Javornik (Javorniki)",
+    "elevation": 1219,
+    "mountain_range": "Goriško, Notranjsko in Snežniško hribovje",
+    "latitude": 45.76421,
+    "longitude": 14.27927
+  },
+  {
+    "name": "Petelinjek",
+    "elevation": 1212,
+    "mountain_range": "Goriško, Notranjsko in Snežniško hribovje",
+    "latitude": 45.6782,
+    "longitude": 14.5531
+  },
+  {
+    "name": "Grmada (Nanos)",
+    "elevation": 1209,
+    "mountain_range": "Goriško, Notranjsko in Snežniško hribovje",
+    "latitude": 45.77751,
+    "longitude": 14.0425
+  },
+  {
+    "name": "Velika Jazbina",
+    "elevation": 1201,
+    "mountain_range": "Goriško, Notranjsko in Snežniško hribovje",
+    "latitude": 45.6814,
+    "longitude": 14.5568
+  },
+  {
+    "name": "Nagnoj",
+    "elevation": 1193,
+    "mountain_range": "Goriško, Notranjsko in Snežniško hribovje",
+    "latitude": 46.1916,
+    "longitude": 13.6336
+  },
+  {
+    "name": "Cerk",
+    "elevation": 1192,
+    "mountain_range": "Goriško, Notranjsko in Snežniško hribovje",
+    "latitude": 45.5464,
+    "longitude": 14.7642
+  },
+  {
+    "name": "Stanov rob",
+    "elevation": 1191,
+    "mountain_range": "Goriško, Notranjsko in Snežniško hribovje",
+    "latitude": 46.02082,
+    "longitude": 13.81632
+  },
+  {
+    "name": "Čaven",
+    "elevation": 1185,
+    "mountain_range": "Goriško, Notranjsko in Snežniško hribovje",
+    "latitude": 45.93387,
+    "longitude": 13.79646
+  },
+  {
+    "name": "Škol",
+    "elevation": 1182,
+    "mountain_range": "Goriško, Notranjsko in Snežniško hribovje",
+    "latitude": 46.01981,
+    "longitude": 13.79177
+  },
+  {
+    "name": "Križna gora (Hrušica)",
+    "elevation": 1162,
+    "mountain_range": "Goriško, Notranjsko in Snežniško hribovje",
+    "latitude": 45.87238,
+    "longitude": 14.05385
+  },
+  {
+    "name": "Maj",
+    "elevation": 1142,
+    "mountain_range": "Goriško, Notranjsko in Snežniško hribovje",
+    "latitude": 45.7913,
+    "longitude": 14.0804
+  },
+  {
+    "name": "Velika ledena jama v Paradani",
+    "elevation": 1140,
+    "mountain_range": "Goriško, Notranjsko in Snežniško hribovje",
+    "latitude": 45.98868,
+    "longitude": 13.84461
+  },
+  {
+    "name": "Racna gora",
+    "elevation": 1140,
+    "mountain_range": "Goriško, Notranjsko in Snežniško hribovje",
+    "latitude": 45.7085,
+    "longitude": 14.5292
+  },
+  {
+    "name": "Trinški vrh",
+    "elevation": 1138,
+    "mountain_range": "Goriško, Notranjsko in Snežniško hribovje",
+    "latitude": 46.1872,
+    "longitude": 13.65119
+  },
+  {
+    "name": "Špičasti vrh",
+    "elevation": 1128,
+    "mountain_range": "Goriško, Notranjsko in Snežniško hribovje",
+    "latitude": 45.92694,
+    "longitude": 13.99776
+  },
+  {
+    "name": "Bela stena",
+    "elevation": 1122,
+    "mountain_range": "Goriško, Notranjsko in Snežniško hribovje",
+    "latitude": 45.69203,
+    "longitude": 14.71968
+  },
+  {
+    "name": "Krokar",
+    "elevation": 1122,
+    "mountain_range": "Goriško, Notranjsko in Snežniško hribovje",
+    "latitude": 45.5383,
+    "longitude": 14.7695
+  },
+  {
+    "name": "Na gradu",
+    "elevation": 1115,
+    "mountain_range": "Goriško, Notranjsko in Snežniško hribovje",
+    "latitude": 46.1836,
+    "longitude": 13.65946
+  },
+  {
+    "name": "Slivnica",
+    "elevation": 1114,
+    "mountain_range": "Goriško, Notranjsko in Snežniško hribovje",
+    "latitude": 45.79005,
+    "longitude": 14.4081
+  },
+  {
+    "name": "Krim",
+    "elevation": 1107,
+    "mountain_range": "Goriško, Notranjsko in Snežniško hribovje",
+    "latitude": 45.92856,
+    "longitude": 14.47138
+  },
+  {
+    "name": "Čelkov vrh",
+    "elevation": 1106,
+    "mountain_range": "Goriško, Notranjsko in Snežniško hribovje",
+    "latitude": 45.91333,
+    "longitude": 14.04905
+  },
+  {
+    "name": "Sveta Trojica",
+    "elevation": 1106,
+    "mountain_range": "Goriško, Notranjsko in Snežniško hribovje",
+    "latitude": 45.72505,
+    "longitude": 14.27125
+  },
+  {
+    "name": "Velika Milanja",
+    "elevation": 1099,
+    "mountain_range": "Goriško, Notranjsko in Snežniško hribovje",
+    "latitude": 45.59443,
+    "longitude": 14.30967
+  },
+  {
+    "name": "Kršičevec",
+    "elevation": 1091,
+    "mountain_range": "Goriško, Notranjsko in Snežniško hribovje",
+    "latitude": 45.66523,
+    "longitude": 14.33318
+  },
+  {
+    "name": "Baba (pri Javornikih)",
+    "elevation": 1085,
+    "mountain_range": "Goriško, Notranjsko in Snežniško hribovje",
+    "latitude": 45.7535,
+    "longitude": 14.274
+  },
+  {
+    "name": "Razsušica",
+    "elevation": 1083,
+    "mountain_range": "Goriško, Notranjsko in Snežniško hribovje",
+    "latitude": 45.49388,
+    "longitude": 14.0592
+  },
+  {
+    "name": "Kameni zid",
+    "elevation": 1081,
+    "mountain_range": "Goriško, Notranjsko in Snežniško hribovje",
+    "latitude": 45.61291,
+    "longitude": 14.73481
+  },
+  {
+    "name": "Medvižica",
+    "elevation": 1081,
+    "mountain_range": "Goriško, Notranjsko in Snežniško hribovje",
+    "latitude": 45.49525,
+    "longitude": 14.06347
+  },
+  {
+    "name": "Črni vrh (pri Lokvah)",
+    "elevation": 1072,
+    "mountain_range": "Goriško, Notranjsko in Snežniško hribovje",
+    "latitude": 46.0159,
+    "longitude": 13.7815
+  },
+  {
+    "name": "Veliki vrh (nad Lomom)",
+    "elevation": 1071,
+    "mountain_range": "Goriško, Notranjsko in Snežniško hribovje",
+    "latitude": 46.10641,
+    "longitude": 13.7801
+  },
+  {
+    "name": "Lašček",
+    "elevation": 1071,
+    "mountain_range": "Goriško, Notranjsko in Snežniško hribovje",
+    "latitude": 46.079,
+    "longitude": 13.773
+  },
+  {
+    "name": "Mokrc",
+    "elevation": 1059,
+    "mountain_range": "Goriško, Notranjsko in Snežniško hribovje",
+    "latitude": 45.8941,
+    "longitude": 14.5268
+  },
+  {
+    "name": "Ostrič",
+    "elevation": 1056,
+    "mountain_range": "Goriško, Notranjsko in Snežniško hribovje",
+    "latitude": 45.49143,
+    "longitude": 14.07342
+  },
+  {
+    "name": "Mala gora",
+    "elevation": 1034,
+    "mountain_range": "Goriško, Notranjsko in Snežniško hribovje",
+    "latitude": 45.92536,
+    "longitude": 13.84464
+  },
+  {
+    "name": "Bele ovce",
+    "elevation": 1029,
+    "mountain_range": "Goriško, Notranjsko in Snežniško hribovje",
+    "latitude": 45.59577,
+    "longitude": 14.30122
+  },
+  {
+    "name": "Slavnik",
+    "elevation": 1028,
+    "mountain_range": "Goriško, Notranjsko in Snežniško hribovje",
+    "latitude": 45.53388,
+    "longitude": 13.97581
+  },
+  {
+    "name": "Vremščica",
+    "elevation": 1027,
+    "mountain_range": "Goriško, Notranjsko in Snežniško hribovje",
+    "latitude": 45.6883,
+    "longitude": 14.0616
+  },
+  {
+    "name": "Gora (Sveti Lovrenc)",
+    "elevation": 1019,
+    "mountain_range": "Goriško, Notranjsko in Snežniško hribovje",
+    "latitude": 45.83905,
+    "longitude": 14.16735
+  },
+  {
+    "name": "Špilnik",
+    "elevation": 1018,
+    "mountain_range": "Goriško, Notranjsko in Snežniško hribovje",
+    "latitude": 45.84151,
+    "longitude": 14.18875
+  },
+  {
+    "name": "Koča na Kamnem griču",
+    "elevation": 1016,
+    "mountain_range": "Goriško, Notranjsko in Snežniško hribovje",
+    "latitude": 45.72936,
+    "longitude": 14.61693
+  },
+  {
+    "name": "Sinji vrh",
+    "elevation": 1002,
+    "mountain_range": "Goriško, Notranjsko in Snežniško hribovje",
+    "latitude": 45.90828,
+    "longitude": 13.93735
+  },
+  {
+    "name": "Grmada pri Slavniku",
+    "elevation": 1001,
+    "mountain_range": "Goriško, Notranjsko in Snežniško hribovje",
+    "latitude": 45.53884,
+    "longitude": 13.96739
+  },
+  {
+    "name": "Županov vrh",
+    "elevation": 999,
+    "mountain_range": "Goriško, Notranjsko in Snežniško hribovje",
+    "latitude": 45.8963,
+    "longitude": 14.4494
+  },
+  {
+    "name": "Novaška gora",
+    "elevation": 998,
+    "mountain_range": "Goriško, Notranjsko in Snežniško hribovje",
+    "latitude": 45.88663,
+    "longitude": 14.42055
+  },
+  {
+    "name": "Koča na Kozleku",
+    "elevation": 997,
+    "mountain_range": "Goriško, Notranjsko in Snežniško hribovje",
+    "latitude": 45.54458,
+    "longitude": 14.32259
+  },
+  {
+    "name": "Špiček (Špečk)",
+    "elevation": 986,
+    "mountain_range": "Goriško, Notranjsko in Snežniško hribovje",
+    "latitude": 45.89795,
+    "longitude": 14.00735
+  },
+  {
+    "name": "Lovsko zavetišče pod Čavnom",
+    "elevation": 980,
+    "mountain_range": "Goriško, Notranjsko in Snežniško hribovje",
+    "latitude": 45.93452,
+    "longitude": 13.78879
+  },
+  {
+    "name": "Volovja reber",
+    "elevation": 975,
+    "mountain_range": "Goriško, Notranjsko in Snežniško hribovje",
+    "latitude": 45.60216,
+    "longitude": 14.28646
+  },
+  {
+    "name": "Rotovc",
+    "elevation": 964,
+    "mountain_range": "Goriško, Notranjsko in Snežniško hribovje",
+    "latitude": 45.8941,
+    "longitude": 14.4559
+  },
+  {
+    "name": "Mišnice",
+    "elevation": 961,
+    "mountain_range": "Goriško, Notranjsko in Snežniško hribovje",
+    "latitude": 45.9081,
+    "longitude": 14.4678
+  },
+  {
+    "name": "Kovk",
+    "elevation": 961,
+    "mountain_range": "Goriško, Notranjsko in Snežniško hribovje",
+    "latitude": 45.88792,
+    "longitude": 13.96903
+  },
+  {
+    "name": "Bloudkova skakalnica (Predmeja)",
+    "elevation": 960,
+    "mountain_range": "Goriško, Notranjsko in Snežniško hribovje",
+    "latitude": 45.95448,
+    "longitude": 13.87753
+  },
+  {
+    "name": "Križna gora nad Colom",
+    "elevation": 957,
+    "mountain_range": "Goriško, Notranjsko in Snežniško hribovje",
+    "latitude": 45.89532,
+    "longitude": 14.0033
+  },
+  {
+    "name": "Velika Špička",
+    "elevation": 955,
+    "mountain_range": "Goriško, Notranjsko in Snežniško hribovje",
+    "latitude": 45.83534,
+    "longitude": 14.39687
+  },
+  {
+    "name": "Mala Plešivica",
+    "elevation": 953,
+    "mountain_range": "Goriško, Notranjsko in Snežniško hribovje",
+    "latitude": 45.5066,
+    "longitude": 14.0345
+  },
+  {
+    "name": "Ježa",
+    "elevation": 949,
+    "mountain_range": "Goriško, Notranjsko in Snežniško hribovje",
+    "latitude": 46.17044,
+    "longitude": 13.67452
+  },
+  {
+    "name": "Milanka",
+    "elevation": 948,
+    "mountain_range": "Goriško, Notranjsko in Snežniško hribovje",
+    "latitude": 45.60399,
+    "longitude": 14.2804
+  },
+  {
+    "name": "Leskovica (nad Stražiščem)",
+    "elevation": 947,
+    "mountain_range": "Goriško, Notranjsko in Snežniško hribovje",
+    "latitude": 45.8479,
+    "longitude": 14.3929
+  },
+  {
+    "name": "Krempa",
+    "elevation": 944,
+    "mountain_range": "Goriško, Notranjsko in Snežniško hribovje",
+    "latitude": 45.53108,
+    "longitude": 14.78095
+  },
+  {
+    "name": "Deveti konfin (kota 942)",
+    "elevation": 942,
+    "mountain_range": "Goriško, Notranjsko in Snežniško hribovje",
+    "latitude": 46.17034,
+    "longitude": 13.67836
+  },
+  {
+    "name": "Krimšček",
+    "elevation": 940,
+    "mountain_range": "Goriško, Notranjsko in Snežniško hribovje",
+    "latitude": 45.89632,
+    "longitude": 14.41087
+  },
+  {
+    "name": "Petričev hrib",
+    "elevation": 937,
+    "mountain_range": "Goriško, Notranjsko in Snežniško hribovje",
+    "latitude": 45.83407,
+    "longitude": 14.21325
+  },
+  {
+    "name": "Deveti konfin (kota 930)",
+    "elevation": 930,
+    "mountain_range": "Goriško, Notranjsko in Snežniško hribovje",
+    "latitude": 46.16845,
+    "longitude": 13.68252
+  },
+  {
+    "name": "Srednji vrh pri Kozleku",
+    "elevation": 923,
+    "mountain_range": "Goriško, Notranjsko in Snežniško hribovje",
+    "latitude": 45.54823,
+    "longitude": 14.31222
+  },
+  {
+    "name": "Dolski maj",
+    "elevation": 912,
+    "mountain_range": "Goriško, Notranjsko in Snežniško hribovje",
+    "latitude": 45.93387,
+    "longitude": 13.89449
+  },
+  {
+    "name": "Velika Plešivica",
+    "elevation": 908,
+    "mountain_range": "Goriško, Notranjsko in Snežniško hribovje",
+    "latitude": 45.5181,
+    "longitude": 14.02302
+  },
+  {
+    "name": "Kraguljc",
+    "elevation": 897,
+    "mountain_range": "Goriško, Notranjsko in Snežniško hribovje",
+    "latitude": 45.89099,
+    "longitude": 13.94985
+  },
+  {
+    "name": "Marutnik",
+    "elevation": 892,
+    "mountain_range": "Goriško, Notranjsko in Snežniško hribovje",
+    "latitude": 46.00901,
+    "longitude": 14.05159
+  },
+  {
+    "name": "Golič",
+    "elevation": 890,
+    "mountain_range": "Goriško, Notranjsko in Snežniško hribovje",
+    "latitude": 45.49142,
+    "longitude": 13.97161
+  },
+  {
+    "name": "Gozdarska koča Pri logarnici",
+    "elevation": 889,
+    "mountain_range": "Goriško, Notranjsko in Snežniško hribovje",
+    "latitude": 45.8884,
+    "longitude": 14.5348
+  },
+  {
+    "name": "Nadglavinjak",
+    "elevation": 888,
+    "mountain_range": "Goriško, Notranjsko in Snežniško hribovje",
+    "latitude": 45.4815,
+    "longitude": 13.9818
+  },
+  {
+    "name": "Vrh Svetih Treh Kraljev",
+    "elevation": 884,
+    "mountain_range": "Goriško, Notranjsko in Snežniško hribovje",
+    "latitude": 46.01034,
+    "longitude": 14.16879
+  },
+  {
+    "name": "Kavčič",
+    "elevation": 879,
+    "mountain_range": "Goriško, Notranjsko in Snežniško hribovje",
+    "latitude": 45.4711,
+    "longitude": 13.9835
+  },
+  {
+    "name": "Loška stena",
+    "elevation": 875,
+    "mountain_range": "Goriško, Notranjsko in Snežniško hribovje",
+    "latitude": 45.53119,
+    "longitude": 14.74669
+  },
+  {
+    "name": "Grmada (Planinska gora)",
+    "elevation": 873,
+    "mountain_range": "Goriško, Notranjsko in Snežniško hribovje",
+    "latitude": 45.8381,
+    "longitude": 14.23961
+  },
+  {
+    "name": "Sončnica (Reber)",
+    "elevation": 867,
+    "mountain_range": "Goriško, Notranjsko in Snežniško hribovje",
+    "latitude": 45.88553,
+    "longitude": 13.96289
+  },
+  {
+    "name": "Vrh Skopice",
+    "elevation": 863,
+    "mountain_range": "Goriško, Notranjsko in Snežniško hribovje",
+    "latitude": 46.09277,
+    "longitude": 13.80971
+  },
+  {
+    "name": "Kuželjska stena",
+    "elevation": 857,
+    "mountain_range": "Goriško, Notranjsko in Snežniško hribovje",
+    "latitude": 45.48424,
+    "longitude": 14.82282
+  },
+  {
+    "name": "Križna gora",
+    "elevation": 857,
+    "mountain_range": "Goriško, Notranjsko in Snežniško hribovje",
+    "latitude": 45.7419,
+    "longitude": 14.45824
+  },
+  {
+    "name": "Navrše",
+    "elevation": 857,
+    "mountain_range": "Goriško, Notranjsko in Snežniško hribovje",
+    "latitude": 45.9114,
+    "longitude": 13.91686
+  },
+  {
+    "name": "Podrta gora nad Ajdovščino",
+    "elevation": 855,
+    "mountain_range": "Goriško, Notranjsko in Snežniško hribovje",
+    "latitude": 45.89376,
+    "longitude": 13.94779
+  },
+  {
+    "name": "Sveta Marija Magdalena (Gore)",
+    "elevation": 851,
+    "mountain_range": "Goriško, Notranjsko in Snežniško hribovje",
+    "latitude": 46.0033,
+    "longitude": 14.0545
+  },
+  {
+    "name": "Belovka",
+    "elevation": 848,
+    "mountain_range": "Goriško, Notranjsko in Snežniško hribovje",
+    "latitude": 45.76061,
+    "longitude": 14.54092
+  },
+  {
+    "name": "Otliški maj",
+    "elevation": 847,
+    "mountain_range": "Goriško, Notranjsko in Snežniško hribovje",
+    "latitude": 45.92104,
+    "longitude": 13.90796
+  },
+  {
+    "name": "Sveti Vid (Vidovska planota)",
+    "elevation": 846,
+    "mountain_range": "Goriško, Notranjsko in Snežniško hribovje",
+    "latitude": 45.8506,
+    "longitude": 14.4612
+  },
+  {
+    "name": "Pravi vrh",
+    "elevation": 830,
+    "mountain_range": "Goriško, Notranjsko in Snežniško hribovje",
+    "latitude": null,
+    "longitude": null
+  },
+  {
+    "name": "Kurešček",
+    "elevation": 826,
+    "mountain_range": "Goriško, Notranjsko in Snežniško hribovje",
+    "latitude": 45.8853,
+    "longitude": 14.55949
+  },
+  {
+    "name": "Polšakova koča na Zagori",
+    "elevation": 822,
+    "mountain_range": "Goriško, Notranjsko in Snežniško hribovje",
+    "latitude": 45.86262,
+    "longitude": 14.18226
+  },
+  {
+    "name": "Osojnica",
+    "elevation": 820,
+    "mountain_range": "Goriško, Notranjsko in Snežniško hribovje",
+    "latitude": 45.68659,
+    "longitude": 14.16756
+  },
+  {
+    "name": "Ljubljanski vrh",
+    "elevation": 819,
+    "mountain_range": "Goriško, Notranjsko in Snežniško hribovje",
+    "latitude": 45.93098,
+    "longitude": 14.29832
+  },
+  {
+    "name": "Sveti Socerb (Artviže)",
+    "elevation": 817,
+    "mountain_range": "Goriško, Notranjsko in Snežniško hribovje",
+    "latitude": 45.61528,
+    "longitude": 14.03043
+  },
+  {
+    "name": "Goli vrh (Cemarovnik)",
+    "elevation": 816,
+    "mountain_range": "Goriško, Notranjsko in Snežniško hribovje",
+    "latitude": 45.82713,
+    "longitude": 14.3912
+  },
+  {
+    "name": "Medvedje Brdo",
+    "elevation": 814,
+    "mountain_range": "Goriško, Notranjsko in Snežniško hribovje",
+    "latitude": 45.9695,
+    "longitude": 14.1356
+  },
+  {
+    "name": "Korada",
+    "elevation": 812,
+    "mountain_range": "Goriško, Notranjsko in Snežniško hribovje",
+    "latitude": 46.06493,
+    "longitude": 13.56053
+  },
+  {
+    "name": "Globočak",
+    "elevation": 809,
+    "mountain_range": "Goriško, Notranjsko in Snežniško hribovje",
+    "latitude": 46.13007,
+    "longitude": 13.65841
+  },
+  {
+    "name": "Mali Trebelnik",
+    "elevation": 807,
+    "mountain_range": "Goriško, Notranjsko in Snežniško hribovje",
+    "latitude": 45.90679,
+    "longitude": 14.34942
+  },
+  {
+    "name": "Sveti Lenart (Krvava Peč)",
+    "elevation": 805,
+    "mountain_range": "Goriško, Notranjsko in Snežniško hribovje",
+    "latitude": 45.86211,
+    "longitude": 14.51171
+  },
+  {
+    "name": "Ajdovščina",
+    "elevation": 804,
+    "mountain_range": "Goriško, Notranjsko in Snežniško hribovje",
+    "latitude": 45.6242,
+    "longitude": 13.9905
+  },
+  {
+    "name": "Lipnik",
+    "elevation": 804,
+    "mountain_range": "Goriško, Notranjsko in Snežniško hribovje",
+    "latitude": 45.48081,
+    "longitude": 13.96538
+  },
+  {
+    "name": "Kojnik",
+    "elevation": 802,
+    "mountain_range": "Goriško, Notranjsko in Snežniško hribovje",
+    "latitude": 45.50689,
+    "longitude": 13.95176
+  },
+  {
+    "name": "Ulovka",
+    "elevation": 801,
+    "mountain_range": "Goriško, Notranjsko in Snežniško hribovje",
+    "latitude": 45.97571,
+    "longitude": 14.23989
+  },
+  {
+    "name": "Otliško okno",
+    "elevation": 800,
+    "mountain_range": "Goriško, Notranjsko in Snežniško hribovje",
+    "latitude": 45.91647,
+    "longitude": 13.9134
+  },
+  {
+    "name": "Ahac",
+    "elevation": 799,
+    "mountain_range": "Goriško, Notranjsko in Snežniško hribovje",
+    "latitude": 45.56333,
+    "longitude": 14.27763
+  },
+  {
+    "name": "Gradiška Tura",
+    "elevation": 793,
+    "mountain_range": "Goriško, Notranjsko in Snežniško hribovje",
+    "latitude": 45.82929,
+    "longitude": 13.97975
+  },
+  {
+    "name": "Gradišče (Čepan)",
+    "elevation": 791,
+    "mountain_range": "Goriško, Notranjsko in Snežniško hribovje",
+    "latitude": 45.6271,
+    "longitude": 14.2189
+  },
+  {
+    "name": "Vrh",
+    "elevation": 777,
+    "mountain_range": "Goriško, Notranjsko in Snežniško hribovje",
+    "latitude": 45.617,
+    "longitude": 14.2313
+  },
+  {
+    "name": "Trenk",
+    "elevation": 769,
+    "mountain_range": "Goriško, Notranjsko in Snežniško hribovje",
+    "latitude": 45.88666,
+    "longitude": 14.48438
+  },
+  {
+    "name": "Ortneški Stari grad",
+    "elevation": 765,
+    "mountain_range": "Goriško, Notranjsko in Snežniško hribovje",
+    "latitude": 45.78263,
+    "longitude": 14.67021
+  },
+  {
+    "name": "Pečna reber",
+    "elevation": 763,
+    "mountain_range": "Goriško, Notranjsko in Snežniško hribovje",
+    "latitude": 45.77868,
+    "longitude": 14.23004
+  },
+  {
+    "name": "Razgledna točka Široko",
+    "elevation": 755,
+    "mountain_range": "Goriško, Notranjsko in Snežniško hribovje",
+    "latitude": 46.13207,
+    "longitude": 13.75932
+  },
+  {
+    "name": "Sveti Primož in Felicijan (Osredek)",
+    "elevation": 751,
+    "mountain_range": "Goriško, Notranjsko in Snežniško hribovje",
+    "latitude": 45.8645,
+    "longitude": 14.4853
+  },
+  {
+    "name": "Šilentabor",
+    "elevation": 751,
+    "mountain_range": "Goriško, Notranjsko in Snežniško hribovje",
+    "latitude": 45.6502,
+    "longitude": 14.2073
+  },
+  {
+    "name": "Veliko Gradišče",
+    "elevation": 742,
+    "mountain_range": "Goriško, Notranjsko in Snežniško hribovje",
+    "latitude": 45.64012,
+    "longitude": 13.92863
+  },
+  {
+    "name": "Sveti Gregor na Slemenih",
+    "elevation": 737,
+    "mountain_range": "Goriško, Notranjsko in Snežniško hribovje",
+    "latitude": 45.7844,
+    "longitude": 14.6409
+  },
+  {
+    "name": "Hrpeljska gora",
+    "elevation": 737,
+    "mountain_range": "Goriško, Notranjsko in Snežniško hribovje",
+    "latitude": 45.58184,
+    "longitude": 13.95011
+  },
+  {
+    "name": "Škavnica",
+    "elevation": 734,
+    "mountain_range": "Goriško, Notranjsko in Snežniško hribovje",
+    "latitude": 45.84967,
+    "longitude": 13.98185
+  },
+  {
+    "name": "Koča na Planini nad Vrhniko",
+    "elevation": 733,
+    "mountain_range": "Goriško, Notranjsko in Snežniško hribovje",
+    "latitude": 45.97158,
+    "longitude": 14.2517
+  },
+  {
+    "name": "Koča na Kavcu",
+    "elevation": 730,
+    "mountain_range": "Goriško, Notranjsko in Snežniško hribovje",
+    "latitude": 45.9227,
+    "longitude": 14.4416
+  },
+  {
+    "name": "Planina nad Borovnico",
+    "elevation": 729,
+    "mountain_range": "Goriško, Notranjsko in Snežniško hribovje",
+    "latitude": 45.92109,
+    "longitude": 14.38079
+  },
+  {
+    "name": "Šenčurjev vrh",
+    "elevation": 725,
+    "mountain_range": "Goriško, Notranjsko in Snežniško hribovje",
+    "latitude": 45.9392,
+    "longitude": 14.1739
+  },
+  {
+    "name": "Primož",
+    "elevation": 718,
+    "mountain_range": "Goriško, Notranjsko in Snežniško hribovje",
+    "latitude": 45.67011,
+    "longitude": 14.20253
+  },
+  {
+    "name": "Stari grad",
+    "elevation": 703,
+    "mountain_range": "Goriško, Notranjsko in Snežniško hribovje",
+    "latitude": 45.8252,
+    "longitude": 14.2741
+  },
+  {
+    "name": "Obrovnik",
+    "elevation": 700,
+    "mountain_range": "Goriško, Notranjsko in Snežniško hribovje",
+    "latitude": 45.64428,
+    "longitude": 13.91903
+  },
+  {
+    "name": "Mali Mošenik",
+    "elevation": 700,
+    "mountain_range": "Goriško, Notranjsko in Snežniško hribovje",
+    "latitude": null,
+    "longitude": null
+  },
+  {
+    "name": "Grad Lož (Pusti grad)",
+    "elevation": 698,
+    "mountain_range": "Goriško, Notranjsko in Snežniško hribovje",
+    "latitude": 45.7247,
+    "longitude": 14.472
+  },
+  {
+    "name": "Sveta Gora",
+    "elevation": 681,
+    "mountain_range": "Goriško, Notranjsko in Snežniško hribovje",
+    "latitude": 45.99951,
+    "longitude": 13.65473
+  },
+  {
+    "name": "Sv. Katarina nad Novokračinami",
+    "elevation": 675,
+    "mountain_range": "Goriško, Notranjsko in Snežniško hribovje",
+    "latitude": 45.4863,
+    "longitude": 14.2953
+  },
+  {
+    "name": "Sveta Barbara (Ravnik pri Hotedršici)",
+    "elevation": 674,
+    "mountain_range": "Goriško, Notranjsko in Snežniško hribovje",
+    "latitude": 45.9208,
+    "longitude": 14.1568
+  },
+  {
+    "name": "Goropeški grič (Pikrej)",
+    "elevation": 672,
+    "mountain_range": "Goriško, Notranjsko in Snežniško hribovje",
+    "latitude": 46.0413,
+    "longitude": 14.1202
+  },
+  {
+    "name": "Kokoš",
+    "elevation": 670,
+    "mountain_range": "Goriško, Notranjsko in Snežniško hribovje",
+    "latitude": 45.64452,
+    "longitude": 13.89993
+  },
+  {
+    "name": "Rajna peč",
+    "elevation": 656,
+    "mountain_range": "Goriško, Notranjsko in Snežniško hribovje",
+    "latitude": 45.98918,
+    "longitude": 14.22296
+  },
+  {
+    "name": "Sv. Marjeta na Golem",
+    "elevation": 654,
+    "mountain_range": "Goriško, Notranjsko in Snežniško hribovje",
+    "latitude": 45.9143,
+    "longitude": 14.55445
+  },
+  {
+    "name": "Vodice",
+    "elevation": 651,
+    "mountain_range": "Goriško, Notranjsko in Snežniško hribovje",
+    "latitude": 46.01438,
+    "longitude": 13.63623
+  },
+  {
+    "name": "Jampršnik",
+    "elevation": 649,
+    "mountain_range": "Goriško, Notranjsko in Snežniško hribovje",
+    "latitude": 45.50923,
+    "longitude": 13.9353
+  },
+  {
+    "name": "Škabrijel",
+    "elevation": 646,
+    "mountain_range": "Goriško, Notranjsko in Snežniško hribovje",
+    "latitude": 45.97629,
+    "longitude": 13.67757
+  },
+  {
+    "name": "Trstelj",
+    "elevation": 643,
+    "mountain_range": "Goriško, Notranjsko in Snežniško hribovje",
+    "latitude": 45.85784,
+    "longitude": 13.70382
+  },
+  {
+    "name": "Rimska trdnjava (Lanišče)",
+    "elevation": 635,
+    "mountain_range": "Goriško, Notranjsko in Snežniško hribovje",
+    "latitude": 45.8883,
+    "longitude": 14.1635
+  },
+  {
+    "name": "Frančiškov hrib",
+    "elevation": 632,
+    "mountain_range": "Goriško, Notranjsko in Snežniško hribovje",
+    "latitude": 45.9954,
+    "longitude": 13.6612
+  },
+  {
+    "name": "Stol (Črni hribi)",
+    "elevation": 629,
+    "mountain_range": "Goriško, Notranjsko in Snežniško hribovje",
+    "latitude": 45.85884,
+    "longitude": 13.69435
+  },
+  {
+    "name": "Strmica",
+    "elevation": 626,
+    "mountain_range": "Goriško, Notranjsko in Snežniško hribovje",
+    "latitude": 45.9486,
+    "longitude": 14.2359
+  },
+  {
+    "name": "Partizanska bolnica Krvavice",
+    "elevation": 620,
+    "mountain_range": "Goriško, Notranjsko in Snežniško hribovje",
+    "latitude": 45.90518,
+    "longitude": 14.48598
+  },
+  {
+    "name": "Kuk nad Paljevim",
+    "elevation": 612,
+    "mountain_range": "Goriško, Notranjsko in Snežniško hribovje",
+    "latitude": 46.0277,
+    "longitude": 13.6198
+  },
+  {
+    "name": "Sabotin",
+    "elevation": 609,
+    "mountain_range": "Goriško, Notranjsko in Snežniško hribovje",
+    "latitude": 45.98846,
+    "longitude": 13.63465
+  },
+  {
+    "name": "Vitovski hrib",
+    "elevation": 604,
+    "mountain_range": "Goriško, Notranjsko in Snežniško hribovje",
+    "latitude": 45.94072,
+    "longitude": 13.76798
+  },
+  {
+    "name": "Stari tabor",
+    "elevation": 603,
+    "mountain_range": "Goriško, Notranjsko in Snežniško hribovje",
+    "latitude": 45.68078,
+    "longitude": 13.92199
+  },
+  {
+    "name": "Zidovnik (Sedovnik)",
+    "elevation": 575,
+    "mountain_range": "Goriško, Notranjsko in Snežniško hribovje",
+    "latitude": 45.70275,
+    "longitude": 13.88774
+  },
+  {
+    "name": "Putrihove klavže",
+    "elevation": 570,
+    "mountain_range": "Goriško, Notranjsko in Snežniško hribovje",
+    "latitude": 45.97568,
+    "longitude": 13.92806
+  },
+  {
+    "name": "Stolovec",
+    "elevation": 563,
+    "mountain_range": "Goriško, Notranjsko in Snežniško hribovje",
+    "latitude": 45.86074,
+    "longitude": 13.6841
+  },
+  {
+    "name": "Sveta Ana (Razguri)",
+    "elevation": 560,
+    "mountain_range": "Goriško, Notranjsko in Snežniško hribovje",
+    "latitude": 45.7827,
+    "longitude": 13.9443
+  },
+  {
+    "name": "Sveti Socerb (Vipavska brda)",
+    "elevation": 555,
+    "mountain_range": "Goriško, Notranjsko in Snežniško hribovje",
+    "latitude": 45.7939,
+    "longitude": 13.945
+  },
+  {
+    "name": "Stari grad nad Želimljami",
+    "elevation": 555,
+    "mountain_range": "Goriško, Notranjsko in Snežniško hribovje",
+    "latitude": 45.9052,
+    "longitude": 14.568
+  },
+  {
+    "name": "Štanjel (Sveti Danijel)",
+    "elevation": 553,
+    "mountain_range": "Goriško, Notranjsko in Snežniško hribovje",
+    "latitude": null,
+    "longitude": null
+  },
+  {
+    "name": "Lešenjak",
+    "elevation": 552,
+    "mountain_range": "Goriško, Notranjsko in Snežniško hribovje",
+    "latitude": 45.86116,
+    "longitude": 13.67826
+  },
+  {
+    "name": "Volnik",
+    "elevation": 546,
+    "mountain_range": "Goriško, Notranjsko in Snežniško hribovje",
+    "latitude": 45.7471,
+    "longitude": 13.7822
+  },
+  {
+    "name": "Sekirica",
+    "elevation": 545,
+    "mountain_range": "Goriško, Notranjsko in Snežniško hribovje",
+    "latitude": 45.9117,
+    "longitude": 14.2148
+  },
+  {
+    "name": "Griček",
+    "elevation": 532,
+    "mountain_range": "Goriško, Notranjsko in Snežniško hribovje",
+    "latitude": 45.70797,
+    "longitude": 14.74708
+  },
+  {
+    "name": "Sveti Ambrož (Tabor)",
+    "elevation": 531,
+    "mountain_range": "Goriško, Notranjsko in Snežniško hribovje",
+    "latitude": 45.8535,
+    "longitude": 13.6893
+  },
+  {
+    "name": "Plaz",
+    "elevation": 528,
+    "mountain_range": "Goriško, Notranjsko in Snežniško hribovje",
+    "latitude": 45.84235,
+    "longitude": 13.97218
+  },
+  {
+    "name": "Veliki hrib (kota 526)",
+    "elevation": 526,
+    "mountain_range": "Goriško, Notranjsko in Snežniško hribovje",
+    "latitude": 45.9836,
+    "longitude": 13.672
+  },
+  {
+    "name": "Školj sv. Pavla nad Vrtovinom",
+    "elevation": 520,
+    "mountain_range": "Goriško, Notranjsko in Snežniško hribovje",
+    "latitude": 45.91233,
+    "longitude": 13.80967
+  },
+  {
+    "name": "Gura",
+    "elevation": 510,
+    "mountain_range": "Goriško, Notranjsko in Snežniško hribovje",
+    "latitude": 45.6983,
+    "longitude": 13.9183
+  },
+  {
+    "name": "Veliki Gradež",
+    "elevation": 507,
+    "mountain_range": "Goriško, Notranjsko in Snežniško hribovje",
+    "latitude": 45.4863,
+    "longitude": 13.9268
+  },
+  {
+    "name": "Vrtovka",
+    "elevation": 502,
+    "mountain_range": "Goriško, Notranjsko in Snežniško hribovje",
+    "latitude": 45.86218,
+    "longitude": 13.67029
+  },
+  {
+    "name": "Tri učke",
+    "elevation": 499,
+    "mountain_range": "Goriško, Notranjsko in Snežniško hribovje",
+    "latitude": 45.47721,
+    "longitude": 13.93395
+  },
+  {
+    "name": "Kuk",
+    "elevation": 498,
+    "mountain_range": "Goriško, Notranjsko in Snežniško hribovje",
+    "latitude": 45.48621,
+    "longitude": 13.91778
+  },
+  {
+    "name": "Brusove klavže",
+    "elevation": 491,
+    "mountain_range": "Goriško, Notranjsko in Snežniško hribovje",
+    "latitude": 45.9702,
+    "longitude": 13.94793
+  },
+  {
+    "name": "Sveta Ana",
+    "elevation": 484,
+    "mountain_range": "Goriško, Notranjsko in Snežniško hribovje",
+    "latitude": 45.96946,
+    "longitude": 14.42238
+  },
+  {
+    "name": "Klada",
+    "elevation": 475,
+    "mountain_range": "Goriško, Notranjsko in Snežniško hribovje",
+    "latitude": 45.92206,
+    "longitude": 14.56073
+  },
+  {
+    "name": "Veliki Medvejk",
+    "elevation": 472,
+    "mountain_range": "Goriško, Notranjsko in Snežniško hribovje",
+    "latitude": 45.71465,
+    "longitude": 13.82635
+  },
+  {
+    "name": "Marija Snežna na Gradišcah",
+    "elevation": 467,
+    "mountain_range": "Goriško, Notranjsko in Snežniško hribovje",
+    "latitude": 45.5396,
+    "longitude": 13.9074
+  },
+  {
+    "name": "Veliki vrh (Črni hribi)",
+    "elevation": 463,
+    "mountain_range": "Goriško, Notranjsko in Snežniško hribovje",
+    "latitude": 45.86692,
+    "longitude": 13.64951
+  },
+  {
+    "name": "Mengore",
+    "elevation": 453,
+    "mountain_range": "Goriško, Notranjsko in Snežniško hribovje",
+    "latitude": 46.1668,
+    "longitude": 13.72154
+  },
+  {
+    "name": "Lačna",
+    "elevation": 451,
+    "mountain_range": "Goriško, Notranjsko in Snežniško hribovje",
+    "latitude": 45.5051,
+    "longitude": 13.8854
+  },
+  {
+    "name": "Zjat",
+    "elevation": 449,
+    "mountain_range": "Goriško, Notranjsko in Snežniško hribovje",
+    "latitude": 45.52538,
+    "longitude": 13.90758
+  },
+  {
+    "name": "Renški vrh",
+    "elevation": 449,
+    "mountain_range": "Goriško, Notranjsko in Snežniško hribovje",
+    "latitude": 45.86411,
+    "longitude": 13.65991
+  },
+  {
+    "name": "Sveti Jožef (Mlečnik)",
+    "elevation": 441,
+    "mountain_range": "Goriško, Notranjsko in Snežniško hribovje",
+    "latitude": 45.9603,
+    "longitude": 14.4146
+  },
+  {
+    "name": "Grad Socerb",
+    "elevation": 437,
+    "mountain_range": "Goriško, Notranjsko in Snežniško hribovje",
+    "latitude": 45.58941,
+    "longitude": 13.86097
+  },
+  {
+    "name": "Fajti hrib",
+    "elevation": 433,
+    "mountain_range": "Goriško, Notranjsko in Snežniško hribovje",
+    "latitude": 45.86823,
+    "longitude": 13.64284
+  },
+  {
+    "name": "Črnokalska Varda",
+    "elevation": 423,
+    "mountain_range": "Goriško, Notranjsko in Snežniško hribovje",
+    "latitude": 45.57945,
+    "longitude": 13.87702
+  },
+  {
+    "name": "Ostri Vrh nad Vipavsko dolino",
+    "elevation": 422,
+    "mountain_range": "Goriško, Notranjsko in Snežniško hribovje",
+    "latitude": 45.8475,
+    "longitude": 13.8781
+  },
+  {
+    "name": "Iški Vintgar (Vrbica)",
+    "elevation": 420,
+    "mountain_range": "Goriško, Notranjsko in Snežniško hribovje",
+    "latitude": 45.88249,
+    "longitude": 14.49059
+  },
+  {
+    "name": "Žalostna gora pri Preserju",
+    "elevation": 418,
+    "mountain_range": "Goriško, Notranjsko in Snežniško hribovje",
+    "latitude": 45.9588,
+    "longitude": 14.3947
+  },
+  {
+    "name": "Krog",
+    "elevation": 418,
+    "mountain_range": "Goriško, Notranjsko in Snežniško hribovje",
+    "latitude": 45.4912,
+    "longitude": 13.9061
+  },
+  {
+    "name": "Vrh križa",
+    "elevation": 411,
+    "mountain_range": "Goriško, Notranjsko in Snežniško hribovje",
+    "latitude": 45.4953,
+    "longitude": 13.9
+  },
+  {
+    "name": "Sveti Rupert nad Drago",
+    "elevation": 409,
+    "mountain_range": "Goriško, Notranjsko in Snežniško hribovje",
+    "latitude": 45.94335,
+    "longitude": 14.55504
+  },
+  {
+    "name": "Sveti Kvirik",
+    "elevation": 408,
+    "mountain_range": "Goriško, Notranjsko in Snežniško hribovje",
+    "latitude": 45.4636,
+    "longitude": 13.9046
+  },
+  {
+    "name": "Grad Kostel",
+    "elevation": 406,
+    "mountain_range": "Goriško, Notranjsko in Snežniško hribovje",
+    "latitude": 45.50867,
+    "longitude": 14.91031
+  },
+  {
+    "name": "Sveti Pavel (nad Ročinjem)",
+    "elevation": 403,
+    "mountain_range": "Goriško, Notranjsko in Snežniško hribovje",
+    "latitude": 46.11353,
+    "longitude": 13.66087
+  },
+  {
+    "name": "Prižnica",
+    "elevation": 383,
+    "mountain_range": "Goriško, Notranjsko in Snežniško hribovje",
+    "latitude": 46.0443,
+    "longitude": 13.5992
+  },
+  {
+    "name": "Tinjan",
+    "elevation": 374,
+    "mountain_range": "Goriško, Notranjsko in Snežniško hribovje",
+    "latitude": 45.56138,
+    "longitude": 13.83504
+  },
+  {
+    "name": "Pomjan",
+    "elevation": 360,
+    "mountain_range": "Goriško, Notranjsko in Snežniško hribovje",
+    "latitude": 45.499,
+    "longitude": 13.7553
+  },
+  {
+    "name": "Orlovo gnezdo (Veli Badin)",
+    "elevation": 359,
+    "mountain_range": "Goriško, Notranjsko in Snežniško hribovje",
+    "latitude": 45.45944,
+    "longitude": 13.91431
+  },
+  {
+    "name": "Veliko Cerje",
+    "elevation": 343,
+    "mountain_range": "Goriško, Notranjsko in Snežniško hribovje",
+    "latitude": 45.87242,
+    "longitude": 13.61607
+  },
+  {
+    "name": "Sveti Lovrenc (Jezero)",
+    "elevation": 329,
+    "mountain_range": "Goriško, Notranjsko in Snežniško hribovje",
+    "latitude": 45.974,
+    "longitude": 14.4365
+  },
+  {
+    "name": "Lopar",
+    "elevation": 303,
+    "mountain_range": "Goriško, Notranjsko in Snežniško hribovje",
+    "latitude": 45.5079,
+    "longitude": 13.8242
+  },
+  {
+    "name": "Jama Pečinka",
+    "elevation": 295,
+    "mountain_range": "Goriško, Notranjsko in Snežniško hribovje",
+    "latitude": 45.8613,
+    "longitude": 13.6181
+  },
+  {
+    "name": "Iški morost",
+    "elevation": 289,
+    "mountain_range": "Goriško, Notranjsko in Snežniško hribovje",
+    "latitude": 45.9822,
+    "longitude": 14.4794
+  },
+  {
+    "name": "Marezige",
+    "elevation": 284,
+    "mountain_range": "Goriško, Notranjsko in Snežniško hribovje",
+    "latitude": 45.5074,
+    "longitude": 13.7987
+  },
+  {
+    "name": "Sveti Peter (Nad Ajbo)",
+    "elevation": 260,
+    "mountain_range": "Goriško, Notranjsko in Snežniško hribovje",
+    "latitude": 46.10565,
+    "longitude": 13.65186
+  },
+  {
+    "name": "Sveti Duh (Sveti Peter)",
+    "elevation": 253,
+    "mountain_range": "Goriško, Notranjsko in Snežniško hribovje",
+    "latitude": 45.4634,
+    "longitude": 13.6784
+  },
+  {
+    "name": "Stari grad Vipava",
+    "elevation": 241,
+    "mountain_range": "Goriško, Notranjsko in Snežniško hribovje",
+    "latitude": 45.85058,
+    "longitude": 13.96432
+  },
+  {
+    "name": "Goli hrib",
+    "elevation": 217,
+    "mountain_range": "Goriško, Notranjsko in Snežniško hribovje",
+    "latitude": 45.552,
+    "longitude": 13.8228
+  },
+  {
+    "name": "Kamno čelo (Mandrija)",
+    "elevation": 193,
+    "mountain_range": "Goriško, Notranjsko in Snežniško hribovje",
+    "latitude": 45.90095,
+    "longitude": 13.73002
+  },
+  {
+    "name": "Črni vrh (Iskra)",
+    "elevation": 119,
+    "mountain_range": "Goriško, Notranjsko in Snežniško hribovje",
+    "latitude": 45.5791,
+    "longitude": 13.7466
+  },
+  {
+    "name": "Jurjev hrib",
+    "elevation": 109,
+    "mountain_range": "Goriško, Notranjsko in Snežniško hribovje",
+    "latitude": 45.5888,
+    "longitude": 13.7283
+  },
+  {
+    "name": "Strunjanski križ",
+    "elevation": 53,
+    "mountain_range": "Goriško, Notranjsko in Snežniško hribovje",
+    "latitude": 45.5373,
+    "longitude": 13.6063
+  }
+]
