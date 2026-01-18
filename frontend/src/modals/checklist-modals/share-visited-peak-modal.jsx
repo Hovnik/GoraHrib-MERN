@@ -18,15 +18,12 @@ const ShareVisitedPeakModal = ({ isOpen, onClose, peakId, peakName }) => {
         const token = localStorage.getItem("token");
 
         // Fetch checklist to get pictures for this peak
-        const response = await api.get(
-          "/api/checklist",
-          {
-            headers: { Authorization: `Bearer ${token}` },
-          }
-        );
+        const response = await api.get("/api/checklist", {
+          headers: { Authorization: `Bearer ${token}` },
+        });
 
         const peak = response.data.checklist.find(
-          (item) => item.peakId._id === peakId
+          (item) => item.peakId._id === peakId,
         );
 
         if (peak && peak.pictures && peak.pictures.length > 0) {
@@ -81,7 +78,7 @@ const ShareVisitedPeakModal = ({ isOpen, onClose, peakId, peakName }) => {
 
       // Get only the selected pictures
       const picturesToShare = pictures.filter((_, index) =>
-        selectedPictures.has(index)
+        selectedPictures.has(index),
       );
 
       const postData = {
@@ -91,14 +88,16 @@ const ShareVisitedPeakModal = ({ isOpen, onClose, peakId, peakName }) => {
         pictures: picturesToShare,
       };
 
-      await api.post("/forum", postData, {
+      await api.post("/api/forum", postData, {
         headers: { Authorization: `Bearer ${token}` },
       });
 
       handleClose();
     } catch (error) {
       console.error("Error sharing post:", error);
-      alert(error.response?.data?.message || "Napaka pri deljenju objave");
+      toast.error(
+        error.response?.data?.message || "Napaka pri deljenju objave",
+      );
     } finally {
       setIsSubmitting(false);
     }

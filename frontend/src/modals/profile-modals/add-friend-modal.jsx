@@ -213,10 +213,15 @@ const AddFriendModal = ({ isOpen, onClose, onFriendAdded }) => {
                             <div className="w-10 h-10 rounded-full">
                               <img
                                 src={
-                                  user.profilePicture ||
-                                  `https://ui-avatars.com/api/?name=${user.username}&size=40&background=22c55e&color=fff`
+                                  user.profilePicture &&
+                                  user.profilePicture.trim()
+                                    ? user.profilePicture
+                                    : `https://ui-avatars.com/api/?name=${encodeURIComponent(user.username)}&size=40&background=22c55e&color=fff`
                                 }
                                 alt={user.username}
+                                onError={(e) => {
+                                  e.target.src = `https://ui-avatars.com/api/?name=${encodeURIComponent(user.username)}&size=40&background=22c55e&color=fff`;
+                                }}
                               />
                             </div>
                           </div>
