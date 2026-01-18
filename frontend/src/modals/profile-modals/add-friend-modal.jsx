@@ -1,6 +1,6 @@
 import { X, Search, UserPlus, UserCheck, Clock } from "lucide-react";
 import { useState, useEffect } from "react";
-import axios from "axios";
+import api from "../../config/axios";
 
 const AddFriendModal = ({ isOpen, onClose, onFriendAdded }) => {
   const [searchQuery, setSearchQuery] = useState("");
@@ -22,8 +22,8 @@ const AddFriendModal = ({ isOpen, onClose, onFriendAdded }) => {
       setLoading(true);
       const token = localStorage.getItem("token");
       console.log("Searching for:", searchQuery);
-      const response = await axios.get(
-        `http://localhost:3000/api/user/search?q=${encodeURIComponent(
+      const response = await api.get(
+        `/api/user/search?q=${encodeURIComponent(
           searchQuery
         )}`,
         {
@@ -71,7 +71,7 @@ const AddFriendModal = ({ isOpen, onClose, onFriendAdded }) => {
   const checkFriendStatus = async (userId) => {
     try {
       const token = localStorage.getItem("token");
-      const response = await axios.get("http://localhost:3000/api/friends", {
+      const response = await api.get("/api/friends", {
         headers: {
           Authorization: `Bearer ${token}`,
         },
@@ -94,8 +94,8 @@ const AddFriendModal = ({ isOpen, onClose, onFriendAdded }) => {
     try {
       setSendingRequests((prev) => ({ ...prev, [userId]: true }));
       const token = localStorage.getItem("token");
-      await axios.post(
-        `http://localhost:3000/api/friends/${userId}`,
+      await api.post(
+        `/api/friends/${userId}`,
         {},
         {
           headers: {

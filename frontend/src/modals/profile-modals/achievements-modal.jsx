@@ -1,6 +1,6 @@
 import { X } from "lucide-react";
 import { useState, useEffect } from "react";
-import axios from "axios";
+import api from "../../config/axios";
 import AchievementDetailModal from "./achievement-detail-modal";
 import { Lock, Mountain } from "lucide-react";
 
@@ -45,14 +45,14 @@ const AchievementsModal = ({ isOpen, onClose }) => {
       const fetchAchievements = async () => {
         try {
           setLoading(true);
-          const allAchievementsResponse = await axios.get(
-            "http://localhost:3000/api/achievement"
+          const allAchievementsResponse = await api.get(
+            "/api/achievement"
           );
           const allAchievements = allAchievementsResponse.data.achievements;
 
           const token = localStorage.getItem("token");
-          const userAchievementsResponse = await axios.get(
-            "http://localhost:3000/api/achievement/users",
+          const userAchievementsResponse = await api.get(
+            "/api/achievement/users",
             {
               headers: {
                 Authorization: `Bearer ${token}`,

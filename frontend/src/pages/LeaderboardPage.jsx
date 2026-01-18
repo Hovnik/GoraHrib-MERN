@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 import { Trophy, Medal, Award } from "lucide-react";
-import axios from "axios";
+import api from "../config/axios";
 
 const LeaderboardPage = () => {
   const [activeTab, setActiveTab] = useState("global");
@@ -12,13 +12,10 @@ const LeaderboardPage = () => {
     setLoading(true);
     setError(null);
     try {
-      const token = localStorage.getItem("token");
-      const headers = token ? { Authorization: `Bearer ${token}` } : {};
-      const res = await axios.get(
-        `http://localhost:3000/api/leaderboard?type=${encodeURIComponent(
-          type === "friends" ? "Friends" : "Global"
+      const res = await api.get(
+        `/api/leaderboard?type=${encodeURIComponent(
+          type === "friends" ? "Friends" : "Global",
         )}`,
-        { headers }
       );
       setLeaderboard(res.data.leaderboard || []);
     } catch (err) {
@@ -104,7 +101,7 @@ const LeaderboardPage = () => {
                       src={
                         topThree[1]?.profilePicture?.url ||
                         `https://ui-avatars.com/api/?name=${encodeURIComponent(
-                          topThree[1]?.username || "User"
+                          topThree[1]?.username || "User",
                         )}&size=96&background=22c55e&color=fff`
                       }
                       alt={topThree[1]?.username}
@@ -141,7 +138,7 @@ const LeaderboardPage = () => {
                       src={
                         topThree[0]?.profilePicture?.url ||
                         `https://ui-avatars.com/api/?name=${encodeURIComponent(
-                          topThree[0]?.username || "User"
+                          topThree[0]?.username || "User",
                         )}&size=112&background=22c55e&color=fff`
                       }
                       alt={topThree[0]?.username}
@@ -180,7 +177,7 @@ const LeaderboardPage = () => {
                       src={
                         topThree[2]?.profilePicture?.url ||
                         `https://ui-avatars.com/api/?name=${encodeURIComponent(
-                          topThree[2]?.username || "User"
+                          topThree[2]?.username || "User",
                         )}&size=80&background=22c55e&color=fff`
                       }
                       alt={topThree[2]?.username}
@@ -231,7 +228,7 @@ const LeaderboardPage = () => {
                             src={
                               user.profilePicture?.url ||
                               `https://ui-avatars.com/api/?name=${encodeURIComponent(
-                                user.username || "User"
+                                user.username || "User",
                               )}&size=40&background=22c55e&color=fff`
                             }
                             alt={user.username}

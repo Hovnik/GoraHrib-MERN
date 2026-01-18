@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 import { X, Share2 } from "lucide-react";
-import axios from "axios";
+import api from "../../config/axios";
 import toast from "react-hot-toast";
 
 const ShareVisitedPeakModal = ({ isOpen, onClose, peakId, peakName }) => {
@@ -18,8 +18,8 @@ const ShareVisitedPeakModal = ({ isOpen, onClose, peakId, peakName }) => {
         const token = localStorage.getItem("token");
 
         // Fetch checklist to get pictures for this peak
-        const response = await axios.get(
-          "http://localhost:3000/api/checklist",
+        const response = await api.get(
+          "/api/checklist",
           {
             headers: { Authorization: `Bearer ${token}` },
           }
@@ -91,7 +91,7 @@ const ShareVisitedPeakModal = ({ isOpen, onClose, peakId, peakName }) => {
         pictures: picturesToShare,
       };
 
-      await axios.post("http://localhost:3000/api/forum", postData, {
+      await api.post("/api/forum", postData, {
         headers: { Authorization: `Bearer ${token}` },
       });
 

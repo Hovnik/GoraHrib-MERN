@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import axios from "axios";
+import api from "../../config/axios";
 import toast from "react-hot-toast";
 import { Users, BarChart3, Trash2, Ban, Search, X } from "lucide-react";
 import RemoveFriendModal from "./remove-friend-modal";
@@ -26,8 +26,8 @@ const AdminModal = ({ isOpen, onClose }) => {
     setLoading(true);
     try {
       const token = localStorage.getItem("token");
-      const response = await axios.get(
-        "http://localhost:3000/api/admin/users",
+      const response = await api.get(
+        "/api/admin/users",
         {
           headers: { Authorization: `Bearer ${token}` },
         }
@@ -45,8 +45,8 @@ const AdminModal = ({ isOpen, onClose }) => {
     setLoading(true);
     try {
       const token = localStorage.getItem("token");
-      const response = await axios.get(
-        "http://localhost:3000/api/admin/statistics",
+      const response = await api.get(
+        "/api/admin/statistics",
         {
           headers: { Authorization: `Bearer ${token}` },
         }
@@ -63,10 +63,9 @@ const AdminModal = ({ isOpen, onClose }) => {
   const handleToggleBanUser = async (userId, username, currentStatus) => {
     try {
       const token = localStorage.getItem("token");
-      await axios.put(
-        `http://localhost:3000/api/admin/users/${userId}/ban`,
-        {},
-        { headers: { Authorization: `Bearer ${token}` } }
+      await api.put(
+        `/api/admin/users/${userId}/ban`,
+        {}
       );
       const message =
         currentStatus === "ACTIVE"
@@ -85,7 +84,7 @@ const AdminModal = ({ isOpen, onClose }) => {
   const handleDeleteUser = async (userId, username) => {
     try {
       const token = localStorage.getItem("token");
-      await axios.delete(`http://localhost:3000/api/admin/users/${userId}`, {
+      await api.delete(`/api/admin/users/${userId}`, {
         headers: { Authorization: `Bearer ${token}` },
       });
       toast.success(`Uporabnik ${username} je izbrisan`);

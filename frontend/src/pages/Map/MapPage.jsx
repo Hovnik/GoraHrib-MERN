@@ -7,7 +7,7 @@ import {
   useCallback,
 } from "react";
 import toast from "react-hot-toast";
-import axios from "axios";
+import api from "../../config/axios";
 import { Search, X } from "lucide-react";
 import PeakMap from "./PeakMap.jsx";
 
@@ -40,19 +40,15 @@ const MapPage = () => {
         const token = localStorage.getItem("token");
 
         const [peaksRes, checklistRes, friendsPeaksRes] = await Promise.all([
-          axios.get("http://localhost:3000/api/peaks"),
+          api.get("/api/peaks"),
           token
-            ? axios
-                .get("http://localhost:3000/api/checklist", {
-                  headers: { Authorization: `Bearer ${token}` },
-                })
+            ? api
+                .get("/api/checklist")
                 .catch(() => ({ data: { checklist: [] } }))
             : Promise.resolve({ data: { checklist: [] } }),
           token
-            ? axios
-                .get("http://localhost:3000/api/friends/peaks-visited", {
-                  headers: { Authorization: `Bearer ${token}` },
-                })
+            ? api
+                .get("/api/friends/peaks-visited")
                 .catch(() => ({ data: { peakData: {} } }))
             : Promise.resolve({ data: { peakData: {} } }),
         ]);
@@ -112,21 +108,10 @@ const MapPage = () => {
         return;
       }
 
-      await axios.post(
-        `http://localhost:3000/api/checklist/${peakId}`,
-        {},
-        {
-          headers: { Authorization: `Bearer ${token}` },
-        }
-      );
+      await api.post(`/api/checklist/${peakId}`);
 
       // Refresh checklist
-      const checklistRes = await axios.get(
-        "http://localhost:3000/api/checklist",
-        {
-          headers: { Authorization: `Bearer ${token}` },
-        }
-      );
+      const checklistRes = await api.get("/api/checklist");
       setChecklist(checklistRes.data.checklist);
     } catch (error) {
       if (error.response?.data?.message) {
@@ -157,7 +142,7 @@ const MapPage = () => {
     return peaks
       .filter(
         (peak) =>
-          peak._lcName?.includes(query) || peak._lcRange?.includes(query)
+          peak._lcName?.includes(query) || peak._lcRange?.includes(query),
       )
       .slice(0, 5);
   }, [deferredSearchQuery, peaks]);
@@ -234,7 +219,7 @@ const MapPage = () => {
       // Clear suppression after the map flyTo and cluster expansion settle
       suppressTimeoutRef.current = setTimeout(
         () => setSuppressSearchOpen(false),
-        popupDelay
+        popupDelay,
       );
       // Trigger popup to open for this peak after a delay to ensure map has moved and markers uncluster
       popupTimeoutRef.current = setTimeout(() => {
@@ -318,7 +303,7 @@ const MapPage = () => {
               if (e.key === "ArrowDown") {
                 e.preventDefault();
                 setHighlightedIndex((idx) =>
-                  Math.min(idx + 1 < 0 ? 0 : idx + 1, searchResults.length - 1)
+                  Math.min(idx + 1 < 0 ? 0 : idx + 1, searchResults.length - 1),
                 );
               } else if (e.key === "ArrowUp") {
                 e.preventDefault();

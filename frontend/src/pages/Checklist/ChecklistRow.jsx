@@ -3,7 +3,7 @@ import DeleteFromChecklistModal from "../../modals/checklist-modals/delete-from-
 import MarkVisitedModal from "../../modals/checklist-modals/mark-visited-modal";
 import ShareVisitedPeakModal from "../../modals/checklist-modals/share-visited-peak-modal";
 import { useState } from "react";
-import axios from "axios";
+import api from "../../config/axios";
 import toast from "react-hot-toast";
 
 const ChecklistRow = ({ peak, activeTab, onDelete, onVisit }) => {
@@ -21,8 +21,8 @@ const ChecklistRow = ({ peak, activeTab, onDelete, onVisit }) => {
       const token = localStorage.getItem("token");
 
       // First, mark peak as visited
-      const response = await axios.put(
-        `http://localhost:3000/api/checklist/${peak.peakId._id}/visit`,
+      const response = await api.put(
+        `/api/checklist/${peak.peakId._id}/visit`,
         {},
         {
           headers: { Authorization: `Bearer ${token}` },
@@ -62,8 +62,8 @@ const ChecklistRow = ({ peak, activeTab, onDelete, onVisit }) => {
           formData.append("pictures", file);
         });
 
-        await axios.put(
-          `http://localhost:3000/api/checklist/${peak.peakId._id}/pictures`,
+        await api.put(
+          `/api/checklist/${peak.peakId._id}/pictures`,
           formData,
           {
             headers: {

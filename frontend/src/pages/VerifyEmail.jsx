@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import { useParams, useNavigate, Link } from "react-router";
 import { Mountain, CheckCircle, XCircle, Loader } from "lucide-react";
-import axios from "axios";
+import api from "../config/axios";
 
 const VerifyEmail = () => {
   const { token } = useParams();
@@ -12,16 +12,14 @@ const VerifyEmail = () => {
   useEffect(() => {
     const verifyEmail = async () => {
       try {
-        const response = await axios.get(
-          `http://localhost:3000/api/auth/verify-email/${token}`
-        );
+        const response = await api.get(`/api/auth/verify-email/${token}`);
         setStatus("success");
         setMessage(response.data.message || "Email uspešno preverjen!");
       } catch (error) {
         setStatus("error");
         setMessage(
           error.response?.data?.message ||
-            "Preverjanje ni uspelo. Povezava je morda potekla."
+            "Preverjanje ni uspelo. Povezava je morda potekla.",
         );
       }
     };

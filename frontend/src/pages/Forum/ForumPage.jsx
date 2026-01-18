@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import axios from "axios";
+import api from "../../config/axios";
 import ForumPageTabs from "./ForumPageTabs";
 import ForumPagePost from "./ForumPagePost";
 import { jwtDecode } from "jwt-decode";
@@ -22,8 +22,8 @@ const ForumPage = () => {
         const token = localStorage.getItem("token");
 
         // Fetch initial posts from friends
-        const response = await axios.get(
-          "http://localhost:3000/api/forum/friends?page=1&limit=10",
+        const response = await api.get(
+          "/api/forum/friends?page=1&limit=10",
           {
             headers: { Authorization: `Bearer ${token}` },
           }
@@ -54,8 +54,8 @@ const ForumPage = () => {
       const token = localStorage.getItem("token");
       const nextPage = currentPage + 1;
 
-      const response = await axios.get(
-        `http://localhost:3000/api/forum/friends?page=${nextPage}&limit=10`,
+      const response = await api.get(
+        `/api/forum/friends?page=${nextPage}&limit=10`,
         {
           headers: { Authorization: `Bearer ${token}` },
         }
@@ -74,8 +74,8 @@ const ForumPage = () => {
   const fetchComments = async (postId) => {
     try {
       const token = localStorage.getItem("token");
-      const response = await axios.get(
-        `http://localhost:3000/api/forum/${postId}/comments`,
+      const response = await api.get(
+        `/api/forum/${postId}/comments`,
         {
           headers: { Authorization: `Bearer ${token}` },
         }
@@ -101,8 +101,8 @@ const ForumPage = () => {
   const toggleLike = async (postId) => {
     try {
       const token = localStorage.getItem("token");
-      await axios.post(
-        `http://localhost:3000/api/forum/${postId}/like`,
+      await api.post(
+        `/api/forum/${postId}/like`,
         {},
         {
           headers: { Authorization: `Bearer ${token}` },
@@ -133,7 +133,7 @@ const ForumPage = () => {
   const deletePost = async (postId) => {
     try {
       const token = localStorage.getItem("token");
-      await axios.delete(`http://localhost:3000/api/forum/${postId}`, {
+      await api.delete(`/api/forum/${postId}`, {
         headers: { Authorization: `Bearer ${token}` },
       });
       setPosts(posts.filter((post) => post._id !== postId));

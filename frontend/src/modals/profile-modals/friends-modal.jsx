@@ -3,7 +3,7 @@ import { useEffect, useState } from "react";
 import { useNavigate } from "react-router";
 import RemoveFriendModal from "./remove-friend-modal";
 import AddFriendModal from "./add-friend-modal";
-import axios from "axios";
+import api from "../../config/axios";
 
 const FriendsModal = ({ isOpen, onClose }) => {
   const navigate = useNavigate();
@@ -36,8 +36,8 @@ const FriendsModal = ({ isOpen, onClose }) => {
       try {
         setLoading(true);
         const token = localStorage.getItem("token");
-        const friendsResponse = await axios.get(
-          "http://localhost:3000/api/friends?status=Accepted",
+        const friendsResponse = await api.get(
+          "/api/friends?status=Accepted",
           {
             headers: {
               Authorization: `Bearer ${token}`,
@@ -46,8 +46,8 @@ const FriendsModal = ({ isOpen, onClose }) => {
         );
         setFriends(friendsResponse.data.friends || []);
 
-        const requestsResponse = await axios.get(
-          "http://localhost:3000/api/friends?status=Pending",
+        const requestsResponse = await api.get(
+          "/api/friends?status=Pending",
           {
             headers: {
               Authorization: `Bearer ${token}`,
@@ -73,10 +73,10 @@ const FriendsModal = ({ isOpen, onClose }) => {
       setLoading(true);
       const token = localStorage.getItem("token");
       const [friendsResponse, requestsResponse] = await Promise.all([
-        axios.get("http://localhost:3000/api/friends?status=Accepted", {
+        api.get("/api/friends?status=Accepted", {
           headers: { Authorization: `Bearer ${token}` },
         }),
-        axios.get("http://localhost:3000/api/friends?status=Pending", {
+        api.get("/api/friends?status=Pending", {
           headers: { Authorization: `Bearer ${token}` },
         }),
       ]);
@@ -100,14 +100,14 @@ const FriendsModal = ({ isOpen, onClose }) => {
   const handleConfirmRemove = async (friendId) => {
     try {
       const token = localStorage.getItem("token");
-      await axios.delete(`http://localhost:3000/api/friends/${friendId}`, {
+      await api.delete(`/api/friends/${friendId}`, {
         headers: {
           Authorization: `Bearer ${token}`,
         },
       });
       // Refresh friends list
-      const friendsResponse = await axios.get(
-        "http://localhost:3000/api/friends?status=Accepted",
+      const friendsResponse = await api.get(
+        "/api/friends?status=Accepted",
         {
           headers: {
             Authorization: `Bearer ${token}`,
@@ -126,8 +126,8 @@ const FriendsModal = ({ isOpen, onClose }) => {
   const handleAcceptRequest = async (requestId) => {
     try {
       const token = localStorage.getItem("token");
-      await axios.put(
-        `http://localhost:3000/api/friends/accept/${requestId}`,
+      await api.put(
+        `/api/friends/accept/${requestId}`,
         {},
         {
           headers: {
@@ -137,10 +137,10 @@ const FriendsModal = ({ isOpen, onClose }) => {
       );
       // Refresh both friends and requests
       const [friendsResponse, requestsResponse] = await Promise.all([
-        axios.get("http://localhost:3000/api/friends?status=Accepted", {
+        api.get("/api/friends?status=Accepted", {
           headers: { Authorization: `Bearer ${token}` },
         }),
-        axios.get("http://localhost:3000/api/friends?status=Pending", {
+        api.get("/api/friends?status=Pending", {
           headers: { Authorization: `Bearer ${token}` },
         }),
       ]);
@@ -155,8 +155,8 @@ const FriendsModal = ({ isOpen, onClose }) => {
   const handleRejectRequest = async (requestId) => {
     try {
       const token = localStorage.getItem("token");
-      await axios.delete(
-        `http://localhost:3000/api/friends/request/${requestId}`,
+      await api.delete(
+        `/api/friends/request/${requestId}`,
         {
           headers: {
             Authorization: `Bearer ${token}`,
@@ -164,8 +164,8 @@ const FriendsModal = ({ isOpen, onClose }) => {
         }
       );
       // Refresh requests
-      const requestsResponse = await axios.get(
-        "http://localhost:3000/api/friends?status=Pending",
+      const requestsResponse = await api.get(
+        "/api/friends?status=Pending",
         {
           headers: {
             Authorization: `Bearer ${token}`,

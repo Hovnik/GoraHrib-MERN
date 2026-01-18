@@ -1,5 +1,5 @@
 import { useState } from "react";
-import axios from "axios";
+import api from "../../config/axios";
 import toast from "react-hot-toast";
 import { Eye, EyeOff } from "lucide-react";
 
@@ -31,8 +31,8 @@ const ChangePasswordModal = ({ isOpen, onClose }) => {
 
     try {
       const token = localStorage.getItem("token");
-      await axios.put(
-        "http://localhost:3000/api/user/change-password",
+      await api.put(
+        "/api/user/change-password",
         {
           currentPassword: formData.currentPassword,
           newPassword: formData.newPassword,

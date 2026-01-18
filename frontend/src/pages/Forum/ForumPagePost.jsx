@@ -7,7 +7,7 @@ import {
   ChevronUp,
   Send,
 } from "lucide-react";
-import axios from "axios";
+import api from "../../config/axios";
 import DeletePostModal from "../../modals/forum-modals/delete-post-modal";
 import DeleteCommentModal from "../../modals/forum-modals/delete-comment-modal";
 
@@ -47,8 +47,8 @@ const ForumPagePost = ({
     try {
       setIsSubmitting(true);
       const token = localStorage.getItem("token");
-      await axios.post(
-        `http://localhost:3000/api/forum/${post._id}/comments`,
+      await api.post(
+        `/api/forum/${post._id}/comments`,
         { content: newComment.trim() },
         {
           headers: { Authorization: `Bearer ${token}` },
@@ -69,8 +69,8 @@ const ForumPagePost = ({
   const onDeleteComment = async (postId, commentId) => {
     try {
       const token = localStorage.getItem("token");
-      await axios.delete(
-        `http://localhost:3000/api/forum/${postId}/comments/${commentId}`,
+      await api.delete(
+        `/api/forum/${postId}/comments/${commentId}`,
         {
           headers: { Authorization: `Bearer ${token}` },
         },

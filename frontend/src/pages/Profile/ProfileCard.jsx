@@ -10,7 +10,7 @@ import {
   Shield,
   ClipboardList,
 } from "lucide-react";
-import axios from "axios";
+import api from "../../config/axios";
 import EditProfileModal from "../../modals/profile-modals/edit-profile-modal";
 import ChangePasswordModal from "../../modals/profile-modals/change-password-modal";
 import AchievementsModal from "../../modals/profile-modals/achievements-modal";
@@ -33,12 +33,7 @@ const ProfileCard = () => {
     const fetchUserProfile = async () => {
       try {
         setLoading(true);
-        const token = localStorage.getItem("token");
-        const response = await axios.get(`http://localhost:3000/api/user`, {
-          headers: {
-            Authorization: `Bearer ${token}`,
-          },
-        });
+        const response = await api.get(`/api/user`);
 
         const userData = response.data.user;
 

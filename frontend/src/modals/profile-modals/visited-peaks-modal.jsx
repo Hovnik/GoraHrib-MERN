@@ -1,6 +1,6 @@
 import { X, Image } from "lucide-react";
 import { useEffect, useState } from "react";
-import axios from "axios";
+import api from "../../config/axios";
 import PeakPhotosModal from "./peak-photos-modal";
 
 const VisitedPeaksModal = ({ isOpen, onClose }) => {
@@ -25,8 +25,8 @@ const VisitedPeaksModal = ({ isOpen, onClose }) => {
       try {
         setLoading(true);
         const token = localStorage.getItem("token");
-        const response = await axios.get(
-          "http://localhost:3000/api/checklist",
+        const response = await api.get(
+          "/api/checklist",
           {
             headers: { Authorization: `Bearer ${token}` },
           }

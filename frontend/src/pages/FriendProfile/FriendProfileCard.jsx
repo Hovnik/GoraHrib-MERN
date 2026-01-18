@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 import { ClipboardList, Trophy, Users, CheckCircle } from "lucide-react";
-import axios from "axios";
+import api from "../../config/axios";
 import FriendAchievementsModal from "../../modals/friend-profile-modals/friend-achievements-modal";
 import FriendFriendsModal from "../../modals/friend-profile-modals/friend-friends-modal";
 import FriendVisitedPeaksModal from "../../modals/friend-profile-modals/friend-visited-peaks-modal";
@@ -31,10 +31,10 @@ const FriendProfileCard = ({ userId }) => {
 
         // Fetch user profile and friend data in parallel
         const [userResponse, friendDataResponse] = await Promise.all([
-          axios.get(`http://localhost:3000/api/user/${userId}`, {
+          api.get(`/api/user/${userId}`, {
             headers: { Authorization: `Bearer ${token}` },
           }),
-          axios.get(`http://localhost:3000/api/friends/${userId}`, {
+          api.get(`/api/friends/${userId}`, {
             headers: { Authorization: `Bearer ${token}` },
           }),
         ]);

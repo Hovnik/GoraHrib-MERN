@@ -9,7 +9,7 @@ import {
   Users,
   TrendingUp,
 } from "lucide-react";
-import axios from "axios";
+import api from "../config/axios";
 import toast from "react-hot-toast";
 
 const Register = () => {
@@ -33,7 +33,7 @@ const Register = () => {
   useEffect(() => {
     const fetchStats = async () => {
       try {
-        const peaksRes = await axios.get("http://localhost:3000/api/peaks");
+        const peaksRes = await api.get("/api/peaks");
         const peaksCount = peaksRes.data.peaks?.length || 0;
 
         setStats({
@@ -67,15 +67,12 @@ const Register = () => {
 
     try {
       setLoading(true);
-      const response = await axios.post(
-        "http://localhost:3000/api/auth/register",
-        {
-          username: formData.username,
-          email: formData.email,
-          password: formData.password,
-          confirmPassword: formData.confirmPassword,
-        },
-      );
+      const response = await api.post("/api/auth/register", {
+        username: formData.username,
+        email: formData.email,
+        password: formData.password,
+        confirmPassword: formData.confirmPassword,
+      });
 
       // Store token in localStorage
       localStorage.setItem("token", response.data.token);

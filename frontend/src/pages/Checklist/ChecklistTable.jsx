@@ -1,6 +1,6 @@
 import ChecklistRow from "./ChecklistRow";
 import { useState, useEffect } from "react";
-import axios from "axios";
+import api from "../../config/axios";
 
 const ChecklistTable = ({ activeTab }) => {
   const [checklist, setChecklist] = useState([]);
@@ -14,8 +14,8 @@ const ChecklistTable = ({ activeTab }) => {
       try {
         setLoading(true);
         const token = localStorage.getItem("token");
-        const response = await axios.get(
-          "http://localhost:3000/api/checklist",
+        const response = await api.get(
+          "/api/checklist",
           {
             headers: { Authorization: `Bearer ${token}` },
           }

@@ -1,5 +1,5 @@
 import { useState } from "react";
-import axios from "axios";
+import api from "../config/axios";
 import toast from "react-hot-toast";
 
 const ForgotPasswordModal = ({ isOpen, onClose }) => {
@@ -11,17 +11,14 @@ const ForgotPasswordModal = ({ isOpen, onClose }) => {
     setLoading(true);
     try {
       console.log("Sending forgot password request for:", email);
-      const response = await axios.post(
-        "http://localhost:3000/api/auth/forgot-password",
-        {
-          email,
-        }
-      );
+      const response = await api.post("/api/auth/forgot-password", {
+        email,
+      });
       console.log("Forgot password response:", response.data);
       toast.success(
         response.data.message ||
           "Če obstaja račun s tem emailom, smo poslali novo geslo.",
-        { duration: 5000 }
+        { duration: 5000 },
       );
       setEmail("");
       onClose();

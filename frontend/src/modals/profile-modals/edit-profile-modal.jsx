@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 import { User, Camera, Minus } from "lucide-react";
-import axios from "axios";
+import api from "../../config/axios";
 import ProfilePictureCropModal from "./profile-picture-crop-modal";
 import toast from "react-hot-toast";
 
@@ -22,7 +22,7 @@ const EditProfileModal = ({ isOpen, onClose }) => {
     if (isOpen) {
       const token = localStorage.getItem("token");
       axios
-        .get("http://localhost:3000/api/user", {
+        .get("/api/user", {
           headers: { Authorization: `Bearer ${token}` },
         })
         .then((res) => {
@@ -79,7 +79,7 @@ const EditProfileModal = ({ isOpen, onClose }) => {
   const handleDeleteProfilePicture = async () => {
     const token = localStorage.getItem("token");
     try {
-      await axios.delete("http://localhost:3000/api/user/profile-picture", {
+      await api.delete("/api/user/profile-picture", {
         headers: {
           Authorization: `Bearer ${token}`,
         },
@@ -88,7 +88,7 @@ const EditProfileModal = ({ isOpen, onClose }) => {
       setCropData(null);
 
       // Refresh user data
-      const userRes = await axios.get("http://localhost:3000/api/user", {
+      const userRes = await api.get("/api/user", {
         headers: { Authorization: `Bearer ${token}` },
       });
       localStorage.setItem("user", JSON.stringify(userRes.data.user));
@@ -108,8 +108,8 @@ const EditProfileModal = ({ isOpen, onClose }) => {
         formData.append("profilePicture", profilePicture);
         formData.append("crop", JSON.stringify(cropData));
 
-        await axios.put(
-          "http://localhost:3000/api/user/profile-picture",
+        await api.put(
+          "/api/user/profile-picture",
           formData,
           {
             headers: {
@@ -131,8 +131,8 @@ const EditProfileModal = ({ isOpen, onClose }) => {
 
         // If username changed, check availability
         if (newUsername !== storedUser?.username) {
-          const searchRes = await axios.get(
-            `http://localhost:3000/api/user/search?q=${encodeURIComponent(
+          const searchRes = await api.get(
+            `/api/user/search?q=${encodeURIComponent(
               newUsername,
             )}`,
             {
@@ -146,8 +146,8 @@ const EditProfileModal = ({ isOpen, onClose }) => {
           }
         }
 
-        await axios.put(
-          `http://localhost:3000/api/user/username`,
+        await api.put(
+          `/api/user/username`,
           { value: newUsername },
           {
             headers: {
@@ -158,7 +158,7 @@ const EditProfileModal = ({ isOpen, onClose }) => {
       }
 
       // Refresh user data
-      const userRes = await axios.get("http://localhost:3000/api/user", {
+      const userRes = await api.get("/api/user", {
         headers: { Authorization: `Bearer ${token}` },
       });
       localStorage.setItem("user", JSON.stringify(userRes.data.user));

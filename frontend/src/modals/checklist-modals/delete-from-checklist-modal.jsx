@@ -1,5 +1,5 @@
 import { AlertTriangle } from "lucide-react";
-import axios from "axios";
+import api from "../../config/axios";
 
 const DeleteFromChecklistModal = ({ isOpen, onClose, onConfirm, peak }) => {
   if (!isOpen) return null;
@@ -7,8 +7,8 @@ const DeleteFromChecklistModal = ({ isOpen, onClose, onConfirm, peak }) => {
   const handleDelete = async () => {
     const token = localStorage.getItem("token");
     try {
-      await axios.delete(
-        `http://localhost:3000/api/checklist/${peak.peakId._id}`,
+      await api.delete(
+        `/api/checklist/${peak.peakId._id}`,
         {
           headers: { Authorization: `Bearer ${token}` },
         }

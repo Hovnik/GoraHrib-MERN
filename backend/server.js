@@ -12,6 +12,7 @@ import { connectDB } from "./config/db.js";
 import { generalLimiter } from "./middleware/rateLimiter.js";
 import cors from "cors";
 import { ApiError } from "./utils/api-error.js";
+import path from "path";
 
 /**
  * Connect to the database
@@ -23,6 +24,7 @@ await connectDB();
  */
 const app = express();
 const PORT = process.env.PORT || 3000;
+const __dirname = path.resolve();
 
 /**
  * Middleware to parse JSON requests with increased limit for base64 images
@@ -35,11 +37,10 @@ app.use(express.urlencoded({ limit: "10mb", extended: true }));
  */
 app.use(
   cors({
-    origin: "http://localhost:5173", // Vite default dev server port
+    origin: process.env.CLIENT_URL || "http://localhost:5173",
     credentials: true,
-  })
+  }),
 );
-
 /**
  * Apply rate limiting middleware
  */
@@ -49,6 +50,17 @@ app.use(generalLimiter);
  * Mount the main API router
  */
 app.use("/api", routes);
+
+/**
+ * Serve static files and frontend in production
+ */
+if (process.env.NODE_ENV === "production") {
+  app.use(express.static(path.join(__dirname, "../frontend/dist")));
+
+  app.get("*", (req, res) => {
+    res.sendFile(path.join(__dirname, "../frontend", "dist", "index.html"));
+  });
+}
 
 /**
  * Error handling middleware - must be after all routes

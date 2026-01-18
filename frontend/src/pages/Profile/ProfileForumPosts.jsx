@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import axios from "axios";
+import api from "../../config/axios";
 import { jwtDecode } from "jwt-decode";
 import ForumPagePost from "../Forum/ForumPagePost";
 
@@ -16,7 +16,7 @@ const ProfileForumPosts = () => {
         const token = localStorage.getItem("token");
 
         // Fetch all posts from friends
-        const posts = await axios.get("http://localhost:3000/api/forum", {
+        const posts = await api.get("/api/forum", {
           headers: { Authorization: `Bearer ${token}` },
         });
 
@@ -40,8 +40,8 @@ const ProfileForumPosts = () => {
   const fetchComments = async (postId) => {
     try {
       const token = localStorage.getItem("token");
-      const response = await axios.get(
-        `http://localhost:3000/api/forum/${postId}/comments`,
+      const response = await api.get(
+        `/api/forum/${postId}/comments`,
         {
           headers: { Authorization: `Bearer ${token}` },
         }
@@ -67,8 +67,8 @@ const ProfileForumPosts = () => {
   const toggleLike = async (postId) => {
     try {
       const token = localStorage.getItem("token");
-      await axios.post(
-        `http://localhost:3000/api/forum/${postId}/like`,
+      await api.post(
+        `/api/forum/${postId}/like`,
         {},
         {
           headers: { Authorization: `Bearer ${token}` },
@@ -99,7 +99,7 @@ const ProfileForumPosts = () => {
   const deletePost = async (postId) => {
     try {
       const token = localStorage.getItem("token");
-      await axios.delete(`http://localhost:3000/api/forum/${postId}`, {
+      await api.delete(`/api/forum/${postId}`, {
         headers: { Authorization: `Bearer ${token}` },
       });
       setPosts(posts.filter((post) => post._id !== postId));

@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 import { Plus } from "lucide-react";
-import axios from "axios";
+import api from "../../config/axios";
 
 const AddPeakToChecklistModal = ({ isOpen, onClose }) => {
   const [searchTerm, setSearchTerm] = useState("");
@@ -17,9 +17,9 @@ const AddPeakToChecklistModal = ({ isOpen, onClose }) => {
         const token = localStorage.getItem("token");
 
         const [peaksRes, checklistRes] = await Promise.all([
-          axios.get("http://localhost:3000/api/peaks"),
+          api.get("/api/peaks"),
           token
-            ? axios.get("http://localhost:3000/api/checklist", {
+            ? api.get("/api/checklist", {
                 headers: { Authorization: `Bearer ${token}` },
               })
             : Promise.resolve({ data: { checklist: [] } }),
@@ -50,10 +50,9 @@ const AddPeakToChecklistModal = ({ isOpen, onClose }) => {
     try {
       // Add peaks sequentially to avoid write conflicts
       for (const peak of selectedPeaks) {
-        await axios.post(
-          `http://localhost:3000/api/checklist/${peak._id}`,
-          {},
-          { headers: { Authorization: `Bearer ${token}` } }
+        await api.post(
+          `/api/checklist/${peak._id}`,
+          {}
         );
       }
 
