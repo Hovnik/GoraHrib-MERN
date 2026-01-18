@@ -18,14 +18,26 @@ function getTransporter() {
 
   if (isEmailConfigured) {
     transporter = nodemailer.createTransport({
-      service: "gmail",
+      host: "mail.gorahrib.si",
+      port: 465,
+      secure: true, // SSL
+      debug: true,
+      logger: true,
       auth: {
         user: process.env.EMAIL_USER,
         pass: process.env.EMAIL_PASS,
       },
+      // DKIM signing (optional - configure in control panel)
+      dkim: process.env.DKIM_PRIVATE_KEY
+        ? {
+            domainName: "gorahrib.si",
+            keySelector: "default",
+            privateKey: process.env.DKIM_PRIVATE_KEY,
+          }
+        : undefined,
     });
     console.log(
-      `send-email: transporter initialized for ${process.env.EMAIL_USER}`
+      `send-email: transporter initialized for ${process.env.EMAIL_USER}`,
     );
   } else {
     console.log("send-email: no valid email config, will use console fallback");
@@ -46,8 +58,15 @@ const sendVerificationEmail = async (email, url) => {
   }
 
   await trans.sendMail({
+    from: `"GoraHrib" <${process.env.EMAIL_USER}>`,
     to: email,
     subject: "GoraHrib - Potrdi svoj email",
+    replyTo: process.env.EMAIL_USER,
+    headers: {
+      "X-Priority": "3",
+      "X-Mailer": "GoraHrib",
+      "List-Unsubscribe": `<${process.env.CLIENT_URL}/unsubscribe>`,
+    },
     html: `
       <!DOCTYPE html>
       <html>
@@ -138,8 +157,15 @@ const sendNewPasswordEmail = async (email, newPassword) => {
   }
 
   await trans.sendMail({
+    from: `"GoraHrib" <${process.env.EMAIL_USER}>`,
     to: email,
     subject: "GoraHrib - Novo geslo",
+    replyTo: process.env.EMAIL_USER,
+    headers: {
+      "X-Priority": "1",
+      "X-Mailer": "GoraHrib",
+      Importance: "high",
+    },
     html: `
       <!DOCTYPE html>
       <html>
@@ -215,7 +241,7 @@ const sendNewPasswordEmail = async (email, newPassword) => {
     `,
   });
   console.log(
-    `✅ New password email sent to ${email} via ${process.env.EMAIL_USER}`
+    `✅ New password email sent to ${email} via ${process.env.EMAIL_USER}`,
   );
 };
 

@@ -1,5 +1,7 @@
 ## TODOs
 
+- when scrolling on mobile hide the sidebar to maximize screen space
+
 **Achievements**
 
 - add logic for unlocking other achievements
