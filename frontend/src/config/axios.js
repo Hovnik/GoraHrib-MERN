@@ -4,7 +4,7 @@ import axios from "axios";
 // Production: frontend and backend served from same domain, use relative path
 // Development: backend on localhost:3000
 const BASE_URL =
-  import.meta.env.MODE === "development" ? "http://localhost:3000/api" : "/api";
+  import.meta.env.MODE === "development" ? "http://localhost:3000" : "/api";
 
 const api = axios.create({
   baseURL: BASE_URL,
