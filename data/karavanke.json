@@ -1,0 +1,1640 @@
+[
+  {
+    "name": "Stol",
+    "elevation": 2236,
+    "mountain_range": "Karavanke",
+    "latitude": 46.43402,
+    "longitude": 14.17362
+  },
+  {
+    "name": "Vrtača",
+    "elevation": 2181,
+    "mountain_range": "Karavanke",
+    "latitude": 46.43992,
+    "longitude": 14.21226
+  },
+  {
+    "name": "Prešernova koča na Stolu",
+    "elevation": 2174,
+    "mountain_range": "Karavanke",
+    "latitude": 46.43136,
+    "longitude": 14.17495
+  },
+  {
+    "name": "Kepa",
+    "elevation": 2143,
+    "mountain_range": "Karavanke",
+    "latitude": 46.50679,
+    "longitude": 13.95249
+  },
+  {
+    "name": "Ojstrc",
+    "elevation": 2139,
+    "mountain_range": "Karavanke",
+    "latitude": 46.50599,
+    "longitude": 14.48724
+  },
+  {
+    "name": "Košutnikov turn",
+    "elevation": 2133,
+    "mountain_range": "Karavanke",
+    "latitude": 46.44637,
+    "longitude": 14.41031
+  },
+  {
+    "name": "Kordeževa glava (Peca)",
+    "elevation": 2125,
+    "mountain_range": "Karavanke",
+    "latitude": 46.50023,
+    "longitude": 14.77993
+  },
+  {
+    "name": "Bistriška špica (Peca)",
+    "elevation": 2113,
+    "mountain_range": "Karavanke",
+    "latitude": 46.51149,
+    "longitude": 14.75018
+  },
+  {
+    "name": "Končnikov vrh (Peca)",
+    "elevation": 2109,
+    "mountain_range": "Karavanke",
+    "latitude": 46.50401,
+    "longitude": 14.76322
+  },
+  {
+    "name": "Križnik (Peca)",
+    "elevation": 2109,
+    "mountain_range": "Karavanke",
+    "latitude": 46.50547,
+    "longitude": 14.75766
+  },
+  {
+    "name": "Vajnež",
+    "elevation": 2104,
+    "mountain_range": "Karavanke",
+    "latitude": 46.44309,
+    "longitude": 14.1511
+  },
+  {
+    "name": "Celovška špica",
+    "elevation": 2102,
+    "mountain_range": "Karavanke",
+    "latitude": 46.43812,
+    "longitude": 14.18035
+  },
+  {
+    "name": "Veliko Kladivo",
+    "elevation": 2094,
+    "mountain_range": "Karavanke",
+    "latitude": 46.43719,
+    "longitude": 14.34402
+  },
+  {
+    "name": "Veliki vrh (Košuta)",
+    "elevation": 2088,
+    "mountain_range": "Karavanke",
+    "latitude": 46.43068,
+    "longitude": 14.30956
+  },
+  {
+    "name": "Dovška Mala Kepa",
+    "elevation": 2077,
+    "mountain_range": "Karavanke",
+    "latitude": 46.50309,
+    "longitude": 13.9595
+  },
+  {
+    "name": "Velika glava (Peca)",
+    "elevation": 2077,
+    "mountain_range": "Karavanke",
+    "latitude": 46.50418,
+    "longitude": 14.77198
+  },
+  {
+    "name": "Veška kopa (Peca)",
+    "elevation": 2074,
+    "mountain_range": "Karavanke",
+    "latitude": 46.51578,
+    "longitude": 14.74424
+  },
+  {
+    "name": "Begunjščica",
+    "elevation": 2060,
+    "mountain_range": "Karavanke",
+    "latitude": 46.42166,
+    "longitude": 14.22982
+  },
+  {
+    "name": "Tolsta Košuta - Vzhodni vrh",
+    "elevation": 2057,
+    "mountain_range": "Karavanke",
+    "latitude": 46.44703,
+    "longitude": 14.42951
+  },
+  {
+    "name": "Tolsta Košuta - Zahodni vrh",
+    "elevation": 2039,
+    "mountain_range": "Karavanke",
+    "latitude": 46.44618,
+    "longitude": 14.42618
+  },
+  {
+    "name": "Malo Kladivo",
+    "elevation": 2036,
+    "mountain_range": "Karavanke",
+    "latitude": 46.43497,
+    "longitude": 14.33821
+  },
+  {
+    "name": "Gubno",
+    "elevation": 2035,
+    "mountain_range": "Karavanke",
+    "latitude": 46.50064,
+    "longitude": 13.96126
+  },
+  {
+    "name": "Palec",
+    "elevation": 2026,
+    "mountain_range": "Karavanke",
+    "latitude": 46.4432,
+    "longitude": 14.21928
+  },
+  {
+    "name": "Pungartska gora",
+    "elevation": 2025,
+    "mountain_range": "Karavanke",
+    "latitude": 46.4397,
+    "longitude": 14.3686
+  },
+  {
+    "name": "Ovčji vrh (Kozjak)",
+    "elevation": 2024,
+    "mountain_range": "Karavanke",
+    "latitude": 46.45315,
+    "longitude": 14.18153
+  },
+  {
+    "name": "Zelenjak",
+    "elevation": 2024,
+    "mountain_range": "Karavanke",
+    "latitude": 46.44269,
+    "longitude": 14.21524
+  },
+  {
+    "name": "Mali vrh",
+    "elevation": 2017,
+    "mountain_range": "Karavanke",
+    "latitude": 46.44827,
+    "longitude": 14.14018
+  },
+  {
+    "name": "Kravji vrh",
+    "elevation": 2017,
+    "mountain_range": "Karavanke",
+    "latitude": 46.49581,
+    "longitude": 14.46787
+  },
+  {
+    "name": "Potoški Stol",
+    "elevation": 2014,
+    "mountain_range": "Karavanke",
+    "latitude": 46.43695,
+    "longitude": 14.1537
+  },
+  {
+    "name": "Toplar",
+    "elevation": 2000,
+    "mountain_range": "Karavanke",
+    "latitude": 46.43156,
+    "longitude": 14.31668
+  },
+  {
+    "name": "Begunjska Vrtača",
+    "elevation": 1991,
+    "mountain_range": "Karavanke",
+    "latitude": 46.42126,
+    "longitude": 14.243
+  },
+  {
+    "name": "Košutica",
+    "elevation": 1968,
+    "mountain_range": "Karavanke",
+    "latitude": 46.43892,
+    "longitude": 14.29909
+  },
+  {
+    "name": "Kofce gora",
+    "elevation": 1967,
+    "mountain_range": "Karavanke",
+    "latitude": 46.43108,
+    "longitude": 14.32729
+  },
+  {
+    "name": "Cjajnik",
+    "elevation": 1965,
+    "mountain_range": "Karavanke",
+    "latitude": 46.44328,
+    "longitude": 14.38808
+  },
+  {
+    "name": "Svačica",
+    "elevation": 1953,
+    "mountain_range": "Karavanke",
+    "latitude": 46.44412,
+    "longitude": 14.19124
+  },
+  {
+    "name": "Struška",
+    "elevation": 1944,
+    "mountain_range": "Karavanke",
+    "latitude": 46.47275,
+    "longitude": 14.12286
+  },
+  {
+    "name": "Trupejevo poldne",
+    "elevation": 1931,
+    "mountain_range": "Karavanke",
+    "latitude": 46.51535,
+    "longitude": 13.86066
+  },
+  {
+    "name": "Govca (Olševa)",
+    "elevation": 1929,
+    "mountain_range": "Karavanke",
+    "latitude": 46.44953,
+    "longitude": 14.68571
+  },
+  {
+    "name": "Bele peči (Lepi vrh)",
+    "elevation": 1926,
+    "mountain_range": "Karavanke",
+    "latitude": 46.5121,
+    "longitude": 13.8647
+  },
+  {
+    "name": "Setiče",
+    "elevation": 1922,
+    "mountain_range": "Karavanke",
+    "latitude": 46.48881,
+    "longitude": 14.40935
+  },
+  {
+    "name": "Srednja peč",
+    "elevation": 1920,
+    "mountain_range": "Karavanke",
+    "latitude": 46.43556,
+    "longitude": 14.18973
+  },
+  {
+    "name": "Obel kamen (Olševa)",
+    "elevation": 1911,
+    "mountain_range": "Karavanke",
+    "latitude": 46.4508,
+    "longitude": 14.6747
+  },
+  {
+    "name": "Dovška Baba",
+    "elevation": 1891,
+    "mountain_range": "Karavanke",
+    "latitude": 46.48762,
+    "longitude": 13.99389
+  },
+  {
+    "name": "Murnovc",
+    "elevation": 1866,
+    "mountain_range": "Karavanke",
+    "latitude": 46.51812,
+    "longitude": 13.88257
+  },
+  {
+    "name": "Kamnitnik",
+    "elevation": 1858,
+    "mountain_range": "Karavanke",
+    "latitude": 46.4507,
+    "longitude": 14.1297
+  },
+  {
+    "name": "Grlovec",
+    "elevation": 1840,
+    "mountain_range": "Karavanke",
+    "latitude": 46.48666,
+    "longitude": 14.31398
+  },
+  {
+    "name": "Kresišče",
+    "elevation": 1839,
+    "mountain_range": "Karavanke",
+    "latitude": 46.51982,
+    "longitude": 13.89517
+  },
+  {
+    "name": "Golica",
+    "elevation": 1835,
+    "mountain_range": "Karavanke",
+    "latitude": 46.49132,
+    "longitude": 14.05411
+  },
+  {
+    "name": "Visoki vrh",
+    "elevation": 1828,
+    "mountain_range": "Karavanke",
+    "latitude": 46.49621,
+    "longitude": 13.88815
+  },
+  {
+    "name": "Kraguljše",
+    "elevation": 1828,
+    "mountain_range": "Karavanke",
+    "latitude": 46.5039,
+    "longitude": 14.5019
+  },
+  {
+    "name": "Maloško poldne",
+    "elevation": 1823,
+    "mountain_range": "Karavanke",
+    "latitude": 46.5228,
+    "longitude": 13.88204
+  },
+  {
+    "name": "Mojstrovica",
+    "elevation": 1816,
+    "mountain_range": "Karavanke",
+    "latitude": 46.5032,
+    "longitude": 13.894
+  },
+  {
+    "name": "Lokovnikov Grintovec",
+    "elevation": 1809,
+    "mountain_range": "Karavanke",
+    "latitude": 46.44547,
+    "longitude": 14.3001
+  },
+  {
+    "name": "Plešivec",
+    "elevation": 1801,
+    "mountain_range": "Karavanke",
+    "latitude": 46.43399,
+    "longitude": 14.4313
+  },
+  {
+    "name": "Ostra peč",
+    "elevation": 1801,
+    "mountain_range": "Karavanke",
+    "latitude": 46.52433,
+    "longitude": 13.88105
+  },
+  {
+    "name": "Srednji vrh (nad Završnico)",
+    "elevation": 1796,
+    "mountain_range": "Karavanke",
+    "latitude": 46.43064,
+    "longitude": 14.20789
+  },
+  {
+    "name": "Rjavca",
+    "elevation": 1789,
+    "mountain_range": "Karavanke",
+    "latitude": 46.4514,
+    "longitude": 14.2221
+  },
+  {
+    "name": "Na Možeh",
+    "elevation": 1784,
+    "mountain_range": "Karavanke",
+    "latitude": 46.43351,
+    "longitude": 14.2332
+  },
+  {
+    "name": "Krvavka",
+    "elevation": 1784,
+    "mountain_range": "Karavanke",
+    "latitude": 46.48921,
+    "longitude": 14.06515
+  },
+  {
+    "name": "Hruški vrh",
+    "elevation": 1776,
+    "mountain_range": "Karavanke",
+    "latitude": 46.48134,
+    "longitude": 14.0068
+  },
+  {
+    "name": "Pristovški Storžič",
+    "elevation": 1759,
+    "mountain_range": "Karavanke",
+    "latitude": 46.43132,
+    "longitude": 14.52549
+  },
+  {
+    "name": "Koprivnjak",
+    "elevation": 1754,
+    "mountain_range": "Karavanke",
+    "latitude": 46.49203,
+    "longitude": 14.00737
+  },
+  {
+    "name": "Klek",
+    "elevation": 1753,
+    "mountain_range": "Karavanke",
+    "latitude": 46.48511,
+    "longitude": 14.02485
+  },
+  {
+    "name": "Zajčnik",
+    "elevation": 1746,
+    "mountain_range": "Karavanke",
+    "latitude": 46.515,
+    "longitude": 13.8291
+  },
+  {
+    "name": "Zajmenove peči",
+    "elevation": 1745,
+    "mountain_range": "Karavanke",
+    "latitude": 46.4239,
+    "longitude": 14.2896
+  },
+  {
+    "name": "Kamnica (Komnica)",
+    "elevation": 1742,
+    "mountain_range": "Karavanke",
+    "latitude": 46.5214,
+    "longitude": 13.9643
+  },
+  {
+    "name": "Mala Košuta",
+    "elevation": 1740,
+    "mountain_range": "Karavanke",
+    "latitude": 46.44293,
+    "longitude": 14.43825
+  },
+  {
+    "name": "Vošca",
+    "elevation": 1737,
+    "mountain_range": "Karavanke",
+    "latitude": 46.51019,
+    "longitude": 13.81842
+  },
+  {
+    "name": "Mala Peca",
+    "elevation": 1731,
+    "mountain_range": "Karavanke",
+    "latitude": 46.49229,
+    "longitude": 14.79182
+  },
+  {
+    "name": "Tamarča",
+    "elevation": 1728,
+    "mountain_range": "Karavanke",
+    "latitude": 46.5063,
+    "longitude": 13.8119
+  },
+  {
+    "name": "Hajnžev Praprotnik",
+    "elevation": 1727,
+    "mountain_range": "Karavanke",
+    "latitude": 46.4475,
+    "longitude": 14.3119
+  },
+  {
+    "name": "Veliki Javornik (Ženiklovec)",
+    "elevation": 1716,
+    "mountain_range": "Karavanke",
+    "latitude": 46.37502,
+    "longitude": 14.40256
+  },
+  {
+    "name": "Vrh Ljubeljščice (Triangel)",
+    "elevation": 1704,
+    "mountain_range": "Karavanke",
+    "latitude": 46.43219,
+    "longitude": 14.23721
+  },
+  {
+    "name": "Feuersberger Spitze (Peca)",
+    "elevation": 1704,
+    "mountain_range": "Karavanke",
+    "latitude": 46.51957,
+    "longitude": 14.72584
+  },
+  {
+    "name": "Uršlja gora (Plešivec)",
+    "elevation": 1699,
+    "mountain_range": "Karavanke",
+    "latitude": 46.48555,
+    "longitude": 14.96149
+  },
+  {
+    "name": "Stegovnik",
+    "elevation": 1692,
+    "mountain_range": "Karavanke",
+    "latitude": 46.39525,
+    "longitude": 14.41993
+  },
+  {
+    "name": "Mačenski vrh",
+    "elevation": 1691,
+    "mountain_range": "Karavanke",
+    "latitude": 46.48969,
+    "longitude": 14.13771
+  },
+  {
+    "name": "Mali Javornik",
+    "elevation": 1685,
+    "mountain_range": "Karavanke",
+    "latitude": 46.38198,
+    "longitude": 14.41744
+  },
+  {
+    "name": "Bela peč",
+    "elevation": 1684,
+    "mountain_range": "Karavanke",
+    "latitude": 46.4537,
+    "longitude": 14.2236
+  },
+  {
+    "name": "Spodnji Plot",
+    "elevation": 1682,
+    "mountain_range": "Karavanke",
+    "latitude": 46.4304,
+    "longitude": 14.2377
+  },
+  {
+    "name": "Grpišca",
+    "elevation": 1676,
+    "mountain_range": "Karavanke",
+    "latitude": 46.5065,
+    "longitude": 13.799
+  },
+  {
+    "name": "Pečovnik (kota 1668)",
+    "elevation": 1668,
+    "mountain_range": "Karavanke",
+    "latitude": 46.42842,
+    "longitude": 14.44176
+  },
+  {
+    "name": "Javorče",
+    "elevation": 1667,
+    "mountain_range": "Karavanke",
+    "latitude": 46.38255,
+    "longitude": 14.38363
+  },
+  {
+    "name": "Potočka zijalka",
+    "elevation": 1660,
+    "mountain_range": "Karavanke",
+    "latitude": 46.44955,
+    "longitude": 14.67117
+  },
+  {
+    "name": "Kosmatica",
+    "elevation": 1659,
+    "mountain_range": "Karavanke",
+    "latitude": 46.4596,
+    "longitude": 14.1981
+  },
+  {
+    "name": "Kamnati vrh",
+    "elevation": 1658,
+    "mountain_range": "Karavanke",
+    "latitude": 46.51763,
+    "longitude": 13.77643
+  },
+  {
+    "name": "Virnikov Grintovec",
+    "elevation": 1654,
+    "mountain_range": "Karavanke",
+    "latitude": 46.41349,
+    "longitude": 14.47887
+  },
+  {
+    "name": "Visoka Bavha",
+    "elevation": 1650,
+    "mountain_range": "Karavanke",
+    "latitude": 46.5106,
+    "longitude": 13.7848
+  },
+  {
+    "name": "Topica",
+    "elevation": 1649,
+    "mountain_range": "Karavanke",
+    "latitude": 46.51639,
+    "longitude": 14.67728
+  },
+  {
+    "name": "Mala Golica",
+    "elevation": 1646,
+    "mountain_range": "Karavanke",
+    "latitude": 46.4868,
+    "longitude": 14.0729
+  },
+  {
+    "name": "Pečovnik",
+    "elevation": 1640,
+    "mountain_range": "Karavanke",
+    "latitude": 46.42406,
+    "longitude": 14.44161
+  },
+  {
+    "name": "Veliki vrh nad Komatevro",
+    "elevation": 1634,
+    "mountain_range": "Karavanke",
+    "latitude": 46.41594,
+    "longitude": 14.4326
+  },
+  {
+    "name": "Macna",
+    "elevation": 1627,
+    "mountain_range": "Karavanke",
+    "latitude": 46.509,
+    "longitude": 14.3624
+  },
+  {
+    "name": "Jerebikovec",
+    "elevation": 1621,
+    "mountain_range": "Karavanke",
+    "latitude": 46.5146,
+    "longitude": 13.76667
+  },
+  {
+    "name": "Ruš",
+    "elevation": 1614,
+    "mountain_range": "Karavanke",
+    "latitude": 46.402,
+    "longitude": 14.4365
+  },
+  {
+    "name": "Sveta peč",
+    "elevation": 1613,
+    "mountain_range": "Karavanke",
+    "latitude": 46.4561,
+    "longitude": 14.2314
+  },
+  {
+    "name": "Čofatijev vrh",
+    "elevation": 1606,
+    "mountain_range": "Karavanke",
+    "latitude": 46.47523,
+    "longitude": 14.74992
+  },
+  {
+    "name": "Žingarica",
+    "elevation": 1589,
+    "mountain_range": "Karavanke",
+    "latitude": 46.50054,
+    "longitude": 14.25848
+  },
+  {
+    "name": "Bela peč",
+    "elevation": 1583,
+    "mountain_range": "Karavanke",
+    "latitude": 46.37761,
+    "longitude": 14.37982
+  },
+  {
+    "name": "Sinski vrh",
+    "elevation": 1577,
+    "mountain_range": "Karavanke",
+    "latitude": 46.49439,
+    "longitude": 14.19209
+  },
+  {
+    "name": "Ojstra",
+    "elevation": 1577,
+    "mountain_range": "Karavanke",
+    "latitude": 46.5099,
+    "longitude": 14.6433
+  },
+  {
+    "name": "Petelinjek (nad Korenskim sedlom)",
+    "elevation": 1552,
+    "mountain_range": "Karavanke",
+    "latitude": 46.5184,
+    "longitude": 13.7337
+  },
+  {
+    "name": "Stara gora",
+    "elevation": 1552,
+    "mountain_range": "Karavanke",
+    "latitude": 46.5248,
+    "longitude": 14.5307
+  },
+  {
+    "name": "Špičasti vrh",
+    "elevation": 1551,
+    "mountain_range": "Karavanke",
+    "latitude": 46.4734,
+    "longitude": 14.6846
+  },
+  {
+    "name": "Ptičji vrh",
+    "elevation": 1550,
+    "mountain_range": "Karavanke",
+    "latitude": 46.48527,
+    "longitude": 14.08835
+  },
+  {
+    "name": "Snežnik (nad Koprivno)",
+    "elevation": 1543,
+    "mountain_range": "Karavanke",
+    "latitude": 46.4743,
+    "longitude": 14.6977
+  },
+  {
+    "name": "Šoparjev vrh",
+    "elevation": 1524,
+    "mountain_range": "Karavanke",
+    "latitude": 46.48606,
+    "longitude": 14.74105
+  },
+  {
+    "name": "Mejnik",
+    "elevation": 1517,
+    "mountain_range": "Karavanke",
+    "latitude": 46.4537,
+    "longitude": 14.3961
+  },
+  {
+    "name": "Požgani rob",
+    "elevation": 1513,
+    "mountain_range": "Karavanke",
+    "latitude": 46.4579,
+    "longitude": 14.2222
+  },
+  {
+    "name": "Peč (Tromeja)",
+    "elevation": 1508,
+    "mountain_range": "Karavanke",
+    "latitude": 46.52283,
+    "longitude": 13.71413
+  },
+  {
+    "name": "Planica",
+    "elevation": 1508,
+    "mountain_range": "Karavanke",
+    "latitude": 46.48348,
+    "longitude": 13.94063
+  },
+  {
+    "name": "Bukovec",
+    "elevation": 1506,
+    "mountain_range": "Karavanke",
+    "latitude": 46.39371,
+    "longitude": 14.44994
+  },
+  {
+    "name": "Polna peč",
+    "elevation": 1503,
+    "mountain_range": "Karavanke",
+    "latitude": 46.4389,
+    "longitude": 14.25617
+  },
+  {
+    "name": "Žerjavov Praprotnik",
+    "elevation": 1500,
+    "mountain_range": "Karavanke",
+    "latitude": 46.4635,
+    "longitude": 14.2788
+  },
+  {
+    "name": "Kopa",
+    "elevation": 1496,
+    "mountain_range": "Karavanke",
+    "latitude": 46.51474,
+    "longitude": 13.70705
+  },
+  {
+    "name": "Borovje",
+    "elevation": 1476,
+    "mountain_range": "Karavanke",
+    "latitude": 46.48051,
+    "longitude": 13.95125
+  },
+  {
+    "name": "Rabenberg",
+    "elevation": 1465,
+    "mountain_range": "Karavanke",
+    "latitude": 46.4999,
+    "longitude": 14.2144
+  },
+  {
+    "name": "Veliki Rob",
+    "elevation": 1464,
+    "mountain_range": "Karavanke",
+    "latitude": 46.4717,
+    "longitude": 14.2031
+  },
+  {
+    "name": "Bela peč (nad Dovjem)",
+    "elevation": 1460,
+    "mountain_range": "Karavanke",
+    "latitude": 46.4757,
+    "longitude": 13.9808
+  },
+  {
+    "name": "Spominska plošča Jožeta Rozmana",
+    "elevation": 1450,
+    "mountain_range": "Karavanke",
+    "latitude": 46.3768,
+    "longitude": 14.3811
+  },
+  {
+    "name": "Borovski vrh (Žehtar)",
+    "elevation": 1449,
+    "mountain_range": "Karavanke",
+    "latitude": 46.4996,
+    "longitude": 14.3156
+  },
+  {
+    "name": "Črna peč",
+    "elevation": 1447,
+    "mountain_range": "Karavanke",
+    "latitude": 46.4244,
+    "longitude": 14.4133
+  },
+  {
+    "name": "Kališje",
+    "elevation": 1435,
+    "mountain_range": "Karavanke",
+    "latitude": 46.5067,
+    "longitude": 13.7368
+  },
+  {
+    "name": "Plešivška kopa (Kozarnica)",
+    "elevation": 1414,
+    "mountain_range": "Karavanke",
+    "latitude": 46.48337,
+    "longitude": 14.99691
+  },
+  {
+    "name": "Robič",
+    "elevation": 1384,
+    "mountain_range": "Karavanke",
+    "latitude": 46.4083,
+    "longitude": 14.3299
+  },
+  {
+    "name": "Veronjak",
+    "elevation": 1348,
+    "mountain_range": "Karavanke",
+    "latitude": 46.4796,
+    "longitude": 14.21194
+  },
+  {
+    "name": "Španov vrh",
+    "elevation": 1334,
+    "mountain_range": "Karavanke",
+    "latitude": 46.45971,
+    "longitude": 14.06957
+  },
+  {
+    "name": "Primožkovi hribi",
+    "elevation": 1326,
+    "mountain_range": "Karavanke",
+    "latitude": 46.40904,
+    "longitude": 14.35241
+  },
+  {
+    "name": "Robniške peči",
+    "elevation": 1323,
+    "mountain_range": "Karavanke",
+    "latitude": 46.4122,
+    "longitude": 14.46
+  },
+  {
+    "name": "Na pečeh pri Črnem Vrhu",
+    "elevation": 1318,
+    "mountain_range": "Karavanke",
+    "latitude": 46.4644,
+    "longitude": 14.0632
+  },
+  {
+    "name": "Penatca",
+    "elevation": 1299,
+    "mountain_range": "Karavanke",
+    "latitude": 46.4148,
+    "longitude": 14.3847
+  },
+  {
+    "name": "Golarjeva peč",
+    "elevation": 1276,
+    "mountain_range": "Karavanke",
+    "latitude": 46.4297,
+    "longitude": 14.6517
+  },
+  {
+    "name": "Basališče (Paški Kozjak)",
+    "elevation": 1272,
+    "mountain_range": "Karavanke",
+    "latitude": 46.39023,
+    "longitude": 15.24015
+  },
+  {
+    "name": "Vetrh vrh",
+    "elevation": 1268,
+    "mountain_range": "Karavanke",
+    "latitude": 46.3986,
+    "longitude": 14.3833
+  },
+  {
+    "name": "Velika Boncla",
+    "elevation": 1241,
+    "mountain_range": "Karavanke",
+    "latitude": 46.4483,
+    "longitude": 14.1093
+  },
+  {
+    "name": "Izvir reke Meže",
+    "elevation": 1230,
+    "mountain_range": "Karavanke",
+    "latitude": 46.4598,
+    "longitude": 14.7022
+  },
+  {
+    "name": "Božičev vrh",
+    "elevation": 1228,
+    "mountain_range": "Karavanke",
+    "latitude": null,
+    "longitude": null
+  },
+  {
+    "name": "Štrukljev vrh",
+    "elevation": 1227,
+    "mountain_range": "Karavanke",
+    "latitude": 46.3871,
+    "longitude": 15.2268
+  },
+  {
+    "name": "Tolsti vrh (pri Poljški planini)",
+    "elevation": 1225,
+    "mountain_range": "Karavanke",
+    "latitude": 46.40627,
+    "longitude": 14.2056
+  },
+  {
+    "name": "Medvodnica",
+    "elevation": 1202,
+    "mountain_range": "Karavanke",
+    "latitude": 46.4144,
+    "longitude": 14.4023
+  },
+  {
+    "name": "Jesenik (Jesenikov vrh)",
+    "elevation": 1199,
+    "mountain_range": "Karavanke",
+    "latitude": 46.5051,
+    "longitude": 14.8316
+  },
+  {
+    "name": "Hom (nad Prevaljami)",
+    "elevation": 1193,
+    "mountain_range": "Karavanke",
+    "latitude": 46.5076,
+    "longitude": 14.9401
+  },
+  {
+    "name": "Brdo (Plezališče pod Golico)",
+    "elevation": 1192,
+    "mountain_range": "Karavanke",
+    "latitude": null,
+    "longitude": null
+  },
+  {
+    "name": "Ostrica",
+    "elevation": 1182,
+    "mountain_range": "Karavanke",
+    "latitude": 46.3889,
+    "longitude": 15.2079
+  },
+  {
+    "name": "Veliki vrh (nad Mežiško dolino)",
+    "elevation": 1165,
+    "mountain_range": "Karavanke",
+    "latitude": 46.4947,
+    "longitude": 14.8524
+  },
+  {
+    "name": "Šumahov vrh",
+    "elevation": 1155,
+    "mountain_range": "Karavanke",
+    "latitude": 46.4935,
+    "longitude": 14.8613
+  },
+  {
+    "name": "Pikov vrh",
+    "elevation": 1149,
+    "mountain_range": "Karavanke",
+    "latitude": 46.4961,
+    "longitude": 14.8419
+  },
+  {
+    "name": "Alničje",
+    "elevation": 1145,
+    "mountain_range": "Karavanke",
+    "latitude": 46.43889,
+    "longitude": 14.11044
+  },
+  {
+    "name": "Hribarska (Huda) zijalka",
+    "elevation": 1140,
+    "mountain_range": "Karavanke",
+    "latitude": 46.4278,
+    "longitude": 14.682
+  },
+  {
+    "name": "Mala Boncla (Bavha)",
+    "elevation": 1131,
+    "mountain_range": "Karavanke",
+    "latitude": 46.45241,
+    "longitude": 14.10375
+  },
+  {
+    "name": "Žmitkov špic",
+    "elevation": 1124,
+    "mountain_range": "Karavanke",
+    "latitude": 46.4,
+    "longitude": 14.49055
+  },
+  {
+    "name": "Železna (Kisla) voda",
+    "elevation": 1115,
+    "mountain_range": "Karavanke",
+    "latitude": 46.43079,
+    "longitude": 14.64336
+  },
+  {
+    "name": "Špik (Paški Kozjak)",
+    "elevation": 1108,
+    "mountain_range": "Karavanke",
+    "latitude": 46.38724,
+    "longitude": 15.18658
+  },
+  {
+    "name": "Jelenkamen",
+    "elevation": 1096,
+    "mountain_range": "Karavanke",
+    "latitude": 46.43925,
+    "longitude": 14.07706
+  },
+  {
+    "name": "Stenica",
+    "elevation": 1091,
+    "mountain_range": "Karavanke",
+    "latitude": 46.3665,
+    "longitude": 15.312
+  },
+  {
+    "name": "Blažčeva skala",
+    "elevation": 1091,
+    "mountain_range": "Karavanke",
+    "latitude": 46.46944,
+    "longitude": 13.97333
+  },
+  {
+    "name": "Arihova peč",
+    "elevation": 1090,
+    "mountain_range": "Karavanke",
+    "latitude": 46.5337,
+    "longitude": 13.9832
+  },
+  {
+    "name": "Pogorevc",
+    "elevation": 1076,
+    "mountain_range": "Karavanke",
+    "latitude": 46.49051,
+    "longitude": 14.90013
+  },
+  {
+    "name": "Smolnik",
+    "elevation": 1075,
+    "mountain_range": "Karavanke",
+    "latitude": 46.41982,
+    "longitude": 14.14404
+  },
+  {
+    "name": "Sveti Jakob v Koprivni",
+    "elevation": 1062,
+    "mountain_range": "Karavanke",
+    "latitude": 46.4544,
+    "longitude": 14.747
+  },
+  {
+    "name": "Ajdna",
+    "elevation": 1046,
+    "mountain_range": "Karavanke",
+    "latitude": 46.42098,
+    "longitude": 14.13073
+  },
+  {
+    "name": "Partizanska bolnica Krtina",
+    "elevation": 1040,
+    "mountain_range": "Karavanke",
+    "latitude": 46.40991,
+    "longitude": 14.4553
+  },
+  {
+    "name": "Mirca",
+    "elevation": 1025,
+    "mountain_range": "Karavanke",
+    "latitude": 46.445,
+    "longitude": 14.0545
+  },
+  {
+    "name": "Veliki Mošenik",
+    "elevation": 1021,
+    "mountain_range": "Karavanke",
+    "latitude": 46.50681,
+    "longitude": 14.0973
+  },
+  {
+    "name": "Stolpnik",
+    "elevation": 1012,
+    "mountain_range": "Karavanke",
+    "latitude": 46.33448,
+    "longitude": 15.36826
+  },
+  {
+    "name": "Plakopec (Brezejec)",
+    "elevation": 1005,
+    "mountain_range": "Karavanke",
+    "latitude": 46.3741,
+    "longitude": 15.1877
+  },
+  {
+    "name": "Špicasti vrh (Kislica)",
+    "elevation": 994,
+    "mountain_range": "Karavanke",
+    "latitude": 46.35735,
+    "longitude": 15.30353
+  },
+  {
+    "name": "Visoko",
+    "elevation": 991,
+    "mountain_range": "Karavanke",
+    "latitude": 46.3761,
+    "longitude": 15.1898
+  },
+  {
+    "name": "Ramšakov vrh",
+    "elevation": 970,
+    "mountain_range": "Karavanke",
+    "latitude": 46.35916,
+    "longitude": 15.19006
+  },
+  {
+    "name": "Veliki vrh nad Završnikom",
+    "elevation": 968,
+    "mountain_range": "Karavanke",
+    "latitude": 46.38183,
+    "longitude": 14.3068
+  },
+  {
+    "name": "Radojč",
+    "elevation": 937,
+    "mountain_range": "Karavanke",
+    "latitude": 46.35958,
+    "longitude": 15.17242
+  },
+  {
+    "name": "Smodivnik",
+    "elevation": 923,
+    "mountain_range": "Karavanke",
+    "latitude": 46.4018,
+    "longitude": 15.1588
+  },
+  {
+    "name": "Andrejev vrh",
+    "elevation": 897,
+    "mountain_range": "Karavanke",
+    "latitude": 46.5205,
+    "longitude": 14.8794
+  },
+  {
+    "name": "Jerman",
+    "elevation": 890,
+    "mountain_range": "Karavanke",
+    "latitude": 46.48809,
+    "longitude": 13.84212
+  },
+  {
+    "name": "Volinjak",
+    "elevation": 886,
+    "mountain_range": "Karavanke",
+    "latitude": 46.5315,
+    "longitude": 14.8756
+  },
+  {
+    "name": "Selovec (Gruberjev vrh)",
+    "elevation": 885,
+    "mountain_range": "Karavanke",
+    "latitude": 46.55216,
+    "longitude": 15.01509
+  },
+  {
+    "name": "Donačka gora",
+    "elevation": 884,
+    "mountain_range": "Karavanke",
+    "latitude": 46.26268,
+    "longitude": 15.7423
+  },
+  {
+    "name": "Donačka gora (vzhodni vrh)",
+    "elevation": 883,
+    "mountain_range": "Karavanke",
+    "latitude": 46.26341,
+    "longitude": 15.74759
+  },
+  {
+    "name": "Fričev vrh",
+    "elevation": 881,
+    "mountain_range": "Karavanke",
+    "latitude": 46.44065,
+    "longitude": 15.14592
+  },
+  {
+    "name": "Rokov vrh",
+    "elevation": 880,
+    "mountain_range": "Karavanke",
+    "latitude": 46.528,
+    "longitude": 14.5715
+  },
+  {
+    "name": "Stropnica",
+    "elevation": 880,
+    "mountain_range": "Karavanke",
+    "latitude": 46.39223,
+    "longitude": 15.15122
+  },
+  {
+    "name": "Kamnek",
+    "elevation": 873,
+    "mountain_range": "Karavanke",
+    "latitude": 46.3726,
+    "longitude": 14.31347
+  },
+  {
+    "name": "Veliki Juhej",
+    "elevation": 865,
+    "mountain_range": "Karavanke",
+    "latitude": 46.3999,
+    "longitude": 14.3428
+  },
+  {
+    "name": "Stropnik",
+    "elevation": 862,
+    "mountain_range": "Karavanke",
+    "latitude": 46.38934,
+    "longitude": 15.15458
+  },
+  {
+    "name": "Gank",
+    "elevation": 850,
+    "mountain_range": "Karavanke",
+    "latitude": 46.4334,
+    "longitude": 14.1018
+  },
+  {
+    "name": "Malnež",
+    "elevation": 846,
+    "mountain_range": "Karavanke",
+    "latitude": 46.42881,
+    "longitude": 14.1104
+  },
+  {
+    "name": "Gora sv. Eme (Junska gora)",
+    "elevation": 842,
+    "mountain_range": "Karavanke",
+    "latitude": 46.5533,
+    "longitude": 14.6672
+  },
+  {
+    "name": "Turška jama v Gozdašnici",
+    "elevation": 835,
+    "mountain_range": "Karavanke",
+    "latitude": 46.41031,
+    "longitude": 14.1495
+  },
+  {
+    "name": "Plešivec (pri Boču)",
+    "elevation": 822,
+    "mountain_range": "Karavanke",
+    "latitude": 46.27399,
+    "longitude": 15.64927
+  },
+  {
+    "name": "Časov vrh",
+    "elevation": 821,
+    "mountain_range": "Karavanke",
+    "latitude": 46.4418,
+    "longitude": 15.1521
+  },
+  {
+    "name": "Mali Juhej",
+    "elevation": 820,
+    "mountain_range": "Karavanke",
+    "latitude": 46.39929,
+    "longitude": 14.34404
+  },
+  {
+    "name": "Sveti Rupert (Završe)",
+    "elevation": 815,
+    "mountain_range": "Karavanke",
+    "latitude": 46.42751,
+    "longitude": 15.1481
+  },
+  {
+    "name": "Sveti Vid (Završe)",
+    "elevation": 808,
+    "mountain_range": "Karavanke",
+    "latitude": 46.422,
+    "longitude": 15.159
+  },
+  {
+    "name": "Vinska gora",
+    "elevation": 806,
+    "mountain_range": "Karavanke",
+    "latitude": 46.34894,
+    "longitude": 15.19538
+  },
+  {
+    "name": "Aljažev stolp v Završah",
+    "elevation": 803,
+    "mountain_range": "Karavanke",
+    "latitude": 46.42891,
+    "longitude": 15.14185
+  },
+  {
+    "name": "Grobnica barona Borna",
+    "elevation": 800,
+    "mountain_range": "Karavanke",
+    "latitude": 46.3995,
+    "longitude": 14.3476
+  },
+  {
+    "name": "Črepič",
+    "elevation": 798,
+    "mountain_range": "Karavanke",
+    "latitude": 46.44105,
+    "longitude": 15.1661
+  },
+  {
+    "name": "Temnjak",
+    "elevation": 798,
+    "mountain_range": "Karavanke",
+    "latitude": 46.35063,
+    "longitude": 15.18615
+  },
+  {
+    "name": "Štalekarjev vrh",
+    "elevation": 792,
+    "mountain_range": "Karavanke",
+    "latitude": 46.5116,
+    "longitude": 14.8456
+  },
+  {
+    "name": "Kršiše",
+    "elevation": 790,
+    "mountain_range": "Karavanke",
+    "latitude": 46.40289,
+    "longitude": 14.281
+  },
+  {
+    "name": "Kalvarija nad Jesenicami",
+    "elevation": 784,
+    "mountain_range": "Karavanke",
+    "latitude": 46.43786,
+    "longitude": 14.06816
+  },
+  {
+    "name": "Skalni vrh (Vodemla)",
+    "elevation": 780,
+    "mountain_range": "Karavanke",
+    "latitude": 46.3871,
+    "longitude": 15.1359
+  },
+  {
+    "name": "Lubela",
+    "elevation": 778,
+    "mountain_range": "Karavanke",
+    "latitude": 46.3968,
+    "longitude": 15.1232
+  },
+  {
+    "name": "Kozjek",
+    "elevation": 766,
+    "mountain_range": "Karavanke",
+    "latitude": null,
+    "longitude": null
+  },
+  {
+    "name": "Skala",
+    "elevation": 750,
+    "mountain_range": "Karavanke",
+    "latitude": 46.32526,
+    "longitude": 15.41553
+  },
+  {
+    "name": "Kušpergarjev turn (Kušpergarjevi turni)",
+    "elevation": 750,
+    "mountain_range": "Karavanke",
+    "latitude": 46.3839,
+    "longitude": 14.3318
+  },
+  {
+    "name": "Kozjek (nad Socko)",
+    "elevation": 748,
+    "mountain_range": "Karavanke",
+    "latitude": 46.35722,
+    "longitude": 15.2815
+  },
+  {
+    "name": "Gradišče nad Sotesko (Soteska)",
+    "elevation": 724,
+    "mountain_range": "Karavanke",
+    "latitude": 46.4194,
+    "longitude": 14.112
+  },
+  {
+    "name": "Maceljska gora",
+    "elevation": 718,
+    "mountain_range": "Karavanke",
+    "latitude": 46.26026,
+    "longitude": 15.79765
+  },
+  {
+    "name": "Strana",
+    "elevation": 711,
+    "mountain_range": "Karavanke",
+    "latitude": 46.4296,
+    "longitude": 14.097
+  },
+  {
+    "name": "Grad Lindek",
+    "elevation": 695,
+    "mountain_range": "Karavanke",
+    "latitude": 46.3526,
+    "longitude": 15.3253
+  },
+  {
+    "name": "Soteska Mučevo",
+    "elevation": 690,
+    "mountain_range": "Karavanke",
+    "latitude": 46.48956,
+    "longitude": 14.87471
+  },
+  {
+    "name": "Galke",
+    "elevation": 684,
+    "mountain_range": "Karavanke",
+    "latitude": 46.28459,
+    "longitude": 15.58146
+  },
+  {
+    "name": "Ravnocerje",
+    "elevation": 679,
+    "mountain_range": "Karavanke",
+    "latitude": 46.27415,
+    "longitude": 15.66432
+  },
+  {
+    "name": "Rahtelov vrh",
+    "elevation": 667,
+    "mountain_range": "Karavanke",
+    "latitude": 46.52102,
+    "longitude": 15.07233
+  },
+  {
+    "name": "Dedni vrh (Šuštarica)",
+    "elevation": 653,
+    "mountain_range": "Karavanke",
+    "latitude": 46.28589,
+    "longitude": 15.65327
+  },
+  {
+    "name": "Gradišna peč",
+    "elevation": 636,
+    "mountain_range": "Karavanke",
+    "latitude": 46.31989,
+    "longitude": 15.3731
+  },
+  {
+    "name": "Rančka",
+    "elevation": 615,
+    "mountain_range": "Karavanke",
+    "latitude": 46.28375,
+    "longitude": 15.56023
+  },
+  {
+    "name": "Joški vrh",
+    "elevation": 595,
+    "mountain_range": "Karavanke",
+    "latitude": 46.26699,
+    "longitude": 15.73973
+  },
+  {
+    "name": "Baba (pri Boču)",
+    "elevation": 594,
+    "mountain_range": "Karavanke",
+    "latitude": 46.29082,
+    "longitude": 15.58628
+  },
+  {
+    "name": "Gonžarjeva peč",
+    "elevation": 575,
+    "mountain_range": "Karavanke",
+    "latitude": 46.3512,
+    "longitude": 15.1672
+  },
+  {
+    "name": "Babček",
+    "elevation": 575,
+    "mountain_range": "Karavanke",
+    "latitude": 46.2981,
+    "longitude": 15.4158
+  },
+  {
+    "name": "Krajnikov grad",
+    "elevation": 549,
+    "mountain_range": "Karavanke",
+    "latitude": 46.3792,
+    "longitude": 15.2932
+  },
+  {
+    "name": "Ljubična gora",
+    "elevation": 533,
+    "mountain_range": "Karavanke",
+    "latitude": 46.2899,
+    "longitude": 15.5412
+  },
+  {
+    "name": "Sveti Pankracij (Grajski grič)",
+    "elevation": 530,
+    "mountain_range": "Karavanke",
+    "latitude": 46.508,
+    "longitude": 15.0669
+  },
+  {
+    "name": "Grad Konjice",
+    "elevation": 515,
+    "mountain_range": "Karavanke",
+    "latitude": 46.33585,
+    "longitude": 15.40977
+  },
+  {
+    "name": "Goležev grad",
+    "elevation": 505,
+    "mountain_range": "Karavanke",
+    "latitude": 46.37654,
+    "longitude": 15.29305
+  },
+  {
+    "name": "Cerkev Marije Loretske na Ložnem",
+    "elevation": 481,
+    "mountain_range": "Karavanke",
+    "latitude": 46.2633,
+    "longitude": 15.69062
+  },
+  {
+    "name": "Škrbatnica",
+    "elevation": 473,
+    "mountain_range": "Karavanke",
+    "latitude": 46.29462,
+    "longitude": 15.69955
+  },
+  {
+    "name": "Sveta Ana nad Stopercami",
+    "elevation": 460,
+    "mountain_range": "Karavanke",
+    "latitude": 46.29254,
+    "longitude": 15.69753
+  },
+  {
+    "name": "Sv. Tomaž nad Vojnikom",
+    "elevation": 444,
+    "mountain_range": "Karavanke",
+    "latitude": 46.2917,
+    "longitude": 15.3269
+  },
+  {
+    "name": "Sveta Barbara v Zagradu",
+    "elevation": 435,
+    "mountain_range": "Karavanke",
+    "latitude": 46.5442,
+    "longitude": 14.9307
+  },
+  {
+    "name": "Cerkev Marije Tolažnice (Brezje nad Žetalami)",
+    "elevation": 382,
+    "mountain_range": "Karavanke",
+    "latitude": 46.27183,
+    "longitude": 15.7852
+  },
+  {
+    "name": "Studeniški grad",
+    "elevation": 315,
+    "mountain_range": "Karavanke",
+    "latitude": 46.3,
+    "longitude": 15.6151
+  }
+]

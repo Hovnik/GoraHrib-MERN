@@ -1,0 +1,415 @@
+[
+  {
+    "name": "Črni vrh",
+    "elevation": 1543,
+    "mountain_range": "Pohorje, Dravinjske gorice in Haloze",
+    "latitude": 46.48561,
+    "longitude": 15.23325
+  },
+  {
+    "name": "Velika Kopa",
+    "elevation": 1542,
+    "mountain_range": "Pohorje, Dravinjske gorice in Haloze",
+    "latitude": 46.50669,
+    "longitude": 15.1981
+  },
+  {
+    "name": "Jezerski vrh",
+    "elevation": 1537,
+    "mountain_range": "Pohorje, Dravinjske gorice in Haloze",
+    "latitude": 46.4938,
+    "longitude": 15.26443
+  },
+  {
+    "name": "Mali Črni vrh",
+    "elevation": 1533,
+    "mountain_range": "Pohorje, Dravinjske gorice in Haloze",
+    "latitude": 46.49591,
+    "longitude": 15.25396
+  },
+  {
+    "name": "Mala Kopa",
+    "elevation": 1524,
+    "mountain_range": "Pohorje, Dravinjske gorice in Haloze",
+    "latitude": 46.51358,
+    "longitude": 15.18843
+  },
+  {
+    "name": "Lovrenška jezera",
+    "elevation": 1520,
+    "mountain_range": "Pohorje, Dravinjske gorice in Haloze",
+    "latitude": 46.48336,
+    "longitude": 15.31557
+  },
+  {
+    "name": "Rogla",
+    "elevation": 1517,
+    "mountain_range": "Pohorje, Dravinjske gorice in Haloze",
+    "latitude": 46.45643,
+    "longitude": 15.3458
+  },
+  {
+    "name": "Ostruščica",
+    "elevation": 1498,
+    "mountain_range": "Pohorje, Dravinjske gorice in Haloze",
+    "latitude": 46.45852,
+    "longitude": 15.3235
+  },
+  {
+    "name": "Pesek",
+    "elevation": 1423,
+    "mountain_range": "Pohorje, Dravinjske gorice in Haloze",
+    "latitude": 46.46848,
+    "longitude": 15.34165
+  },
+  {
+    "name": "Lasina",
+    "elevation": 1412,
+    "mountain_range": "Pohorje, Dravinjske gorice in Haloze",
+    "latitude": 46.48128,
+    "longitude": 15.34364
+  },
+  {
+    "name": "Žigartov vrh",
+    "elevation": 1346,
+    "mountain_range": "Pohorje, Dravinjske gorice in Haloze",
+    "latitude": 46.49446,
+    "longitude": 15.48712
+  },
+  {
+    "name": "Veliki vrh (na Pohorju)",
+    "elevation": 1344,
+    "mountain_range": "Pohorje, Dravinjske gorice in Haloze",
+    "latitude": 46.4433,
+    "longitude": 15.44821
+  },
+  {
+    "name": "Klopni vrh",
+    "elevation": 1340,
+    "mountain_range": "Pohorje, Dravinjske gorice in Haloze",
+    "latitude": 46.49805,
+    "longitude": 15.39211
+  },
+  {
+    "name": "Turn (pri Klopnem vrhu)",
+    "elevation": 1261,
+    "mountain_range": "Pohorje, Dravinjske gorice in Haloze",
+    "latitude": 46.50814,
+    "longitude": 15.39682
+  },
+  {
+    "name": "Lamprehtov vrh",
+    "elevation": 1230,
+    "mountain_range": "Pohorje, Dravinjske gorice in Haloze",
+    "latitude": 46.50998,
+    "longitude": 15.40916
+  },
+  {
+    "name": "Kopnikov vrh",
+    "elevation": 1220,
+    "mountain_range": "Pohorje, Dravinjske gorice in Haloze",
+    "latitude": 46.52621,
+    "longitude": 15.18563
+  },
+  {
+    "name": "Ledinekov kogel",
+    "elevation": 1182,
+    "mountain_range": "Pohorje, Dravinjske gorice in Haloze",
+    "latitude": 46.50661,
+    "longitude": 15.55489
+  },
+  {
+    "name": "Izvir Polskave",
+    "elevation": 1180,
+    "mountain_range": "Pohorje, Dravinjske gorice in Haloze",
+    "latitude": 46.49026,
+    "longitude": 15.50453
+  },
+  {
+    "name": "Kremžarjev vrh",
+    "elevation": 1164,
+    "mountain_range": "Pohorje, Dravinjske gorice in Haloze",
+    "latitude": 46.52965,
+    "longitude": 15.13416
+  },
+  {
+    "name": "Mariborski razglednik (Cigelnica)",
+    "elevation": 1147,
+    "mountain_range": "Pohorje, Dravinjske gorice in Haloze",
+    "latitude": 46.51178,
+    "longitude": 15.56503
+  },
+  {
+    "name": "Partizanska bolnišnica Jesen",
+    "elevation": 1035,
+    "mountain_range": "Pohorje, Dravinjske gorice in Haloze",
+    "latitude": 46.4572,
+    "longitude": 15.46245
+  },
+  {
+    "name": "Repnikov vrh",
+    "elevation": 988,
+    "mountain_range": "Pohorje, Dravinjske gorice in Haloze",
+    "latitude": 46.43198,
+    "longitude": 15.49173
+  },
+  {
+    "name": "Sedovnikov vrh",
+    "elevation": 942,
+    "mountain_range": "Pohorje, Dravinjske gorice in Haloze",
+    "latitude": 46.53603,
+    "longitude": 15.16158
+  },
+  {
+    "name": "Janževski vrh",
+    "elevation": 915,
+    "mountain_range": "Pohorje, Dravinjske gorice in Haloze",
+    "latitude": 46.5688,
+    "longitude": 15.3042
+  },
+  {
+    "name": "Hlebov vrh (Rdeči Breg)",
+    "elevation": 913,
+    "mountain_range": "Pohorje, Dravinjske gorice in Haloze",
+    "latitude": 46.56844,
+    "longitude": 15.3402
+  },
+  {
+    "name": "Klančnik (Glančnik)",
+    "elevation": 877,
+    "mountain_range": "Pohorje, Dravinjske gorice in Haloze",
+    "latitude": 46.56827,
+    "longitude": 15.36074
+  },
+  {
+    "name": "Sveti Anton (Sveti Anton na Pohorju)",
+    "elevation": 854,
+    "mountain_range": "Pohorje, Dravinjske gorice in Haloze",
+    "latitude": 46.56077,
+    "longitude": 15.20342
+  },
+  {
+    "name": "Sveti Danijel (nad Trbonjami)",
+    "elevation": 845,
+    "mountain_range": "Pohorje, Dravinjske gorice in Haloze",
+    "latitude": 46.59011,
+    "longitude": 15.07287
+  },
+  {
+    "name": "Golarjev vrh",
+    "elevation": 843,
+    "mountain_range": "Pohorje, Dravinjske gorice in Haloze",
+    "latitude": 46.5753,
+    "longitude": 15.0704
+  },
+  {
+    "name": "Kebeljski grad (Zajčev grad)",
+    "elevation": 813,
+    "mountain_range": "Pohorje, Dravinjske gorice in Haloze",
+    "latitude": 46.41351,
+    "longitude": 15.45139
+  },
+  {
+    "name": "Maroltova jelka (Bistriški vintgar)",
+    "elevation": 800,
+    "mountain_range": "Pohorje, Dravinjske gorice in Haloze",
+    "latitude": 46.44066,
+    "longitude": 15.5025
+  },
+  {
+    "name": "Golek",
+    "elevation": 769,
+    "mountain_range": "Pohorje, Dravinjske gorice in Haloze",
+    "latitude": 46.38111,
+    "longitude": 15.36192
+  },
+  {
+    "name": "Razgledna ploščad pri Ančnikovem gradišču",
+    "elevation": 760,
+    "mountain_range": "Pohorje, Dravinjske gorice in Haloze",
+    "latitude": 46.42604,
+    "longitude": 15.52178
+  },
+  {
+    "name": "Anski vrh (nad Pamečami)",
+    "elevation": 756,
+    "mountain_range": "Pohorje, Dravinjske gorice in Haloze",
+    "latitude": 46.55314,
+    "longitude": 15.07503
+  },
+  {
+    "name": "Pečke",
+    "elevation": 720,
+    "mountain_range": "Pohorje, Dravinjske gorice in Haloze",
+    "latitude": 46.5227,
+    "longitude": 15.5408
+  },
+  {
+    "name": "Lobnikov vrh",
+    "elevation": 705,
+    "mountain_range": "Pohorje, Dravinjske gorice in Haloze",
+    "latitude": 46.5613,
+    "longitude": 15.4454
+  },
+  {
+    "name": "Koglerjev vrh",
+    "elevation": 698,
+    "mountain_range": "Pohorje, Dravinjske gorice in Haloze",
+    "latitude": 46.53074,
+    "longitude": 15.36268
+  },
+  {
+    "name": "Sveti Primož (Sveti Primož na Pohorju)",
+    "elevation": 667,
+    "mountain_range": "Pohorje, Dravinjske gorice in Haloze",
+    "latitude": 46.55803,
+    "longitude": 15.16469
+  },
+  {
+    "name": "Sveti Janez Krstnik (Šentjanž nad Dravčami)",
+    "elevation": 655,
+    "mountain_range": "Pohorje, Dravinjske gorice in Haloze",
+    "latitude": 46.57975,
+    "longitude": 15.13175
+  },
+  {
+    "name": "Jelovice",
+    "elevation": 623,
+    "mountain_range": "Pohorje, Dravinjske gorice in Haloze",
+    "latitude": 46.30691,
+    "longitude": 15.7401
+  },
+  {
+    "name": "Globokarjev vrh",
+    "elevation": 616,
+    "mountain_range": "Pohorje, Dravinjske gorice in Haloze",
+    "latitude": 46.52814,
+    "longitude": 15.46586
+  },
+  {
+    "name": "Brinjeva gora (nad Zrečami)",
+    "elevation": 616,
+    "mountain_range": "Pohorje, Dravinjske gorice in Haloze",
+    "latitude": 46.3764,
+    "longitude": 15.4076
+  },
+  {
+    "name": "Golika",
+    "elevation": 609,
+    "mountain_range": "Pohorje, Dravinjske gorice in Haloze",
+    "latitude": 46.37534,
+    "longitude": 15.4112
+  },
+  {
+    "name": "Sveti Mohor (Lačna Gora)",
+    "elevation": 602,
+    "mountain_range": "Pohorje, Dravinjske gorice in Haloze",
+    "latitude": 46.39652,
+    "longitude": 15.45256
+  },
+  {
+    "name": "Hožičev vrh",
+    "elevation": 595,
+    "mountain_range": "Pohorje, Dravinjske gorice in Haloze",
+    "latitude": 46.53547,
+    "longitude": 15.36992
+  },
+  {
+    "name": "Kerješetov vrh",
+    "elevation": 590,
+    "mountain_range": "Pohorje, Dravinjske gorice in Haloze",
+    "latitude": 46.30995,
+    "longitude": 15.74912
+  },
+  {
+    "name": "Sveti Martin (Zlakova)",
+    "elevation": 589,
+    "mountain_range": "Pohorje, Dravinjske gorice in Haloze",
+    "latitude": 46.38305,
+    "longitude": 15.39551
+  },
+  {
+    "name": "Lorbekov vrh",
+    "elevation": 578,
+    "mountain_range": "Pohorje, Dravinjske gorice in Haloze",
+    "latitude": 46.53259,
+    "longitude": 15.5271
+  },
+  {
+    "name": "Rudnica (nad Podčetrtkom)",
+    "elevation": 548,
+    "mountain_range": "Pohorje, Dravinjske gorice in Haloze",
+    "latitude": null,
+    "longitude": null
+  },
+  {
+    "name": "Sveti Bolfenk (Jelovice)",
+    "elevation": 537,
+    "mountain_range": "Pohorje, Dravinjske gorice in Haloze",
+    "latitude": 46.31468,
+    "longitude": 15.75149
+  },
+  {
+    "name": "Arheološko najdišče Poštela",
+    "elevation": 525,
+    "mountain_range": "Pohorje, Dravinjske gorice in Haloze",
+    "latitude": 46.52392,
+    "longitude": 15.61784
+  },
+  {
+    "name": "Gradišče (nad Slovenj Gradcem)",
+    "elevation": 516,
+    "mountain_range": "Pohorje, Dravinjske gorice in Haloze",
+    "latitude": 46.5159,
+    "longitude": 15.092
+  },
+  {
+    "name": "Sveti Avguštin",
+    "elevation": 504,
+    "mountain_range": "Pohorje, Dravinjske gorice in Haloze",
+    "latitude": 46.2899,
+    "longitude": 15.9339
+  },
+  {
+    "name": "Kluže",
+    "elevation": 496,
+    "mountain_range": "Pohorje, Dravinjske gorice in Haloze",
+    "latitude": 46.5295,
+    "longitude": 15.48838
+  },
+  {
+    "name": "Sv. Ana nad Makolami",
+    "elevation": 460,
+    "mountain_range": "Pohorje, Dravinjske gorice in Haloze",
+    "latitude": null,
+    "longitude": null
+  },
+  {
+    "name": "Janški vrh",
+    "elevation": 417,
+    "mountain_range": "Pohorje, Dravinjske gorice in Haloze",
+    "latitude": 46.3358,
+    "longitude": 15.7935
+  },
+  {
+    "name": "Cerkev Device Marije na Kamnu",
+    "elevation": 381,
+    "mountain_range": "Pohorje, Dravinjske gorice in Haloze",
+    "latitude": 46.6078,
+    "longitude": 15.172
+  },
+  {
+    "name": "Ptujska Gora",
+    "elevation": 342,
+    "mountain_range": "Pohorje, Dravinjske gorice in Haloze",
+    "latitude": 46.35455,
+    "longitude": 15.76152
+  },
+  {
+    "name": "Kapela sv. Ane v Puščavi",
+    "elevation": 330,
+    "mountain_range": "Pohorje, Dravinjske gorice in Haloze",
+    "latitude": 46.55285,
+    "longitude": 15.42214
+  }
+]
