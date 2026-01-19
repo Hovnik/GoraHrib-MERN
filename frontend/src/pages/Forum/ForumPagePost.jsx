@@ -69,12 +69,9 @@ const ForumPagePost = ({
   const onDeleteComment = async (postId, commentId) => {
     try {
       const token = localStorage.getItem("token");
-      await api.delete(
-        `/api/forum/${postId}/comments/${commentId}`,
-        {
-          headers: { Authorization: `Bearer ${token}` },
-        },
-      );
+      await api.delete(`/api/forum/${postId}/comments/${commentId}`, {
+        headers: { Authorization: `Bearer ${token}` },
+      });
 
       // Refresh comments
       await onFetchComments(post._id);
@@ -92,6 +89,18 @@ const ForumPagePost = ({
     return `https://ui-avatars.com/api/?name=${encodeURIComponent(
       username,
     )}&size=100&background=22c55e&color=fff`;
+  };
+
+  // Generate comment author profile picture URL
+  const getCommentProfilePicture = (comment) => {
+    const profile = comment.userId?.profilePicture;
+    if (profile && typeof profile === "object" && profile.url)
+      return profile.url;
+    if (typeof profile === "string" && profile.trim()) return profile;
+    const username = comment.userId?.username || "User";
+    return `https://ui-avatars.com/api/?name=${encodeURIComponent(
+      username,
+    )}&size=40&background=22c55e&color=fff`;
   };
 
   return (
@@ -250,6 +259,15 @@ const ForumPagePost = ({
               comments[post._id].map((comment) => (
                 <div key={comment._id} className="bg-base-200 rounded-lg p-3">
                   <div className="flex items-start gap-2">
+                    {/* Comment author avatar */}
+                    <div className="avatar flex-shrink-0">
+                      <div className="w-8 h-8 rounded-full">
+                        <img
+                          src={getCommentProfilePicture(comment)}
+                          alt={comment.userId?.username}
+                        />
+                      </div>
+                    </div>
                     <div className="flex-1 min-w-0">
                       <p className="font-semibold text-sm">
                         {comment.userId.username}

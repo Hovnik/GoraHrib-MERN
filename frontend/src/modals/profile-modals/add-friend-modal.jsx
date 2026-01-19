@@ -8,18 +8,27 @@ const AddFriendModal = ({ isOpen, onClose, onFriendAdded }) => {
   const [loading, setLoading] = useState(false);
   const [friendStatuses, setFriendStatuses] = useState({});
   const [sendingRequests, setSendingRequests] = useState({});
+  const [error, setError] = useState(null);
 
   useEffect(() => {
     if (!isOpen) {
       setSearchQuery("");
       setSearchResults([]);
       setFriendStatuses({});
+      setError(null);
     }
   }, [isOpen]);
 
   const searchUsers = async () => {
+    if (!searchQuery.trim()) {
+      setSearchResults([]);
+      setError(null);
+      return;
+    }
+
     try {
       setLoading(true);
+      setError(null);
       const token = localStorage.getItem("token");
       console.log("Searching for:", searchQuery);
       const response = await api.get(
@@ -31,22 +40,36 @@ const AddFriendModal = ({ isOpen, onClose, onFriendAdded }) => {
         },
       );
       console.log("Search response:", response.data);
-      setSearchResults(response.data.users || []);
+      const users = response.data.users || [];
+      setSearchResults(users);
 
       // Check friend status for each user
-      const statusPromises = response.data.users.map((user) =>
-        checkFriendStatus(user._id),
-      );
-      const statuses = await Promise.all(statusPromises);
+      if (users.length > 0) {
+        try {
+          const statusPromises = users.map((user) =>
+            checkFriendStatus(user._id).catch((err) => {
+              console.error(`Error checking status for user ${user._id}:`, err);
+              return null; // Return null on error instead of failing completely
+            }),
+          );
+          const statuses = await Promise.all(statusPromises);
 
-      const statusMap = {};
-      response.data.users.forEach((user, index) => {
-        statusMap[user._id] = statuses[index];
-      });
-      setFriendStatuses(statusMap);
+          const statusMap = {};
+          users.forEach((user, index) => {
+            statusMap[user._id] = statuses[index];
+          });
+          setFriendStatuses(statusMap);
+        } catch (statusError) {
+          console.error("Error checking friend statuses:", statusError);
+          // Don't fail the whole search if status check fails
+          setFriendStatuses({});
+        }
+      }
     } catch (error) {
       console.error("Error searching users:", error);
       console.error("Error details:", error.response?.data);
+      setError("Napaka pri iskanju uporabnikov. Poskusite ponovno.");
+      setSearchResults([]);
     } finally {
       setLoading(false);
     }
@@ -55,6 +78,7 @@ const AddFriendModal = ({ isOpen, onClose, onFriendAdded }) => {
   useEffect(() => {
     if (!searchQuery.trim()) {
       setSearchResults([]);
+      setError(null);
       return;
     }
 
@@ -193,6 +217,16 @@ const AddFriendModal = ({ isOpen, onClose, onFriendAdded }) => {
             <div className="flex justify-center items-center h-full">
               <span className="loading loading-spinner loading-lg"></span>
             </div>
+          ) : error ? (
+            <div className="text-center py-8">
+              <div className="text-error mb-2">{error}</div>
+              <button
+                onClick={() => searchUsers()}
+                className="btn btn-sm btn-primary"
+              >
+                Poskusi ponovno
+              </button>
+            </div>
           ) : searchResults.length === 0 && searchQuery.trim() ? (
             <div className="text-center py-8 text-gray-500">
               Ni najdenih uporabnikov
@@ -205,32 +239,40 @@ const AddFriendModal = ({ isOpen, onClose, onFriendAdded }) => {
             <div className="overflow-x-auto">
               <table className="table table-zebra w-full">
                 <tbody>
-                  {searchResults.map((user) => (
-                    <tr key={user._id}>
-                      <td>
-                        <div className="flex items-center gap-3">
-                          <div className="avatar">
-                            <div className="w-10 h-10 rounded-full">
-                              <img
-                                src={
-                                  user.profilePicture &&
-                                  user.profilePicture.trim()
-                                    ? user.profilePicture
-                                    : `https://ui-avatars.com/api/?name=${encodeURIComponent(user.username)}&size=40&background=22c55e&color=fff`
-                                }
-                                alt={user.username}
-                                onError={(e) => {
-                                  e.target.src = `https://ui-avatars.com/api/?name=${encodeURIComponent(user.username)}&size=40&background=22c55e&color=fff`;
-                                }}
-                              />
+                  {searchResults.map((user) => {
+                    const getAvatarSrc = () => {
+                      const profile = user.profilePicture;
+                      if (profile && typeof profile === "object" && profile.url)
+                        return profile.url;
+                      if (typeof profile === "string" && profile.trim())
+                        return profile;
+                      return `https://ui-avatars.com/api/?name=${encodeURIComponent(user.username)}&size=40&background=22c55e&color=fff`;
+                    };
+
+                    return (
+                      <tr key={user._id}>
+                        <td>
+                          <div className="flex items-center gap-3">
+                            <div className="avatar">
+                              <div className="w-10 h-10 rounded-full">
+                                <img
+                                  src={getAvatarSrc()}
+                                  alt={user.username}
+                                  onError={(e) => {
+                                    e.target.src = `https://ui-avatars.com/api/?name=${encodeURIComponent(user.username)}&size=40&background=22c55e&color=fff`;
+                                  }}
+                                />
+                              </div>
                             </div>
+                            <div className="font-medium">{user.username}</div>
                           </div>
-                          <div className="font-medium">{user.username}</div>
-                        </div>
-                      </td>
-                      <td className="text-right">{renderActionButton(user)}</td>
-                    </tr>
-                  ))}
+                        </td>
+                        <td className="text-right">
+                          {renderActionButton(user)}
+                        </td>
+                      </tr>
+                    );
+                  })}
                 </tbody>
               </table>
             </div>
