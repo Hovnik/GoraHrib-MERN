@@ -120,9 +120,9 @@
   },
   {
     "title": "Raziskovalec",
-    "description": "Obiskal si vrhove v vseh 5 gorskih območjih.",
+    "description": "Obiskal si vrhove v vseh 3 gorskih območjih.",
     "badge": "🗺️",
-    "criteria": "Obišči vrhove v vseh 5 območjih",
+    "criteria": "Obišči vrhove v vseh 3 območjih",
     "rarity": "Rare"
   },
   {

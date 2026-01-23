@@ -80,6 +80,55 @@ export async function checkAndAwardAchievements(userId, session = null) {
       ua.achievementId._id.toString(),
     );
 
+    // PRE-FETCH ALL DATA NEEDED FOR CHECKS (optimization)
+    // Get all visited checklist items with peak details
+    const visitedChecklists = await Checklist.find({
+      userId,
+      status: "Visited",
+    })
+      .populate("peakId")
+      .session(session);
+
+    const visitedPeaks = visitedChecklists
+      .map((c) => c.peakId)
+      .filter((p) => p != null);
+
+    // Build lookup maps for fast checking
+    const visitedPeakNames = new Set(
+      visitedPeaks.map((p) => p.name.toLowerCase()),
+    );
+
+    // Count peaks by region
+    const peaksByRegion = {};
+    visitedPeaks.forEach((peak) => {
+      const region = peak.mountainRange;
+      peaksByRegion[region] = (peaksByRegion[region] || 0) + 1;
+    });
+
+    // Count peaks by altitude
+    const peaksAbove2000 = visitedPeaks.filter(
+      (p) => p.elevation >= 2000,
+    ).length;
+
+    // Count unique regions visited
+    const regionsVisited = Object.keys(peaksByRegion).length;
+
+    // Get total peaks per region (cached for region completion checks)
+    const totalPeaksByRegion = {};
+    const allRegions = [
+      "Julijske Alpe",
+      "Karavanke",
+      "Kamniško-Savinjske Alpe",
+      "Pohorje",
+      "Ostale",
+    ];
+    for (const region of allRegions) {
+      const count = await Peak.countDocuments({
+        mountainRange: region,
+      }).session(session);
+      totalPeaksByRegion[region] = count;
+    }
+
     // Check each achievement
     const newAchievements = [];
 
@@ -104,47 +153,28 @@ export async function checkAndAwardAchievements(userId, session = null) {
       }
 
       // Award if the user has visited the peak named Triglav
-      if (criteria.includes("triglav")) {
-        const peakObj = await Peak.findOne({
-          name: { $regex: /^triglav$/i },
-        }).session(session);
-        if (peakObj) {
-          const visited = await Checklist.findOne({
-            userId,
-            peakId: peakObj._id,
-            status: "Visited",
-          }).session(session);
-          if (visited) {
-            shouldAward = true;
-          }
+      if (criteria.includes("triglav") && !shouldAward) {
+        if (visitedPeakNames.has("triglav")) {
+          shouldAward = true;
         }
       }
 
       // Region-specific achievements: "Obišči X vrhov v [Region]"
       const regionMatch = criteria.match(
-        /obišči\s+(\d+)\s+vrhov\s+(?:v|na)\s+(.+)/,
+        /obišči\s+(\d+)\s+vrh(?:ov)?\s+(?:v|na)\s+(.+)/,
       );
       if (regionMatch && !shouldAward) {
         const requiredCount = parseInt(regionMatch[1]);
         const regionName = regionMatch[2].trim();
         const normalizedRegion = normalizeRegionName(regionName);
 
-        // Find all peaks in this region - match against normalized region name
-        const regionPeaks = await Peak.find({
-          range: { $regex: new RegExp(normalizedRegion, "i") },
-        }).session(session);
+        // Find matching region in our map
+        const visitedInRegion = Object.entries(peaksByRegion).find(([region]) =>
+          region.toLowerCase().includes(normalizedRegion.toLowerCase()),
+        );
 
-        if (regionPeaks.length > 0) {
-          const peakIds = regionPeaks.map((p) => p._id);
-          const visitedCount = await Checklist.countDocuments({
-            userId,
-            peakId: { $in: peakIds },
-            status: "Visited",
-          }).session(session);
-
-          if (visitedCount >= requiredCount) {
-            shouldAward = true;
-          }
+        if (visitedInRegion && visitedInRegion[1] >= requiredCount) {
+          shouldAward = true;
         }
       }
 
@@ -154,28 +184,61 @@ export async function checkAndAwardAchievements(userId, session = null) {
         const regionName = allRegionMatch[1].trim();
         const normalizedRegion = normalizeRegionName(regionName);
 
-        // Find all peaks in this region
-        const regionPeaks = await Peak.find({
-          range: { $regex: new RegExp(normalizedRegion, "i") },
-        }).session(session);
+        // Find matching region in our map
+        const visitedInRegion = Object.entries(peaksByRegion).find(([region]) =>
+          region.toLowerCase().includes(normalizedRegion.toLowerCase()),
+        );
 
-        if (regionPeaks.length > 0) {
-          const peakIds = regionPeaks.map((p) => p._id);
-          const visitedCount = await Checklist.countDocuments({
-            userId,
-            peakId: { $in: peakIds },
-            status: "Visited",
-          }).session(session);
+        if (visitedInRegion) {
+          const [regionKey, visitedCount] = visitedInRegion;
+          const totalInRegion = totalPeaksByRegion[regionKey] || 0;
 
-          // All peaks in region must be visited
-          if (visitedCount === regionPeaks.length) {
+          if (totalInRegion > 0 && visitedCount === totalInRegion) {
             shouldAward = true;
           }
         }
       }
 
+      // Altitude-based achievements: "Obišči N vrhov nad 2000m"
+      const altitudeMatch = criteria.match(
+        /obišči\s+(\d+)\s+vrh(?:ov)?\s+nad\s+(\d+)m/,
+      );
+      if (altitudeMatch && !shouldAward) {
+        const requiredCount = parseInt(altitudeMatch[1]);
+        const minAltitude = parseInt(altitudeMatch[2]);
+
+        const peaksAboveAltitude = visitedPeaks.filter(
+          (p) => p.elevation >= minAltitude,
+        ).length;
+
+        if (peaksAboveAltitude >= requiredCount) {
+          shouldAward = true;
+        }
+      }
+
+      // Single altitude achievement: "Obišči vrh nad 2000m"
+      const singleAltitudeMatch = criteria.match(/obišči\s+vrh\s+nad\s+(\d+)m/);
+      if (singleAltitudeMatch && !shouldAward) {
+        const minAltitude = parseInt(singleAltitudeMatch[1]);
+
+        const peaksAboveAltitude = visitedPeaks.filter(
+          (p) => p.elevation >= minAltitude,
+        ).length;
+
+        if (peaksAboveAltitude >= 1) {
+          shouldAward = true;
+        }
+      }
+
+      // All 4 regions achievement: "Obišči vrhove v vseh 4 območjih"
+      if (criteria.includes("vseh 4 območjih") && !shouldAward) {
+        if (regionsVisited >= 4) {
+          shouldAward = true;
+        }
+      }
+
       // Add more criteria checks here as needed
-      // For example: altitude-based, seasonal, etc.
+      // For example: seasonal, photo-based, etc.
 
       if (shouldAward) {
         newAchievements.push(achievement);
@@ -258,6 +321,55 @@ export async function revokeAchievementsIfNeeded(userId, session = null) {
     // Find achievements with criteria like "Obišči N vrhov"
     const achievements = await Achievement.find().session(session);
 
+    // PRE-FETCH ALL DATA NEEDED FOR CHECKS (optimization)
+    // Get all visited checklist items with peak details
+    const visitedChecklists = await Checklist.find({
+      userId,
+      status: "Visited",
+    })
+      .populate("peakId")
+      .session(session);
+
+    const visitedPeaks = visitedChecklists
+      .map((c) => c.peakId)
+      .filter((p) => p != null);
+
+    // Build lookup maps for fast checking
+    const visitedPeakNames = new Set(
+      visitedPeaks.map((p) => p.name.toLowerCase()),
+    );
+
+    // Count peaks by region
+    const peaksByRegion = {};
+    visitedPeaks.forEach((peak) => {
+      const region = peak.mountainRange;
+      peaksByRegion[region] = (peaksByRegion[region] || 0) + 1;
+    });
+
+    // Count peaks by altitude
+    const peaksAbove2000 = visitedPeaks.filter(
+      (p) => p.elevation >= 2000,
+    ).length;
+
+    // Count unique regions visited
+    const regionsVisited = Object.keys(peaksByRegion).length;
+
+    // Get total peaks per region (cached for region completion checks)
+    const totalPeaksByRegion = {};
+    const allRegions = [
+      "Julijske Alpe",
+      "Karavanke",
+      "Kamniško-Savinjske Alpe",
+      "Pohorje",
+      "Ostale",
+    ];
+    for (const region of allRegions) {
+      const count = await Peak.countDocuments({
+        mountainRange: region,
+      }).session(session);
+      totalPeaksByRegion[region] = count;
+    }
+
     const achievementsToRevoke = [];
 
     for (const achievement of achievements) {
@@ -282,20 +394,10 @@ export async function revokeAchievementsIfNeeded(userId, session = null) {
 
       // Specific peak achievements (e.g., "Obišči Triglav")
       if (criteria.includes("triglav")) {
-        const peakObj = await Peak.findOne({
-          name: { $regex: /^triglav$/i },
-        }).session(session);
-        // If the peak exists but the user no longer has it marked as visited, revoke
-        if (peakObj) {
-          const stillVisited = await Checklist.findOne({
-            userId,
-            peakId: peakObj._id,
-            status: "Visited",
-          }).session(session);
-          if (!stillVisited) {
-            achievementsToRevoke.push(achievement._id);
-          }
+        if (!visitedPeakNames.has("triglav")) {
+          achievementsToRevoke.push(achievement._id);
         }
+        continue;
       }
 
       // Region-specific achievements: "Obišči X vrhov v [Region]"
@@ -307,21 +409,15 @@ export async function revokeAchievementsIfNeeded(userId, session = null) {
         const regionName = regionMatch[2].trim();
         const normalizedRegion = normalizeRegionName(regionName);
 
-        const regionPeaks = await Peak.find({
-          range: { $regex: new RegExp(normalizedRegion, "i") },
-        }).session(session);
+        // Find matching region in our map
+        const visitedInRegion = Object.entries(peaksByRegion).find(([region]) =>
+          region.toLowerCase().includes(normalizedRegion.toLowerCase()),
+        );
 
-        if (regionPeaks.length > 0) {
-          const peakIds = regionPeaks.map((p) => p._id);
-          const visitedCount = await Checklist.countDocuments({
-            userId,
-            peakId: { $in: peakIds },
-            status: "Visited",
-          }).session(session);
+        const visitedCount = visitedInRegion ? visitedInRegion[1] : 0;
 
-          if (visitedCount < requiredCount) {
-            achievementsToRevoke.push(achievement._id);
-          }
+        if (visitedCount < requiredCount) {
+          achievementsToRevoke.push(achievement._id);
         }
         continue;
       }
@@ -332,21 +428,62 @@ export async function revokeAchievementsIfNeeded(userId, session = null) {
         const regionName = allRegionMatch[1].trim();
         const normalizedRegion = normalizeRegionName(regionName);
 
-        const regionPeaks = await Peak.find({
-          range: { $regex: new RegExp(normalizedRegion, "i") },
-        }).session(session);
+        // Find matching region in our map
+        const visitedInRegion = Object.entries(peaksByRegion).find(([region]) =>
+          region.toLowerCase().includes(normalizedRegion.toLowerCase()),
+        );
 
-        if (regionPeaks.length > 0) {
-          const peakIds = regionPeaks.map((p) => p._id);
-          const visitedCount = await Checklist.countDocuments({
-            userId,
-            peakId: { $in: peakIds },
-            status: "Visited",
-          }).session(session);
+        if (visitedInRegion) {
+          const [regionKey, visitedCount] = visitedInRegion;
+          const totalInRegion = totalPeaksByRegion[regionKey] || 0;
 
-          if (visitedCount < regionPeaks.length) {
+          if (totalInRegion === 0 || visitedCount < totalInRegion) {
             achievementsToRevoke.push(achievement._id);
           }
+        } else {
+          // No peaks visited in this region at all
+          achievementsToRevoke.push(achievement._id);
+        }
+        continue;
+      }
+
+      // Altitude-based achievements: "Obišči N vrhov nad 2000m"
+      const altitudeMatch = criteria.match(
+        /obišči\s+(\d+)\s+vrh(?:ov)?\s+nad\s+(\d+)m/,
+      );
+      if (altitudeMatch) {
+        const requiredCount = parseInt(altitudeMatch[1]);
+        const minAltitude = parseInt(altitudeMatch[2]);
+
+        const peaksAboveAltitude = visitedPeaks.filter(
+          (p) => p.elevation >= minAltitude,
+        ).length;
+
+        if (peaksAboveAltitude < requiredCount) {
+          achievementsToRevoke.push(achievement._id);
+        }
+        continue;
+      }
+
+      // Single altitude achievement: "Obišči vrh nad 2000m"
+      const singleAltitudeMatch = criteria.match(/obišči\s+vrh\s+nad\s+(\d+)m/);
+      if (singleAltitudeMatch) {
+        const minAltitude = parseInt(singleAltitudeMatch[1]);
+
+        const peaksAboveAltitude = visitedPeaks.filter(
+          (p) => p.elevation >= minAltitude,
+        ).length;
+
+        if (peaksAboveAltitude < 1) {
+          achievementsToRevoke.push(achievement._id);
+        }
+        continue;
+      }
+
+      // All 4 regions achievement: "Obišči vrhove v vseh 4 območjih"
+      if (criteria.includes("vseh 4 območjih")) {
+        if (regionsVisited < 4) {
+          achievementsToRevoke.push(achievement._id);
         }
       }
     }

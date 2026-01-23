@@ -1,6 +1,7 @@
 import { LogOut } from "lucide-react";
 import LogoutModal from "../modals/logout-modal";
 import { useState } from "react";
+import { Link } from "react-router";
 
 const Titlebar = () => {
   const [isLogoutModalOpen, setIsLogoutModalOpen] = useState(false);
@@ -12,9 +13,12 @@ const Titlebar = () => {
     >
       {/* Left */}
       <div className="navbar-start">
-        <a className="text-white text-4xl font-bold pl-0 md:pl-3 flex items-center h-16">
+        <Link
+          to="/map"
+          className="text-white text-4xl font-bold pl-0 md:pl-3 flex items-center h-16"
+        >
           GoraHrib
-        </a>
+        </Link>
       </div>
 
       {/* Right */}

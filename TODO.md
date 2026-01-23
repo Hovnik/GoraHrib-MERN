@@ -17,5 +17,4 @@
 
 - the text on user statistics panel is overflowing on smaller screens
 - make the users tappable on forum posts and comments
-- when searching for peaks, when user searches for something like smarna, it also finds šmarna
-- user somehow got -1 peaks on checklist
+- make the usr tappable on friends leaderboard

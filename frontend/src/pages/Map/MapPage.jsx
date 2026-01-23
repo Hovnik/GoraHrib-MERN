@@ -11,6 +11,14 @@ import api from "../../config/axios";
 import { Search, X } from "lucide-react";
 import PeakMap from "./PeakMap.jsx";
 
+// Normalize strings for search: remove diacritics and lowercase
+const normalizeString = (s) =>
+  (s || "")
+    .toString()
+    .normalize("NFD")
+    .replace(/[\u0300-\u036f]/g, "")
+    .toLowerCase();
+
 const MapPage = () => {
   const [peaks, setPeaks] = useState([]);
   const [checklist, setChecklist] = useState([]);
@@ -53,11 +61,15 @@ const MapPage = () => {
             : Promise.resolve({ data: { peakData: {} } }),
         ]);
 
-        // Precompute lowercase fields to avoid calling toLowerCase on every keystroke
+        // Precompute lowercase and normalized fields to avoid calling toLowerCase
+        // or normalize on every keystroke. Normalized fields strip diacritics
+        // so searches like "smarna" will match "Šmarna" / "šmarna".
         const processedPeaks = (peaksRes.data.peaks || []).map((p) => ({
           ...p,
           _lcName: (p.name || "").toLowerCase(),
           _lcRange: (p.mountainRange || "").toLowerCase(),
+          _searchName: normalizeString(p.name),
+          _searchRange: normalizeString(p.mountainRange),
         }));
         setPeaks(processedPeaks);
         setChecklist(checklistRes.data.checklist);
@@ -138,11 +150,12 @@ const MapPage = () => {
         .map((r) => r.item);
     }
 
-    const query = q.toLowerCase();
+    const query = normalizeString(q);
     return peaks
       .filter(
         (peak) =>
-          peak._lcName?.includes(query) || peak._lcRange?.includes(query),
+          peak._searchName?.includes(query) ||
+          peak._searchRange?.includes(query),
       )
       .slice(0, 5);
   }, [deferredSearchQuery, peaks]);

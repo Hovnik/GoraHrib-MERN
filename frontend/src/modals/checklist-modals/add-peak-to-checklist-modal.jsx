@@ -2,6 +2,14 @@ import { useState, useEffect } from "react";
 import { Plus } from "lucide-react";
 import api from "../../config/axios";
 
+// Normalize strings for search: remove diacritics and lowercase
+const normalizeString = (s) =>
+  (s || "")
+    .toString()
+    .normalize("NFD")
+    .replace(/[\u0300-\u036f]/g, "")
+    .toLowerCase();
+
 const AddPeakToChecklistModal = ({ isOpen, onClose }) => {
   const [searchTerm, setSearchTerm] = useState("");
   const [selectedPeaks, setSelectedPeaks] = useState([]);
@@ -90,8 +98,9 @@ const AddPeakToChecklistModal = ({ isOpen, onClose }) => {
     });
   };
 
+  const normalizedQuery = normalizeString(searchTerm);
   const filteredPeaks = peaks.filter((peak) =>
-    peak.name.toLowerCase().includes(searchTerm.toLowerCase()),
+    normalizeString(peak.name).includes(normalizedQuery),
   );
 
   if (!isOpen) return null;
