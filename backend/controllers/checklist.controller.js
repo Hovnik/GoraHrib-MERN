@@ -15,7 +15,7 @@ export async function getChecklist(req, res) {
   const userId = req.user.id;
 
   const checklist = await Checklist.find({ userId })
-    .populate("peakId", "name elevation mountainRange")
+    .populate("peakId", "name elevation mountainRange location")
     .sort({ createdAt: -1 });
 
   res.status(StatusCodes.OK).json({ checklist });

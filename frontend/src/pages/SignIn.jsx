@@ -8,7 +8,6 @@ import {
   EyeOff,
   MapPin,
   Users,
-  Trophy,
   TrendingUp,
 } from "lucide-react";
 import api from "../config/axios";

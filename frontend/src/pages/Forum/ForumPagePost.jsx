@@ -1,4 +1,5 @@
 import { useState, useEffect } from "react";
+import { useNavigate } from "react-router";
 import {
   Heart,
   MessageCircle,
@@ -28,7 +29,7 @@ const ForumPagePost = ({
     useState(false);
   const [commentToDelete, setCommentToDelete] = useState(null);
   const [enlargedImage, setEnlargedImage] = useState(null);
-  const [showLikeTooltip, setShowLikeTooltip] = useState(false);
+  const navigate = useNavigate();
 
   useEffect(() => {
     // Fetch comments when expanded
@@ -118,7 +119,18 @@ const ForumPagePost = ({
 
             {/* User Info */}
             <div className="flex-1">
-              <p className="text-sm font-semibold">{post.userId.username}</p>
+              <p
+                className="text-sm font-semibold cursor-pointer hover:text-green-600 transition-colors"
+                onClick={() => {
+                  if (post.userId._id === currentUserId) {
+                    navigate("/profile");
+                  } else {
+                    navigate(`/profile/${post.userId._id}`);
+                  }
+                }}
+              >
+                {post.userId.username}
+              </p>
               <p className="text-xs text-gray-600">
                 {formatDate(post.createdAt)}
               </p>
@@ -198,8 +210,6 @@ const ForumPagePost = ({
             <div className="relative">
               <button
                 onClick={() => onToggleLike(post._id)}
-                onMouseEnter={() => setShowLikeTooltip(true)}
-                onMouseLeave={() => setShowLikeTooltip(false)}
                 className={`btn btn-ghost btn-sm gap-2 ${
                   post.likedBy.includes(currentUserId) ? "text-red-500" : ""
                 }`}
@@ -211,18 +221,6 @@ const ForumPagePost = ({
                 />
                 {post.likes}
               </button>
-              {showLikeTooltip &&
-                post.likedByUsers &&
-                post.likedByUsers.length > 0 && (
-                  <div className="absolute bottom-full left-0 mb-2 bg-base-300 text-sm rounded-lg shadow-lg p-2 z-10 min-w-max">
-                    <p className="font-semibold mb-1">Všečkov:</p>
-                    {post.likedByUsers.map((user, idx) => (
-                      <p key={idx} className="text-xs">
-                        {user.username}
-                      </p>
-                    ))}
-                  </div>
-                )}
             </div>
             <button
               onClick={toggleComments}
@@ -269,7 +267,16 @@ const ForumPagePost = ({
                       </div>
                     </div>
                     <div className="flex-1 min-w-0">
-                      <p className="font-semibold text-sm">
+                      <p
+                        className="font-semibold text-sm cursor-pointer hover:text-green-600 transition-colors"
+                        onClick={() => {
+                          if (comment.userId._id === currentUserId) {
+                            navigate("/profile");
+                          } else {
+                            navigate(`/profile/${comment.userId._id}`);
+                          }
+                        }}
+                      >
                         {comment.userId.username}
                       </p>
                       <p className="text-sm break-words whitespace-pre-wrap">

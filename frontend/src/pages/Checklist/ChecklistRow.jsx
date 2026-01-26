@@ -2,6 +2,7 @@ import { CheckCircle, Trash2, Share2 } from "lucide-react";
 import DeleteFromChecklistModal from "../../modals/checklist-modals/delete-from-checklist-modal";
 import MarkVisitedModal from "../../modals/checklist-modals/mark-visited-modal";
 import ShareVisitedPeakModal from "../../modals/checklist-modals/share-visited-peak-modal";
+import LocationErrorModal from "../../modals/checklist-modals/location-error-modal";
 import { useState } from "react";
 import api from "../../config/axios";
 import toast from "react-hot-toast";
@@ -10,10 +11,104 @@ const ChecklistRow = ({ peak, activeTab, onDelete, onVisit }) => {
   const [isDeleteModalOpen, setIsDeleteModalOpen] = useState(false);
   const [isMarkVisitedModalOpen, setIsMarkVisitedModalOpen] = useState(false);
   const [isShareModalOpen, setIsShareModalOpen] = useState(false);
+  const [isLocationErrorModalOpen, setIsLocationErrorModalOpen] =
+    useState(false);
+  const [locationErrorMessage, setLocationErrorMessage] = useState("");
+  const [locationErrorDistance, setLocationErrorDistance] = useState(null);
+  const [isCheckingLocation, setIsCheckingLocation] = useState(false);
 
   const handleDeleteConfirm = () => {
     onDelete(peak.peakId._id);
     setIsDeleteModalOpen(false);
+  };
+
+  // Calculate distance between two coordinates in meters using Haversine formula
+  const calculateDistance = (lat1, lon1, lat2, lon2) => {
+    const R = 6371e3; // Earth's radius in meters
+    const φ1 = (lat1 * Math.PI) / 180;
+    const φ2 = (lat2 * Math.PI) / 180;
+    const Δφ = ((lat2 - lat1) * Math.PI) / 180;
+    const Δλ = ((lon2 - lon1) * Math.PI) / 180;
+
+    const a =
+      Math.sin(Δφ / 2) * Math.sin(Δφ / 2) +
+      Math.cos(φ1) * Math.cos(φ2) * Math.sin(Δλ / 2) * Math.sin(Δλ / 2);
+    const c = 2 * Math.atan2(Math.sqrt(a), Math.sqrt(1 - a));
+
+    return R * c; // Distance in meters
+  };
+
+  // Check if user is near the peak before allowing to mark as visited
+  const handleMarkVisitedClick = () => {
+    if (!navigator.geolocation) {
+      setLocationErrorMessage("Vaša naprava ne podpira določanja lokacije.");
+      setLocationErrorDistance(null);
+      setIsLocationErrorModalOpen(true);
+      return;
+    }
+
+    setIsCheckingLocation(true);
+
+    navigator.geolocation.getCurrentPosition(
+      (position) => {
+        setIsCheckingLocation(false);
+        const userLat = position.coords.latitude;
+        const userLon = position.coords.longitude;
+
+        // Get peak coordinates from populated peakId
+        const peakCoordinates = peak.peakId?.location?.coordinates;
+
+        if (!peakCoordinates || peakCoordinates.length !== 2) {
+          setLocationErrorMessage(
+            "Koordinate vrha niso na voljo. Prosimo, kontaktirajte podporo.",
+          );
+          setLocationErrorDistance(null);
+          setIsLocationErrorModalOpen(true);
+          return;
+        }
+
+        const [peakLon, peakLat] = peakCoordinates;
+        const distance = calculateDistance(userLat, userLon, peakLat, peakLon);
+
+        // Allow marking if within 100 meters of the peak
+        const MAX_DISTANCE = 100;
+        if (distance <= MAX_DISTANCE) {
+          setIsMarkVisitedModalOpen(true);
+        } else {
+          const distanceKm = (distance / 1000).toFixed(2);
+          setLocationErrorMessage(
+            "Niste dovolj blizu vrha, da bi ga lahko označili kot osvojenega.",
+          );
+          setLocationErrorDistance(`${distanceKm} km`);
+          setIsLocationErrorModalOpen(true);
+        }
+      },
+      (error) => {
+        setIsCheckingLocation(false);
+        setLocationErrorDistance(null);
+        let errorMsg = "Napaka pri pridobivanju lokacije.";
+        switch (error.code) {
+          case error.PERMISSION_DENIED:
+            errorMsg =
+              "Dovoljenje za dostop do lokacije je zavrnjeno. Prosimo, omogočite dostop do lokacije v nastavitvah.";
+            break;
+          case error.POSITION_UNAVAILABLE:
+            errorMsg =
+              "Informacije o lokaciji niso na voljo. Preverite, ali je GPS omogočen.";
+            break;
+          case error.TIMEOUT:
+            errorMsg = "Zahteva za lokacijo je potekla. Poskusite ponovno.";
+            break;
+        }
+        setLocationErrorMessage(errorMsg);
+        setIsLocationErrorModalOpen(true);
+      },
+      {
+        enableHighAccuracy: true,
+        timeout: 10000,
+        maximumAge: 0,
+      },
+    );
   };
 
   const handleMarkVisitedConfirm = async (pictureFiles) => {
@@ -62,16 +157,12 @@ const ChecklistRow = ({ peak, activeTab, onDelete, onVisit }) => {
           formData.append("pictures", file);
         });
 
-        await api.put(
-          `/api/checklist/${peak.peakId._id}/pictures`,
-          formData,
-          {
-            headers: {
-              Authorization: `Bearer ${token}`,
-              "Content-Type": "multipart/form-data",
-            },
+        await api.put(`/api/checklist/${peak.peakId._id}/pictures`, formData, {
+          headers: {
+            Authorization: `Bearer ${token}`,
+            "Content-Type": "multipart/form-data",
           },
-        );
+        });
 
         toast.success("Slike uspešno naložene!");
       }
@@ -100,11 +191,21 @@ const ChecklistRow = ({ peak, activeTab, onDelete, onVisit }) => {
           <div className="flex justify-end gap-2">
             {activeTab === "wishlist" && (
               <button
-                onClick={() => setIsMarkVisitedModalOpen(true)}
+                onClick={handleMarkVisitedClick}
+                disabled={isCheckingLocation}
                 className="btn btn-sm btn-success gap-1"
               >
-                <CheckCircle className="w-4 h-4" />
-                <span className="hidden md:inline">Osvojen</span>
+                {isCheckingLocation ? (
+                  <>
+                    <span className="loading loading-spinner loading-xs"></span>
+                    <span className="hidden md:inline">Preverjam...</span>
+                  </>
+                ) : (
+                  <>
+                    <CheckCircle className="w-4 h-4" />
+                    <span className="hidden md:inline">Osvojen</span>
+                  </>
+                )}
               </button>
             )}
             {activeTab === "visited" && (
@@ -145,6 +246,13 @@ const ChecklistRow = ({ peak, activeTab, onDelete, onVisit }) => {
         onClose={() => setIsShareModalOpen(false)}
         peakId={peak.peakId._id}
         peakName={peak.peakId.name}
+      />
+
+      <LocationErrorModal
+        isOpen={isLocationErrorModalOpen}
+        onClose={() => setIsLocationErrorModalOpen(false)}
+        errorMessage={locationErrorMessage}
+        distance={locationErrorDistance}
       />
     </>
   );

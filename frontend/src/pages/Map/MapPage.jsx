@@ -40,6 +40,20 @@ const MapPage = () => {
   const suppressTimeoutRef = useRef(null);
   const popupTimeoutRef = useRef(null);
   const mapRef = useRef(null);
+  const [userLocation, setUserLocation] = useState(null);
+  const [locationError, setLocationError] = useState(null);
+  const watchIdRef = useRef(null);
+  const hasAutoCenteredRef = useRef(false);
+
+  // Cleanup all timeouts on unmount
+  useEffect(() => {
+    return () => {
+      if (suppressTimeoutRef.current) clearTimeout(suppressTimeoutRef.current);
+      if (popupTimeoutRef.current) clearTimeout(popupTimeoutRef.current);
+      if (watchIdRef.current)
+        navigator.geolocation.clearWatch(watchIdRef.current);
+    };
+  }, []);
 
   useEffect(() => {
     const fetchData = async () => {
@@ -92,6 +106,57 @@ const MapPage = () => {
     return () => window.removeEventListener("resize", handleResize);
   }, []);
 
+  // Start geolocation tracking
+  useEffect(() => {
+    if (!navigator.geolocation) {
+      const msg = "Geolocation is not supported by your browser";
+      setLocationError(msg);
+      toast.error(msg);
+      return;
+    }
+
+    const handleSuccess = (position) => {
+      const { latitude, longitude, accuracy } = position.coords;
+      setUserLocation({ latitude, longitude, accuracy });
+      setLocationError(null);
+
+      if (!hasAutoCenteredRef.current && mapRef.current) {
+        mapRef.current.setView([latitude, longitude], isMobile ? 10 : 11, {
+          animate: true,
+          duration: 1.5,
+        });
+        hasAutoCenteredRef.current = true;
+      }
+    };
+
+    const handleError = (error) => {
+      const messages = {
+        1: "Location permission denied",
+        2: "Location information unavailable",
+        3: "Location request timed out",
+      };
+      const msg = messages[error.code] || "Unable to retrieve your location";
+      setLocationError(msg);
+      toast.error(msg);
+    };
+
+    watchIdRef.current = navigator.geolocation.watchPosition(
+      handleSuccess,
+      handleError,
+      {
+        enableHighAccuracy: true,
+        timeout: 10000,
+        maximumAge: 0,
+      },
+    );
+
+    return () => {
+      if (watchIdRef.current !== null) {
+        navigator.geolocation.clearWatch(watchIdRef.current);
+      }
+    };
+  }, [isMobile]);
+
   // Handle clicks outside search dropdown
   useEffect(() => {
     const handleClickOutside = (event) => {
@@ -103,7 +168,7 @@ const MapPage = () => {
     };
     document.addEventListener("mousedown", handleClickOutside);
     return () => document.removeEventListener("mousedown", handleClickOutside);
-  }, []);
+  }, [isMobile, searchExpanded]);
 
   // focus input when mobile search expands
   useEffect(() => {
@@ -160,21 +225,17 @@ const MapPage = () => {
       .slice(0, 5);
   }, [deferredSearchQuery, peaks]);
 
-  // Update search results and visibility when filtered results change
+  // Update search results and visibility
   useEffect(() => {
     setSearchResults(filteredPeaks);
-    // If a peak was just selected, suppress reopening the dropdown briefly
     if (suppressSearchOpen) {
       setShowSearchResults(false);
       return;
     }
-
     const shouldShow = filteredPeaks.length > 0 && searchQuery.length >= 2;
     setShowSearchResults(shouldShow);
-
-    // Reset highlighted index when results change / dropdown opens
     setHighlightedIndex(shouldShow && filteredPeaks.length > 0 ? 0 : -1);
-  }, [filteredPeaks, searchQuery]);
+  }, [filteredPeaks, searchQuery, suppressSearchOpen]);
 
   // Scroll highlighted result into view when it changes
   useEffect(() => {
@@ -187,68 +248,77 @@ const MapPage = () => {
   }, [highlightedIndex]);
 
   // Handle peak selection from search
-  const handlePeakSelect = (peak) => {
-    if (peak.location?.coordinates?.length === 2) {
-      // Close any active popups first
-      setOpenPopupForPeakId(null);
+  const handlePeakSelect = useCallback(
+    (peak) => {
+      if (!peak.location?.coordinates || peak.location.coordinates.length !== 2)
+        return;
 
-      // Clear any pending timeouts from previous selections
+      // Clear any pending timeouts
       if (suppressTimeoutRef.current) clearTimeout(suppressTimeoutRef.current);
       if (popupTimeoutRef.current) clearTimeout(popupTimeoutRef.current);
+      setOpenPopupForPeakId(null);
 
       const [longitude, latitude] = peak.location.coordinates;
+      let distance = 2.0;
 
-      // Calculate distance from current map center to target peak
-      let distance = 2.0; // Default to max distance if map not ready
       if (mapRef.current) {
-        const currentCenter = mapRef.current.getCenter();
-        const currentLat = currentCenter.lat;
-        const currentLng = currentCenter.lng;
-        const latDiff = Math.abs(latitude - currentLat);
-        const lngDiff = Math.abs(longitude - currentLng);
+        const { lat, lng } = mapRef.current.getCenter();
+        const latDiff = Math.abs(latitude - lat);
+        const lngDiff = Math.abs(longitude - lng);
         distance = Math.sqrt(latDiff * latDiff + lngDiff * lngDiff);
       }
 
-      // Scale duration based on distance: 1s min, 3s max
-      // Distance ~0 = 1s, Distance ~2 (across Slovenia) = 3s
-      const duration = Math.min(Math.max(1.0 + distance * 1.0, 1.0), 3.0);
-      const popupDelay = duration * 1000 + 100; // Wait for animation + 100ms buffer
+      const duration = Math.min(Math.max(1.0 + distance, 1.0), 3.0);
+      const popupDelay = duration * 1000 + 100;
 
-      // Use lower zoom on mobile to prevent tile loading issues
-      const targetZoom = isMobile ? 14 : 16;
       setSelectedPeak({
         center: [latitude, longitude],
-        zoom: targetZoom,
+        zoom: isMobile ? 14 : 16,
         duration,
       });
-      setSearchQuery(peak.name);
-      // prevent the search-results effect from re-opening the dropdown
+      setSearchQuery("");
+      setSearchResults([]);
       setSuppressSearchOpen(true);
       setShowSearchResults(false);
-      // Collapse search on mobile when peak is selected
-      if (isMobile) {
-        setSearchExpanded(false);
-      }
-      // Clear suppression after the map flyTo and cluster expansion settle
+      setHighlightedIndex(-1);
+      if (isMobile) setSearchExpanded(false);
+
       suppressTimeoutRef.current = setTimeout(
         () => setSuppressSearchOpen(false),
         popupDelay,
       );
-      // Trigger popup to open for this peak after a delay to ensure map has moved and markers uncluster
-      popupTimeoutRef.current = setTimeout(() => {
-        setOpenPopupForPeakId(peak._id);
-      }, popupDelay);
-    }
-  };
+      popupTimeoutRef.current = setTimeout(
+        () => setOpenPopupForPeakId(peak._id),
+        popupDelay,
+      );
+    },
+    [isMobile],
+  );
 
   // Clear search
-  const handleClearSearch = () => {
+  const handleClearSearch = useCallback(() => {
     setSearchQuery("");
     setSearchResults([]);
     setShowSearchResults(false);
     setSelectedPeak(null);
     setOpenPopupForPeakId(null);
-  };
+  }, []);
+
+  // Recenter map on user location
+  const handleRecenterLocation = useCallback(() => {
+    if (userLocation && mapRef.current) {
+      mapRef.current.setView(
+        [userLocation.latitude, userLocation.longitude],
+        isMobile ? 10 : 11,
+        {
+          animate: true,
+          duration: 1.0,
+        },
+      );
+    } else if (!userLocation && !locationError) {
+      toast.error("Waiting for location...");
+    }
+  }, [userLocation, locationError, isMobile]);
 
   return (
     <div className="fixed top-16 left-0 md:left-20 right-0 bottom-0 md:bottom-0 pb-16 md:pb-0">
@@ -405,6 +475,8 @@ const MapPage = () => {
         onAddToChecklist={handleAddToChecklist}
         setOpenPopupForPeakId={setOpenPopupForPeakId}
         mapRef={mapRef}
+        userLocation={userLocation}
+        onRecenterLocation={handleRecenterLocation}
       />
     </div>
   );

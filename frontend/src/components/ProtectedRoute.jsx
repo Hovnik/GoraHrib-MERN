@@ -17,13 +17,14 @@ const ProtectedRoute = () => {
 
       try {
         // Verify token with backend by making a simple authenticated request
-        await axiosInstance.get("/api/user/profile");
+        await axiosInstance.get("/api/user");
         setIsAuthenticated(true);
       } catch (error) {
         // Token is invalid/expired, clear it
         localStorage.removeItem("token");
         localStorage.removeItem("user");
         setIsAuthenticated(false);
+        console.error("Token validation failed:", error);
       } finally {
         setIsValidating(false);
       }

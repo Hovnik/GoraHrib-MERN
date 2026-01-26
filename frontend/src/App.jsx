@@ -2,6 +2,7 @@ import { Routes, Route } from "react-router";
 import { Toaster } from "react-hot-toast";
 import Layout from "./components/Layout";
 import ProtectedRoute from "./components/ProtectedRoute";
+import ScrollToTop from "./components/ScrollToTop";
 import MapPage from "./pages/Map/MapPage.jsx";
 import ProfilePage from "./pages/Profile/ProfilePage.jsx";
 import LeaderboardPage from "./pages/LeaderboardPage.jsx";
@@ -17,6 +18,7 @@ const App = () => {
   return (
     <div>
       <Toaster />
+      <ScrollToTop />
       <Routes>
         <Route path="/" element={<SignIn />} />
         <Route path="/signin" element={<SignIn />} />
