@@ -11,10 +11,7 @@
 # Future features
 
 - notifications when someone likes or comments on your forum post
-- user can climb a peak mutiple times and track progress
 
 # Bugs
 
 - the text on user statistics panel is overflowing on smaller screens
-- make the users tappable on forum posts and comments
-- make the usr tappable on friends leaderboard
