@@ -14,7 +14,7 @@ export async function getLeaderboard(req, res) {
     throw new BadRequestError("Invalid leaderboard type");
   }
 
-  let userIds = [];
+  let query = {};
 
   if (leaderboardType === "Friends") {
     // Fetch friends' IDs
@@ -30,63 +30,29 @@ export async function getLeaderboard(req, res) {
     }
 
     const friendIds = friends.map((f) =>
-      f.userId.toString() === userId ? f.friendId : f.userId
+      f.userId.toString() === userId ? f.friendId : f.userId,
     );
 
-    // Include the user's own ID (convert to ObjectId for type consistency)
+    // Include the user's own ID
     friendIds.push(new mongoose.Types.ObjectId(userId));
-    userIds = friendIds;
-  } else {
-    // For global: fetch all users
-    const allUsers = await User.find({}).select("_id");
-    userIds = allUsers.map((u) => u._id);
+    query._id = { $in: friendIds };
   }
 
-  // Aggregate visited peaks count per user from Checklist
-  const leaderboardData = await Checklist.aggregate([
-    {
-      $match: {
-        userId: { $in: userIds },
-        status: "Visited",
-      },
-    },
-    {
-      $group: {
-        _id: "$userId",
-        peaksClimbed: { $sum: 1 },
-      },
-    },
-    {
-      $lookup: {
-        from: "users",
-        localField: "_id",
-        foreignField: "_id",
-        as: "userInfo",
-      },
-    },
-    {
-      $unwind: "$userInfo",
-    },
-    {
-      $project: {
-        _id: 1,
-        peaksClimbed: 1,
-        username: "$userInfo.username",
-        profilePicture: "$userInfo.profilePicture",
-      },
-    },
-    {
-      $sort: { peaksClimbed: -1 },
-    },
-  ]);
+  // Fetch users with finishedPeaksCount from their profile
+  const users = await User.find(query)
+    .select("_id username profilePicture finishedPeaksCount")
+    .sort({ finishedPeaksCount: -1 })
+    .where("finishedPeaksCount")
+    .gt(0)
+    .lean();
 
   // Format response with rank
-  const leaderboard = leaderboardData.map((entry, idx) => ({
+  const leaderboard = users.map((user, idx) => ({
     rank: idx + 1,
-    userId: entry._id,
-    username: entry.username,
-    profilePicture: entry.profilePicture,
-    peaksClimbed: entry.peaksClimbed,
+    userId: user._id,
+    username: user.username,
+    profilePicture: user.profilePicture,
+    peaksClimbed: user.finishedPeaksCount || 0,
   }));
 
   res.status(StatusCodes.OK).json({ leaderboard });

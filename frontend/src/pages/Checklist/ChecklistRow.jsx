@@ -71,7 +71,7 @@ const ChecklistRow = ({ peak, activeTab, onDelete, onVisit }) => {
         const distance = calculateDistance(userLat, userLon, peakLat, peakLon);
 
         // Allow marking if within 100 meters of the peak
-        const MAX_DISTANCE = 1000000;
+        const MAX_DISTANCE = 100;
         if (distance <= MAX_DISTANCE) {
           setIsMarkVisitedModalOpen(true);
         } else {
