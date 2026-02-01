@@ -90,7 +90,7 @@ const Register = () => {
         }
         
         .animated-gradient {
-          background: linear-gradient(-45deg, #15803d, #16a34a, #22c55e, #10b981);
+          background: linear-gradient(-45deg, #166534, #15803d, #16a34a, #22c55e);
           background-size: 400% 400%;
           animation: gradient-shift 15s ease infinite;
         }
@@ -325,6 +325,12 @@ const Register = () => {
               Že imate račun?{" "}
               <Link to="/signin" className="link link-primary font-semibold">
                 Prijavite se
+              </Link>
+            </p>
+
+            <p className="text-center text-sm mt-4">
+              <Link to="/" className="link link-secondary font-semibold">
+                ← Nazaj na začetno stran
               </Link>
             </p>
           </div>

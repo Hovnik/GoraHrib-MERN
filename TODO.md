@@ -16,4 +16,4 @@
 # Bugs
 
 - the text on user statistics panel is overflowing on smaller screens
-- make the navbar on mobile like an island
+- the popups are twitching on mobile

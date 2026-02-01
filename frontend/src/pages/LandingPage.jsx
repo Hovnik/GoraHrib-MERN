@@ -94,8 +94,8 @@ const LandingPage = () => (
           GoraHrib
         </h1>
         <p className="text-xl md:text-2xl text-green-700 mb-8 leading-relaxed max-w-2xl mx-auto">
-          Vaš popoln gorski spremljevalec. Odkrijte skrite vrhove, sledite
-          svojemu napredku in proslavite z skupnostjo.
+          Vaš popoln gorski spremljevalec. Odkrijte skrite vrhove, beležite svoj
+          napredek in proslavite s prijatelji.
         </p>
         <Link
           to="/register"
@@ -121,23 +121,12 @@ const LandingPage = () => (
               <div className="absolute top-0 left-1/2 -translate-x-1/2 w-32 h-6 bg-slate-950 rounded-b-2xl z-20" />
 
               {/* Screen */}
-              <div className="w-full h-full bg-blue-50 rounded-[2.2rem] overflow-hidden flex flex-col relative border border-slate-800">
-                <div className="pt-8 pb-4 px-6 text-sm font-bold text-slate-900 border-b border-slate-100">
-                  Explore
-                </div>
-                <div className="flex-1 flex flex-col items-center justify-center p-6 relative bg-gradient-to-br from-blue-50 to-green-50">
-                  <div className="absolute w-12 h-12 bg-green-400 rounded-full opacity-50 animate-ping" />
-                  <div className="text-4xl z-10 drop-shadow-lg">📍</div>
-                  <div className="mt-6 bg-white p-4 rounded-2xl shadow-xl w-full border border-slate-100">
-                    <span className="text-xs uppercase tracking-widest text-green-700 font-bold">
-                      Trenutni Cilj
-                    </span>
-                    <h3 className="font-bold mt-1">Triglav</h3>
-                    <p className="text-xs text-slate-500 mt-1">
-                      2,864m • Julijske Alpe
-                    </p>
-                  </div>
-                </div>
+              <div className="w-full h-full rounded-[2.2rem] overflow-hidden flex flex-col relative border border-slate-800">
+                <img
+                  src="/src/pages/accessories/IMG_7634.PNG"
+                  alt="Map view screenshot"
+                  className="w-full h-full object-cover"
+                />
               </div>
             </div>
             <p className="text-sm font-bold text-green-700 uppercase tracking-widest">
@@ -149,34 +138,16 @@ const LandingPage = () => (
           <div className="flex flex-col items-center gap-6 group">
             <div className="relative w-[280px] h-[580px] bg-slate-950 rounded-[3rem] p-3 shadow-2xl transition-all duration-500 hover:-translate-y-4 hover:scale-105">
               <div className="absolute top-0 left-1/2 -translate-x-1/2 w-32 h-6 bg-slate-950 rounded-b-2xl z-20" />
-              <div className="w-full h-full bg-slate-50 rounded-[2.2rem] overflow-hidden flex flex-col relative border border-slate-800">
-                <div className="pt-8 pb-4 px-6 text-sm font-bold text-slate-900 border-b border-slate-100">
-                  Dnevnik
-                </div>
-                <div className="p-4 flex flex-col gap-3">
-                  {[
-                    { name: "Rašica", date: "12 Dec", icon: "🌲" },
-                    { name: "Stol", date: "09 Sep", icon: "🏔️" },
-                    { name: "Krvavec", date: "03 Mar", icon: "🚠" },
-                  ].map((hike, i) => (
-                    <div
-                      key={i}
-                      className="flex items-center gap-4 bg-white p-3 rounded-xl shadow-sm border border-slate-100"
-                    >
-                      <span className="text-xl">{hike.icon}</span>
-                      <div>
-                        <div className="font-bold text-sm">{hike.name}</div>
-                        <div className="text-[10px] text-slate-400">
-                          {hike.date} • Potrjen Vzpon
-                        </div>
-                      </div>
-                    </div>
-                  ))}
-                </div>
+              <div className="w-full h-full rounded-[2.2rem] overflow-hidden flex flex-col relative border border-slate-800">
+                <img
+                  src="/src/pages/accessories/IMG_7637.PNG"
+                  alt="Logbook view screenshot"
+                  className="w-full h-full object-cover"
+                />
               </div>
             </div>
             <p className="text-sm font-bold text-green-700 uppercase tracking-widest">
-              Potrjeni Dosežki
+              Osebni Seznam Vrhov
             </p>
           </div>
 
@@ -184,42 +155,16 @@ const LandingPage = () => (
           <div className="flex flex-col items-center gap-6 group">
             <div className="relative w-[280px] h-[580px] bg-slate-950 rounded-[3rem] p-3 shadow-2xl transition-all duration-500 hover:-translate-y-4 hover:scale-105">
               <div className="absolute top-0 left-1/2 -translate-x-1/2 w-32 h-6 bg-slate-950 rounded-b-2xl z-20" />
-              <div className="w-full h-full bg-white rounded-[2.2rem] overflow-hidden flex flex-col relative border border-slate-800">
-                <div className="p-8 bg-gradient-to-br from-green-50 to-white flex flex-col items-center border-b border-slate-100">
-                  <div className="w-20 h-20 bg-green-700 rounded-3xl flex items-center justify-center text-2xl font-bold text-white shadow-lg rotate-3">
-                    MH
-                  </div>
-                  <h3 className="font-bold mt-2 text-slate-900">
-                    Martin Hribar
-                  </h3>
-                  <p className="text-[10px] text-slate-400 mt-1">
-                    Elitni Plezalec
-                  </p>
-                </div>
-                <div className="grid grid-cols-3 gap-2 p-4 mt-4">
-                  <div className="flex flex-col p-2 text-center">
-                    <strong className="text-green-700 text-lg">42</strong>
-                    <span className="text-[10px] uppercase text-slate-400 font-bold mt-1">
-                      Vrhovi
-                    </span>
-                  </div>
-                  <div className="flex flex-col p-2 text-center">
-                    <strong className="text-green-700 text-lg">18</strong>
-                    <span className="text-[10px] uppercase text-slate-400 font-bold mt-1">
-                      Prijatelji
-                    </span>
-                  </div>
-                  <div className="flex flex-col p-2 text-center">
-                    <strong className="text-green-700 text-lg">24</strong>
-                    <span className="text-[10px] uppercase text-slate-400 font-bold mt-1">
-                      Značke
-                    </span>
-                  </div>
-                </div>
+              <div className="w-full h-full rounded-[2.2rem] overflow-hidden flex flex-col relative border border-slate-800">
+                <img
+                  src="/src/pages/accessories/IMG_7636.PNG"
+                  alt="Profile view screenshot"
+                  className="w-full h-full object-cover"
+                />
               </div>
             </div>
             <p className="text-sm font-bold text-green-700 uppercase tracking-widest">
-              Osebna Statistika
+              Lestvica Prijateljev
             </p>
           </div>
         </div>
@@ -315,7 +260,10 @@ const LandingPage = () => (
     {/* Footer */}
     <footer className="bg-green-950 text-green-200 py-8 px-6">
       <div className="max-w-7xl mx-auto text-center">
-        <p className="text-sm">© 2026 GoraHrib. Vse pravice pridržane.</p>
+        <p className="text-sm">
+          © 2026 GoraHrib | Narejeno z <span className="text-error">♥</span> v
+          Sloveniji
+        </p>
       </div>
     </footer>
   </div>
