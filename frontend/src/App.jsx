@@ -13,6 +13,7 @@ import SignIn from "./pages/SignIn.jsx";
 import VerifyEmail from "./pages/VerifyEmail.jsx";
 import NotFound from "./pages/NotFound.jsx";
 import FriendProfilePage from "./pages/FriendProfile/FriendProfilePage.jsx";
+import LandingPage from "./pages/LandingPage.jsx";
 
 const App = () => {
   return (
@@ -20,7 +21,7 @@ const App = () => {
       <Toaster />
       <ScrollToTop />
       <Routes>
-        <Route path="/" element={<SignIn />} />
+        <Route path="/" element={<LandingPage />} />
         <Route path="/signin" element={<SignIn />} />
         <Route path="/register" element={<Register />} />
         <Route path="/verify-email/:token" element={<VerifyEmail />} />

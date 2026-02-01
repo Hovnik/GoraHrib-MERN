@@ -406,7 +406,7 @@ const PeakMap = memo(
               className="user-location-marker"
             >
               <Tooltip permanent={false} direction="top" offset={[0, -10]}>
-                Your Location
+                <span className="font-semibold">Tvoja lokacija</span>
               </Tooltip>
             </CircleMarker>
           </>

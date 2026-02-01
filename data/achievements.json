@@ -175,20 +175,6 @@
     "rarity": "Common"
   },
   {
-    "title": "Zbiratelj Vrhov",
-    "description": "Imaš več kot 200 vrhov na svojem seznamu.",
-    "badge": "📋",
-    "criteria": "Dodaj 200 vrhov na seznam",
-    "rarity": "Rare"
-  },
-  {
-    "title": "Popolnost",
-    "description": "Osvojil si VSE vrhove v Sloveniji! Neverjetno!",
-    "badge": "💎",
-    "criteria": "Obišči vse vrhove",
-    "rarity": "Legendary"
-  },
-  {
     "title": "Prvi po Vrsti",
     "description": "Si prvi na lestvici najboljših!",
     "badge": "🥇",

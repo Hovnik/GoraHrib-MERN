@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import { Link, useNavigate } from "react-router";
 import {
   UserPlus,
@@ -24,30 +24,6 @@ const Register = () => {
   const [loading, setLoading] = useState(false);
   const [showPassword, setShowPassword] = useState(false);
   const [showConfirmPassword, setShowConfirmPassword] = useState(false);
-  const [stats, setStats] = useState({
-    peaks: 0,
-    users: 0,
-    climbs: 0,
-  });
-
-  useEffect(() => {
-    const fetchStats = async () => {
-      try {
-        const peaksRes = await api.get("/api/peaks");
-        const peaksCount = peaksRes.data.peaks?.length || 0;
-
-        setStats({
-          peaks: peaksCount,
-          users: 150,
-          climbs: 2450,
-        });
-      } catch (error) {
-        console.error("Error fetching stats:", error);
-      }
-    };
-
-    fetchStats();
-  }, []);
 
   const handleChange = (e) => {
     setFormData({
@@ -160,21 +136,21 @@ const Register = () => {
           <div className="grid grid-cols-3 gap-4 mb-8">
             <div className="stat-card bg-gradient-to-br from-white/30 to-white/10 backdrop-blur-md rounded-2xl p-5 text-center border border-white/20 shadow-xl">
               <MapPin className="w-10 h-10 mx-auto mb-3 text-yellow-300" />
-              <div className="text-4xl font-extrabold">{stats.peaks}</div>
+              <div className="text-4xl font-extrabold">1482</div>
               <div className="text-xs font-semibold text-green-100 uppercase tracking-wider mt-1">
                 Vrhov
               </div>
             </div>
             <div className="stat-card bg-gradient-to-br from-white/30 to-white/10 backdrop-blur-md rounded-2xl p-5 text-center border border-white/20 shadow-xl">
               <Users className="w-10 h-10 mx-auto mb-3 text-blue-300" />
-              <div className="text-4xl font-extrabold">{stats.users}+</div>
+              <div className="text-4xl font-extrabold">150+</div>
               <div className="text-xs font-semibold text-green-100 uppercase tracking-wider mt-1">
                 Uporabnikov
               </div>
             </div>
             <div className="stat-card bg-gradient-to-br from-white/30 to-white/10 backdrop-blur-md rounded-2xl p-5 text-center border border-white/20 shadow-xl">
               <TrendingUp className="w-10 h-10 mx-auto mb-3 text-pink-300" />
-              <div className="text-4xl font-extrabold">{stats.climbs}+</div>
+              <div className="text-4xl font-extrabold">2450+</div>
               <div className="text-xs font-semibold text-green-100 uppercase tracking-wider mt-1">
                 Vzponov
               </div>
@@ -347,7 +323,7 @@ const Register = () => {
 
             <p className="text-center text-sm">
               Že imate račun?{" "}
-              <Link to="/" className="link link-primary font-semibold">
+              <Link to="/signin" className="link link-primary font-semibold">
                 Prijavite se
               </Link>
             </p>
