@@ -412,8 +412,8 @@ const PeakMap = memo(
           </>
         )}
 
-        {/* Recenter button */}
-        <div className="absolute bottom-4 left-4 z-[1000]">
+        {/* Recenter button - positioned above the floating island on mobile (right side) */}
+        <div className="absolute right-4 bottom-24 md:bottom-4 md:left-4 z-[1200]">
           <button
             onClick={onRecenterLocation}
             disabled={!userLocation}
