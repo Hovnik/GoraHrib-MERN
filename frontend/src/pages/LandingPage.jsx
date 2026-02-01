@@ -5,10 +5,10 @@ const LandingPage = () => (
   <div className="min-h-screen bg-base-200 overflow-hidden">
     {/* Navigation */}
     <nav className="relative z-50 bg-green-800 shadow-lg">
-      <div className="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
+      <div className="max-w-7xl mx-auto px-5 py-3 flex justify-between items-center">
         <div className="flex items-center gap-2">
           <span className="text-3xl">🏔️</span>
-          <span className="text-2xl font-black text-white tracking-tight">
+          <span className="text-4xl font-bold text-white tracking-tight">
             GoraHrib
           </span>
         </div>
@@ -123,7 +123,7 @@ const LandingPage = () => (
               {/* Screen */}
               <div className="w-full h-full rounded-[2.2rem] overflow-hidden flex flex-col relative border border-slate-800">
                 <img
-                  src="/src/pages/accessories/IMG_7634.PNG"
+                  src="/landing-page-screenshots/IMG_7634.PNG"
                   alt="Map view screenshot"
                   className="w-full h-full object-cover"
                 />
@@ -140,7 +140,7 @@ const LandingPage = () => (
               <div className="absolute top-0 left-1/2 -translate-x-1/2 w-32 h-6 bg-slate-950 rounded-b-2xl z-20" />
               <div className="w-full h-full rounded-[2.2rem] overflow-hidden flex flex-col relative border border-slate-800">
                 <img
-                  src="/src/pages/accessories/IMG_7637.PNG"
+                  src="/landing-page-screenshots/IMG_7637.PNG"
                   alt="Logbook view screenshot"
                   className="w-full h-full object-cover"
                 />
@@ -157,7 +157,7 @@ const LandingPage = () => (
               <div className="absolute top-0 left-1/2 -translate-x-1/2 w-32 h-6 bg-slate-950 rounded-b-2xl z-20" />
               <div className="w-full h-full rounded-[2.2rem] overflow-hidden flex flex-col relative border border-slate-800">
                 <img
-                  src="/src/pages/accessories/IMG_7636.PNG"
+                  src="/landing-page-screenshots/IMG_7636.PNG"
                   alt="Profile view screenshot"
                   className="w-full h-full object-cover"
                 />
