@@ -41,7 +41,7 @@ const LeaderboardPage = () => {
   };
 
   return (
-    <div className="p-2 pb-20 md:pb-2">
+    <div className="p-2">
       {/* Header */}
       <div className="mb-6">
         <h1 className="text-3xl font-bold text-gray-800">Lestvica</h1>

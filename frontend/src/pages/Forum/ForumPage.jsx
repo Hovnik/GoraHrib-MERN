@@ -22,12 +22,9 @@ const ForumPage = () => {
         const token = localStorage.getItem("token");
 
         // Fetch initial posts from friends
-        const response = await api.get(
-          "/api/forum/friends?page=1&limit=10",
-          {
-            headers: { Authorization: `Bearer ${token}` },
-          }
-        );
+        const response = await api.get("/api/forum/friends?page=1&limit=10", {
+          headers: { Authorization: `Bearer ${token}` },
+        });
 
         if (token) {
           const decoded = jwtDecode(token);
@@ -58,7 +55,7 @@ const ForumPage = () => {
         `/api/forum/friends?page=${nextPage}&limit=10`,
         {
           headers: { Authorization: `Bearer ${token}` },
-        }
+        },
       );
 
       setPosts((prevPosts) => [...prevPosts, ...response.data.posts]);
@@ -74,12 +71,9 @@ const ForumPage = () => {
   const fetchComments = async (postId) => {
     try {
       const token = localStorage.getItem("token");
-      const response = await api.get(
-        `/api/forum/${postId}/comments`,
-        {
-          headers: { Authorization: `Bearer ${token}` },
-        }
-      );
+      const response = await api.get(`/api/forum/${postId}/comments`, {
+        headers: { Authorization: `Bearer ${token}` },
+      });
       setComments((prev) => ({
         ...prev,
         [postId]: response.data.comments,
@@ -90,8 +84,8 @@ const ForumPage = () => {
         prevPosts.map((post) =>
           post._id === postId
             ? { ...post, commentCount: response.data.comments.length }
-            : post
-        )
+            : post,
+        ),
       );
     } catch (error) {
       console.error("Error fetching comments:", error);
@@ -106,7 +100,7 @@ const ForumPage = () => {
         {},
         {
           headers: { Authorization: `Bearer ${token}` },
-        }
+        },
       );
 
       // Update local state
@@ -123,7 +117,7 @@ const ForumPage = () => {
             };
           }
           return post;
-        })
+        }),
       );
     } catch (error) {
       console.error("Error toggling like:", error);
@@ -145,7 +139,7 @@ const ForumPage = () => {
 
   const filteredPosts = posts
     .filter(
-      (post) => activeCategory === "All" || post.category === activeCategory
+      (post) => activeCategory === "All" || post.category === activeCategory,
     )
     .filter((post) => {
       if (!searchQuery.trim()) return true;
@@ -174,7 +168,7 @@ const ForumPage = () => {
 
   if (loading) {
     return (
-      <div className="p-2 pb-20 md:pb-2 flex justify-center items-center min-h-screen">
+      <div className="p-2 flex justify-center items-center min-h-screen">
         <span className="loading loading-spinner loading-lg"></span>
       </div>
     );
@@ -201,7 +195,7 @@ const ForumPage = () => {
       />
 
       {/* Posts List */}
-      <div className="space-y-4 pb-20 md:pb-4">
+      <div className="space-y-4 pb-4">
         {filteredPosts.length === 0 ? (
           <p className="text-center text-gray-400 italic py-8">
             Ni objav v tej kategoriji

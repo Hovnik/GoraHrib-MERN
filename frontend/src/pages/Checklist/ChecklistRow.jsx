@@ -90,7 +90,7 @@ const ChecklistRow = ({ peak, activeTab, onDelete, onVisit }) => {
         switch (error.code) {
           case error.PERMISSION_DENIED:
             errorMsg =
-              "Dovoljenje za dostop do lokacije je zavrnjeno. Prosimo, omogočite dostop do lokacije v nastavitvah.";
+              "Dovoljenje za dostop do lokacije je zavrnjeno. Prosimo, zaprite brskalnik in ob ponovni prijavi omogočite dostop do lokacije.";
             break;
           case error.POSITION_UNAVAILABLE:
             errorMsg =

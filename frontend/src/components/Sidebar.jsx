@@ -41,8 +41,8 @@ const Sidebar = () => {
 
   return (
     <aside
-      className={`bg-base-200 fixed bottom-0 left-0 right-0 h-16 z-50 md:w-20 md:h-auto md:left-0 md:top-16 md:bottom-0 md:right-auto md:z-40 transition-transform duration-300 ${
-        isVisible ? "translate-y-0" : "translate-y-full md:translate-y-0"
+      className={`bg-base-200/90 backdrop-blur-md fixed bottom-4 left-4 right-4 h-16 rounded-full z-50 md:bg-base-200 md:backdrop-blur-none md:w-20 md:h-auto md:left-0 md:top-16 md:bottom-0 md:right-auto md:rounded-none md:z-40 transition-transform duration-300 ${
+        isVisible ? "translate-y-0" : "translate-y-24 md:translate-y-0"
       }`}
     >
       <ul className="menu flex flex-row justify-around items-center p-2 md:p-2 md:flex-col md:justify-start md:space-y-4 h-full">
@@ -52,7 +52,7 @@ const Sidebar = () => {
             <li key={link.path} className="flex-1 md:flex-none">
               <Link
                 to={link.path}
-                className={`flex justify-center items-center p-2 h-full md:p-2 ${
+                className={`flex justify-center items-center p-2 h-full md:p-2 rounded-full ${
                   location.pathname === link.path ? "active" : ""
                 }`}
               >

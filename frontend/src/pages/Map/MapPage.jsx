@@ -321,7 +321,7 @@ const MapPage = () => {
   }, [userLocation, locationError, isMobile]);
 
   return (
-    <div className="fixed top-16 left-0 md:left-20 right-0 bottom-0 md:bottom-0 pb-16 md:pb-0">
+    <div className="fixed top-16 left-0 md:left-20 right-0 bottom-0">
       {/* Style popup close button to match modal X button */}
       <style>{`
         .leaflet-popup-close-button {
