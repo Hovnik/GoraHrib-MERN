@@ -17,3 +17,4 @@
 
 - the text on user statistics panel is overflowing on smaller screens
 - the popups are twitching on mobile
+- when clicking on a popup the map doesnt reallign itself to the popup position
