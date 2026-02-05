@@ -113,7 +113,7 @@ const PeakMarker = memo(
         >
           {peak.name.replace(/\s*\([^)]*\)/g, "")}
         </Tooltip>
-        <Popup className="custom-popup" minWidth={200} autoPan={false}>
+        <Popup className="custom-popup" minWidth={200} autoPan={true}>
           <div>
             <h3
               className="font-bold text-xl mb-3"

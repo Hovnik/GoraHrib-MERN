@@ -134,14 +134,14 @@ const LandingPage = () => (
             </p>
           </div>
 
-          {/* View 2: Feed */}
+          {/* View 2: Checklist */}
           <div className="flex flex-col items-center gap-6 group">
             <div className="relative w-[280px] h-[580px] bg-slate-950 rounded-[3rem] p-3 shadow-2xl transition-all duration-500 hover:-translate-y-4 hover:scale-105">
               <div className="absolute top-0 left-1/2 -translate-x-1/2 w-32 h-6 bg-slate-950 rounded-b-2xl z-20" />
               <div className="w-full h-full rounded-[2.2rem] overflow-hidden flex flex-col relative border border-slate-800">
                 <img
                   src="/landing-page-screenshots/IMG_7637.PNG"
-                  alt="Logbook view screenshot"
+                  alt="Checklist view screenshot"
                   className="w-full h-full object-cover"
                 />
               </div>
@@ -151,14 +151,14 @@ const LandingPage = () => (
             </p>
           </div>
 
-          {/* View 3: Profile */}
+          {/* View 3: Friends Leaderboard */}
           <div className="flex flex-col items-center gap-6 group">
             <div className="relative w-[280px] h-[580px] bg-slate-950 rounded-[3rem] p-3 shadow-2xl transition-all duration-500 hover:-translate-y-4 hover:scale-105">
               <div className="absolute top-0 left-1/2 -translate-x-1/2 w-32 h-6 bg-slate-950 rounded-b-2xl z-20" />
               <div className="w-full h-full rounded-[2.2rem] overflow-hidden flex flex-col relative border border-slate-800">
                 <img
-                  src="/landing-page-screenshots/IMG_7636.PNG"
-                  alt="Profile view screenshot"
+                  src="/landing-page-screenshots/IMG_7663.PNG"
+                  alt="Friends leaderboard view screenshot"
                   className="w-full h-full object-cover"
                 />
               </div>
