@@ -2,6 +2,12 @@
 @tailwind components;
 @tailwind utilities;
 
+/* Disable bounce/overscroll behavior */
+html,
+body {
+  overscroll-behavior: none;
+}
+
 /* Peak label styling - white text with black stroke */
 .peak-label {
   background: transparent !important;
