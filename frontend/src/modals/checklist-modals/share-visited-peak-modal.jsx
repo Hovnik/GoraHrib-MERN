@@ -243,7 +243,7 @@ const ShareVisitedPeakModal = ({ isOpen, onClose, peakId, peakName }) => {
         <div className="flex gap-2 justify-center">
           <button
             onClick={handleShare}
-            className="btn btn-success gap-2"
+            className="btn btn-info gap-2"
             disabled={isSubmitting}
           >
             {isSubmitting ? (

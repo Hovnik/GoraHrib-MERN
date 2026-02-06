@@ -1,16 +1,16 @@
-import { CheckCircle, Trash2, Share2 } from "lucide-react";
+import { CheckCircle, Trash2, Share2, Camera } from "lucide-react";
 import DeleteFromChecklistModal from "../../modals/checklist-modals/delete-from-checklist-modal";
-import MarkVisitedModal from "../../modals/checklist-modals/mark-visited-modal";
 import ShareVisitedPeakModal from "../../modals/checklist-modals/share-visited-peak-modal";
 import LocationErrorModal from "../../modals/checklist-modals/location-error-modal";
+import AddPicturesModal from "../../modals/checklist-modals/add-pictures-modal";
 import { useState } from "react";
 import api from "../../config/axios";
 import toast from "react-hot-toast";
 
 const ChecklistRow = ({ peak, activeTab, onDelete, onVisit }) => {
   const [isDeleteModalOpen, setIsDeleteModalOpen] = useState(false);
-  const [isMarkVisitedModalOpen, setIsMarkVisitedModalOpen] = useState(false);
   const [isShareModalOpen, setIsShareModalOpen] = useState(false);
+  const [isAddPicturesModalOpen, setIsAddPicturesModalOpen] = useState(false);
   const [isLocationErrorModalOpen, setIsLocationErrorModalOpen] =
     useState(false);
   const [locationErrorMessage, setLocationErrorMessage] = useState("");
@@ -39,7 +39,7 @@ const ChecklistRow = ({ peak, activeTab, onDelete, onVisit }) => {
   };
 
   // Check if user is near the peak before allowing to mark as visited
-  const handleMarkVisitedClick = () => {
+  const handleMarkVisitedClick = async () => {
     if (!navigator.geolocation) {
       setLocationErrorMessage("Vaša naprava ne podpira določanja lokacije.");
       setLocationErrorDistance(null);
@@ -50,8 +50,7 @@ const ChecklistRow = ({ peak, activeTab, onDelete, onVisit }) => {
     setIsCheckingLocation(true);
 
     navigator.geolocation.getCurrentPosition(
-      (position) => {
-        setIsCheckingLocation(false);
+      async (position) => {
         const userLat = position.coords.latitude;
         const userLon = position.coords.longitude;
 
@@ -59,6 +58,7 @@ const ChecklistRow = ({ peak, activeTab, onDelete, onVisit }) => {
         const peakCoordinates = peak.peakId?.location?.coordinates;
 
         if (!peakCoordinates || peakCoordinates.length !== 2) {
+          setIsCheckingLocation(false);
           setLocationErrorMessage(
             "Koordinate vrha niso na voljo. Prosimo, kontaktirajte podporo.",
           );
@@ -73,8 +73,9 @@ const ChecklistRow = ({ peak, activeTab, onDelete, onVisit }) => {
         // Allow marking if within 100 meters of the peak
         const MAX_DISTANCE = 100;
         if (distance <= MAX_DISTANCE) {
-          setIsMarkVisitedModalOpen(true);
+          await handleMarkVisitedConfirm();
         } else {
+          setIsCheckingLocation(false);
           const distanceKm = (distance / 1000).toFixed(2);
           setLocationErrorMessage(
             "Niste dovolj blizu vrha, da bi ga lahko označili kot osvojenega.",
@@ -111,11 +112,11 @@ const ChecklistRow = ({ peak, activeTab, onDelete, onVisit }) => {
     );
   };
 
-  const handleMarkVisitedConfirm = async (pictureFiles) => {
+  const handleMarkVisitedConfirm = async () => {
     try {
       const token = localStorage.getItem("token");
 
-      // First, mark peak as visited
+      // Mark peak as visited
       const response = await api.put(
         `/api/checklist/${peak.peakId._id}/visit`,
         {},
@@ -147,32 +148,14 @@ const ChecklistRow = ({ peak, activeTab, onDelete, onVisit }) => {
 
       // Update local state
       await onVisit(peak.peakId._id);
-
-      // Then upload pictures if any using FormData
-      if (pictureFiles && pictureFiles.length > 0) {
-        const formData = new FormData();
-
-        // Append each file to FormData
-        pictureFiles.forEach((file) => {
-          formData.append("pictures", file);
-        });
-
-        await api.put(`/api/checklist/${peak.peakId._id}/pictures`, formData, {
-          headers: {
-            Authorization: `Bearer ${token}`,
-            "Content-Type": "multipart/form-data",
-          },
-        });
-
-        toast.success("Slike uspešno naložene!");
-      }
-
-      setIsMarkVisitedModalOpen(false);
+      toast.success("Vrh uspešno označen kot osvojen!");
+      setIsCheckingLocation(false);
     } catch (error) {
-      console.error("Error marking as visited or uploading pictures:", error);
+      console.error("Error marking as visited:", error);
       toast.error(
         error.response?.data?.message || "Napaka pri obdelavi zahteve",
       );
+      setIsCheckingLocation(false);
     }
   };
 
@@ -209,13 +192,22 @@ const ChecklistRow = ({ peak, activeTab, onDelete, onVisit }) => {
               </button>
             )}
             {activeTab === "visited" && (
-              <button
-                onClick={() => setIsShareModalOpen(true)}
-                className="btn btn-sm btn-info gap-1"
-              >
-                <Share2 className="w-4 h-4" />
-                <span className="hidden md:inline">Deli</span>
-              </button>
+              <>
+                <button
+                  onClick={() => setIsShareModalOpen(true)}
+                  className="btn btn-sm btn-info gap-1"
+                >
+                  <Share2 className="w-4 h-4" />
+                  <span className="hidden md:inline">Deli</span>
+                </button>
+                <button
+                  onClick={() => setIsAddPicturesModalOpen(true)}
+                  className="btn btn-sm btn-success gap-1"
+                >
+                  <Camera className="w-4 h-4" />
+                  <span className="hidden md:inline">Naloži Slike</span>
+                </button>
+              </>
             )}
             <button
               onClick={() => setIsDeleteModalOpen(true)}
@@ -234,16 +226,16 @@ const ChecklistRow = ({ peak, activeTab, onDelete, onVisit }) => {
         peak={peak}
       />
 
-      <MarkVisitedModal
-        isOpen={isMarkVisitedModalOpen}
-        onClose={() => setIsMarkVisitedModalOpen(false)}
-        onConfirm={handleMarkVisitedConfirm}
-        peakName={peak.peakId.name}
-      />
-
       <ShareVisitedPeakModal
         isOpen={isShareModalOpen}
         onClose={() => setIsShareModalOpen(false)}
+        peakId={peak.peakId._id}
+        peakName={peak.peakId.name}
+      />
+
+      <AddPicturesModal
+        isOpen={isAddPicturesModalOpen}
+        onClose={() => setIsAddPicturesModalOpen(false)}
         peakId={peak.peakId._id}
         peakName={peak.peakId.name}
       />
