@@ -23,20 +23,31 @@ export const uploadToFirebase = async (
     // Create file reference
     const file = bucket.file(uniqueFileName);
 
-    // Upload file
+    // Generate a download token for public access
+    const downloadToken = uuidv4();
+
+    // Upload file with metadata including the download token
     await file.save(fileBuffer, {
       metadata: {
         contentType: mimeType,
+        metadata: {
+          firebaseStorageDownloadTokens: downloadToken,
+        },
       },
-      public: true,
       validation: "md5",
     });
 
-    // Make the file publicly accessible
-    await file.makePublic();
+    // Make the file publicly accessible (belt and suspenders approach)
+    try {
+      await file.makePublic();
+    } catch (error) {
+      console.log("Note: makePublic failed, but token URL should still work");
+    }
 
-    // Return public URL
-    const publicUrl = `https://storage.googleapis.com/${bucket.name}/${uniqueFileName}`;
+    // Return Firebase download URL with token
+    const encodedPath = encodeURIComponent(uniqueFileName);
+    const publicUrl = `https://firebasestorage.googleapis.com/v0/b/${bucket.name}/o/${encodedPath}?alt=media&token=${downloadToken}`;
+
     return publicUrl;
   } catch (error) {
     console.error("Error uploading to Firebase:", error);
@@ -53,12 +64,30 @@ export const deleteFromFirebase = async (fileUrl) => {
   try {
     if (!fileUrl) return;
 
-    // Extract file path from URL
-    // URL format: https://storage.googleapis.com/bucket-name/folder/filename.ext
-    const urlParts = fileUrl.split(`${bucket.name}/`);
-    if (urlParts.length < 2) return;
+    let filePath;
 
-    const filePath = urlParts[1];
+    // Handle both URL formats:
+    // 1. Old format: https://storage.googleapis.com/bucket-name/folder/filename.ext
+    // 2. New format: https://firebasestorage.googleapis.com/v0/b/bucket-name/o/folder%2Ffilename.ext?alt=media&token=xxx
+
+    if (fileUrl.includes("firebasestorage.googleapis.com")) {
+      // New format - extract from encoded path
+      const match = fileUrl.match(/\/o\/([^?]+)/);
+      if (match) {
+        filePath = decodeURIComponent(match[1]);
+      }
+    } else if (fileUrl.includes("storage.googleapis.com")) {
+      // Old format - extract after bucket name
+      const urlParts = fileUrl.split(`${bucket.name}/`);
+      if (urlParts.length >= 2) {
+        filePath = urlParts[1];
+      }
+    }
+
+    if (!filePath) {
+      console.log("Could not extract file path from URL:", fileUrl);
+      return;
+    }
 
     // Delete file
     const file = bucket.file(filePath);
