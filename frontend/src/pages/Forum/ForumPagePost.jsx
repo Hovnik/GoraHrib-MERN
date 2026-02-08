@@ -132,6 +132,14 @@ const ForumPagePost = ({
                 {post.userId.username}
               </p>
               <p className="text-xs text-gray-600">
+                {post.peakId && (
+                  <>
+                    <span className="font-semibold text-green-600">
+                      {post.peakId.name}
+                    </span>
+                    {" | "}
+                  </>
+                )}
                 {formatDate(post.createdAt)}
               </p>
             </div>

@@ -19,6 +19,7 @@ export async function getPostsFromUser(req, res) {
     const posts = await ForumPost.find({ userId: userId })
       .populate("userId", "username profilePicture")
       .populate("achievementId", "title badge description rarity")
+      .populate("peakId", "name elevation")
       .sort({ createdAt: -1 });
 
     res.status(StatusCodes.OK).json({ posts });
@@ -64,6 +65,7 @@ export async function getPostsFromFriends(req, res) {
     const posts = await ForumPost.find({ userId: { $in: allowedUserIds } })
       .populate("userId", "username profilePicture")
       .populate("achievementId", "title badge description rarity")
+      .populate("peakId", "name elevation")
       .sort({ createdAt: -1 })
       .skip(skip)
       .limit(limit);
@@ -89,7 +91,8 @@ export async function getPostDetails(req, res) {
   const postId = req.params.postId;
   const post = await ForumPost.findById(postId)
     .populate("userId", "username profilePicture")
-    .populate("achievementId", "title badge description rarity");
+    .populate("achievementId", "title badge description rarity")
+    .populate("peakId", "name elevation");
   if (!post) {
     return res
       .status(StatusCodes.NOT_FOUND)
@@ -117,7 +120,7 @@ export async function getComments(req, res) {
 // POST /forum
 export async function createPost(req, res) {
   const userId = req.user.id;
-  const { title, content, category, pictures } = req.body;
+  const { title, content, category, pictures, peakId } = req.body;
 
   if (!title) {
     throw new BadRequestError("Post title is required");
@@ -166,10 +169,16 @@ export async function createPost(req, res) {
     pictures: pictureUrls,
   };
 
+  // Add peakId if provided
+  if (peakId) {
+    newPost.peakId = peakId;
+  }
+
   const createdPost = await ForumPost.create(newPost);
   const populatedPost = await ForumPost.findById(createdPost._id)
     .populate("userId", "username profilePicture")
-    .populate("achievementId", "title badge description rarity");
+    .populate("achievementId", "title badge description rarity")
+    .populate("peakId", "name elevation");
 
   res
     .status(StatusCodes.CREATED)

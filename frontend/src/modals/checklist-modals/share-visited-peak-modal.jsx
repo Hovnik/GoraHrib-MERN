@@ -86,6 +86,7 @@ const ShareVisitedPeakModal = ({ isOpen, onClose, peakId, peakName }) => {
         content: content.trim(),
         category: "Hike",
         pictures: picturesToShare,
+        peakId: peakId,
       };
 
       await api.post("/api/forum", postData, {

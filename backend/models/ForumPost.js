@@ -12,6 +12,11 @@ const forumPostSchema = new mongoose.Schema(
       ref: "Achievement",
       // Optional: only set for auto-generated achievement posts
     },
+    peakId: {
+      type: mongoose.Schema.Types.ObjectId,
+      ref: "Peak",
+      // Optional: only set when post is related to a specific peak
+    },
     title: {
       type: String,
       required: [true, "Title is required!"],
