@@ -1,13 +1,32 @@
-import { useState, useRef } from "react";
+import { useState, useRef, useEffect } from "react";
 import { X, Camera } from "lucide-react";
 import api from "../../config/axios";
 import toast from "react-hot-toast";
 
-const AddPicturesModal = ({ isOpen, onClose, peakId, peakName }) => {
+const AddPicturesModal = ({
+  isOpen,
+  onClose,
+  peakId,
+  peakName,
+  existingPictures = [],
+}) => {
   const [selectedFiles, setSelectedFiles] = useState([]);
   const [previews, setPreviews] = useState([]);
+  const [keptExistingPictures, setKeptExistingPictures] = useState([]);
   const [isUploading, setIsUploading] = useState(false);
   const fileInputRef = useRef(null);
+
+  // Load existing pictures when modal opens
+  useEffect(() => {
+    if (isOpen && existingPictures.length > 0) {
+      // Set previews to existing picture URLs (up to 3)
+      setPreviews(existingPictures.slice(0, 3));
+      // Track which existing pictures are kept
+      setKeptExistingPictures(existingPictures.slice(0, 3));
+      // No selected files initially since these are already uploaded
+      setSelectedFiles([]);
+    }
+  }, [isOpen, existingPictures]);
 
   const handleFileSelect = (event) => {
     const files = Array.from(event.target.files);
@@ -30,28 +49,54 @@ const AddPicturesModal = ({ isOpen, onClose, peakId, peakName }) => {
       return;
     }
 
-    // Calculate how many slots are available
-    const availableSlots = 3 - selectedFiles.length;
+    // Calculate how many slots are available (total 3 slots minus existing pictures and new files)
+    const availableSlots = 3 - previews.length;
 
     // Take only the first N files that fit in available slots
     const filesToAdd = validFiles.slice(0, availableSlots);
 
     setSelectedFiles((prev) => [...prev, ...filesToAdd]);
 
-    // Create previews
+    // Create previews for new files
     const newPreviews = filesToAdd.map((file) => URL.createObjectURL(file));
     setPreviews((prev) => [...prev, ...newPreviews]);
   };
 
   const removeImage = (index) => {
-    setSelectedFiles((prev) => prev.filter((_, i) => i !== index));
-    URL.revokeObjectURL(previews[index]);
+    const preview = previews[index];
+
+    // Check if this is a blob URL (newly selected file) or existing URL
+    const isNewFile = preview.startsWith("blob:");
+
+    if (isNewFile) {
+      // Remove from selected files
+      const newFileStartIndex = keptExistingPictures.length;
+      const fileIndex = index - newFileStartIndex;
+      setSelectedFiles((prev) => prev.filter((_, i) => i !== fileIndex));
+      URL.revokeObjectURL(preview);
+    } else {
+      // Remove from kept existing pictures
+      setKeptExistingPictures((prev) => prev.filter((url) => url !== preview));
+    }
+
+    // Remove from previews regardless of type
     setPreviews((prev) => prev.filter((_, i) => i !== index));
   };
 
   const handleUpload = async () => {
-    if (selectedFiles.length === 0) {
-      toast.error("Prosimo, izberite vsaj eno sliko");
+    // Check if there are any changes
+    const hasChanges =
+      selectedFiles.length > 0 ||
+      keptExistingPictures.length !== existingPictures.length;
+
+    if (!hasChanges) {
+      toast.error("Ni sprememb za shranitev");
+      return;
+    }
+
+    // Check if total pictures would exceed limit
+    if (keptExistingPictures.length + selectedFiles.length > 3) {
+      toast.error("Maksimalno 3 slike so dovoljene");
       return;
     }
 
@@ -61,10 +106,13 @@ const AddPicturesModal = ({ isOpen, onClose, peakId, peakName }) => {
       const token = localStorage.getItem("token");
       const formData = new FormData();
 
-      // Append each file to FormData
+      // Append each new file to FormData
       selectedFiles.forEach((file) => {
         formData.append("pictures", file);
       });
+
+      // Append existing pictures to keep as JSON string
+      formData.append("existingPictures", JSON.stringify(keptExistingPictures));
 
       await api.put(`/api/checklist/${peakId}/pictures`, formData, {
         headers: {
@@ -73,7 +121,7 @@ const AddPicturesModal = ({ isOpen, onClose, peakId, peakName }) => {
         },
       });
 
-      toast.success("Slike uspešno naložene!");
+      toast.success("Slike uspešno posodobljene!");
       handleClose();
     } catch (error) {
       console.error("Error uploading pictures:", error);
@@ -84,10 +132,15 @@ const AddPicturesModal = ({ isOpen, onClose, peakId, peakName }) => {
   };
 
   const handleClose = () => {
-    // Clean up previews
-    previews.forEach((preview) => URL.revokeObjectURL(preview));
+    // Clean up only blob URLs (newly selected files)
+    previews.forEach((preview) => {
+      if (preview.startsWith("blob:")) {
+        URL.revokeObjectURL(preview);
+      }
+    });
     setSelectedFiles([]);
     setPreviews([]);
+    setKeptExistingPictures([]);
     onClose();
   };
 
@@ -105,28 +158,44 @@ const AddPicturesModal = ({ isOpen, onClose, peakId, peakName }) => {
         {/* Encouraging Message */}
         <div className="mb-6 p-4 bg-blue-50 rounded-lg border border-blue-200">
           <p className="text-sm text-blue-800 text-center">
-            Naloži do 3 slike iz svojega pohoda in ohrani spomine za kasneje! 📸
+            {existingPictures.length > 0
+              ? `Dodaj nove slike ali zamenjaj obstoječe (${previews.length}/3) 📸`
+              : "Naloži do 3 slike iz svojega pohoda in ohrani spomine za kasneje! 📸"}
           </p>
         </div>
 
         {/* Image Upload Area */}
         <div className="mb-6">
           <div className="grid grid-cols-3 gap-2 mb-4">
-            {previews.map((preview, index) => (
-              <div key={index} className="relative">
-                <img
-                  src={preview}
-                  alt={`Preview ${index + 1}`}
-                  className="w-full h-20 object-cover rounded-lg border"
-                />
-                <button
-                  onClick={() => removeImage(index)}
-                  className="absolute -top-2 -right-2 btn btn-xs btn-circle btn-error"
-                >
-                  <X className="w-3 h-3" />
-                </button>
-              </div>
-            ))}
+            {previews.map((preview, index) => {
+              const isExisting =
+                index < existingPictures.length &&
+                existingPictures.includes(preview);
+              return (
+                <div key={index} className="relative">
+                  <img
+                    src={preview}
+                    alt={`Preview ${index + 1}`}
+                    className="w-full h-20 object-cover rounded-lg border"
+                    onError={(e) => {
+                      e.target.style.display = "none";
+                      console.error("Failed to load image:", preview);
+                    }}
+                  />
+                  <button
+                    onClick={() => removeImage(index)}
+                    className="absolute -top-2 -right-2 btn btn-xs btn-circle btn-error"
+                  >
+                    <X className="w-3 h-3" />
+                  </button>
+                  {isExisting && (
+                    <div className="absolute bottom-0 left-0 right-0 bg-green-500 bg-opacity-75 text-white text-xs py-0.5 text-center rounded-b-lg">
+                      Naloženo
+                    </div>
+                  )}
+                </div>
+              );
+            })}
 
             {/* Upload buttons for remaining slots */}
             {Array.from({ length: Math.max(0, 3 - previews.length) }).map(
@@ -158,16 +227,16 @@ const AddPicturesModal = ({ isOpen, onClose, peakId, peakName }) => {
         <div className="flex gap-2 justify-center">
           <button
             onClick={handleUpload}
-            disabled={isUploading || selectedFiles.length === 0}
+            disabled={isUploading}
             className="btn btn-primary"
           >
             {isUploading ? (
               <>
                 <span className="loading loading-spinner loading-sm"></span>
-                Nalagam...
+                Posodabljam...
               </>
             ) : (
-              "Naloži Slike"
+              "Shrani Spremembe"
             )}
           </button>
           <button onClick={handleClose} disabled={isUploading} className="btn">

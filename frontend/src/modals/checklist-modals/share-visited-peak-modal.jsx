@@ -234,8 +234,8 @@ const ShareVisitedPeakModal = ({ isOpen, onClose, peakId, peakName }) => {
         ) : (
           <div className="mb-6 p-4 bg-base-200 rounded-lg text-center">
             <p className="text-sm text-gray-600">
-              Ni slik za ta vrh. Slike lahko dodaš pri označevanju vrha kot
-              obiskanega.
+              Ni slik za ta vrh. Slike lahko dodaš s klikom na ikono kamere v
+              tvojem seznamu osvojenih vrhov.
             </p>
           </div>
         )}

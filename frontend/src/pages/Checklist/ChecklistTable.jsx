@@ -14,12 +14,9 @@ const ChecklistTable = ({ activeTab }) => {
       try {
         setLoading(true);
         const token = localStorage.getItem("token");
-        const response = await api.get(
-          "/api/checklist",
-          {
-            headers: { Authorization: `Bearer ${token}` },
-          }
-        );
+        const response = await api.get("/api/checklist", {
+          headers: { Authorization: `Bearer ${token}` },
+        });
         setChecklist(response.data.checklist);
       } catch (error) {
         console.error("Error fetching checklist peaks:", error);
@@ -39,8 +36,17 @@ const ChecklistTable = ({ activeTab }) => {
     // Just update local state - API call is made in ChecklistRow
     setChecklist((prev) =>
       prev.map((item) =>
-        item.peakId._id === peakId ? { ...item, status: "Visited" } : item
-      )
+        item.peakId._id === peakId ? { ...item, status: "Visited" } : item,
+      ),
+    );
+  };
+
+  const handlePicturesUpdate = (peakId, newPictures) => {
+    // Update pictures for specific peak in local state
+    setChecklist((prev) =>
+      prev.map((item) =>
+        item.peakId._id === peakId ? { ...item, pictures: newPictures } : item,
+      ),
     );
   };
 
@@ -77,6 +83,7 @@ const ChecklistTable = ({ activeTab }) => {
                 activeTab={activeTab}
                 onDelete={handleDelete}
                 onVisit={handleVisit}
+                onPicturesUpdate={handlePicturesUpdate}
               />
             ))
           )}

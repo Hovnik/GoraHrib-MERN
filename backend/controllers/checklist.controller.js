@@ -161,16 +161,6 @@ export async function addPicturesToVisitedPeak(req, res) {
   const peakId = req.params.peakId;
   const userId = req.user.id;
 
-  // Check if files were uploaded
-  if (!req.files || req.files.length === 0) {
-    throw new BadRequestError("At least one picture is required");
-  }
-
-  // Limit to 3 pictures
-  if (req.files.length > 3) {
-    throw new BadRequestError("Maximum 3 pictures allowed");
-  }
-
   const checklistItem = await Checklist.findOne({ userId, peakId });
   if (!checklistItem) {
     throw new NotFoundError("Peak not found in checklist");
@@ -182,25 +172,60 @@ export async function addPicturesToVisitedPeak(req, res) {
     );
   }
 
-  // Upload all pictures to Firebase
-  const uploadPromises = req.files.map((file) =>
-    uploadToFirebase(
-      file.buffer,
-      file.originalname,
-      "peak-pictures",
-      file.mimetype,
-    ),
-  );
-  const pictureUrls = await Promise.all(uploadPromises);
+  // Parse existing pictures to keep from request body
+  let existingPicturesToKeep = [];
+  if (req.body.existingPictures) {
+    try {
+      existingPicturesToKeep = JSON.parse(req.body.existingPictures);
+    } catch (error) {
+      console.error("Error parsing existingPictures:", error);
+    }
+  }
 
-  // Add picture URLs to checklist item
+  // Upload new pictures to Firebase
+  let newPictureUrls = [];
+  if (req.files && req.files.length > 0) {
+    const uploadPromises = req.files.map((file) =>
+      uploadToFirebase(
+        file.buffer,
+        file.originalname,
+        "peak-pictures",
+        file.mimetype,
+      ),
+    );
+    newPictureUrls = await Promise.all(uploadPromises);
+  }
+
+  // Combine kept existing pictures + new pictures
+  const allPictures = [...existingPicturesToKeep, ...newPictureUrls];
+
+  // Validate total doesn't exceed 3
+  if (allPictures.length > 3) {
+    // Delete the newly uploaded pictures since we're rejecting the request
+    if (newPictureUrls.length > 0) {
+      await deleteMultipleFromFirebase(newPictureUrls);
+    }
+    throw new BadRequestError("Maximum 3 pictures allowed");
+  }
+
+  // Find pictures to delete (pictures in DB that are not in the kept list)
+  const picturesToDelete = checklistItem.pictures.filter(
+    (pic) => !existingPicturesToKeep.includes(pic),
+  );
+
+  // Delete removed pictures from Firebase Storage
+  if (picturesToDelete.length > 0) {
+    await deleteMultipleFromFirebase(picturesToDelete);
+  }
+
+  // Update checklist item with new pictures array (replaces entire array)
   await Checklist.updateOne(
     { userId, peakId },
-    { $push: { pictures: { $each: pictureUrls } } },
+    { $set: { pictures: allPictures } },
   );
 
   res.json({
-    message: `Pictures added to peak ${peakId}`,
-    pictures: pictureUrls,
+    message: `Pictures updated for peak ${peakId}`,
+    pictures: allPictures,
   });
 }

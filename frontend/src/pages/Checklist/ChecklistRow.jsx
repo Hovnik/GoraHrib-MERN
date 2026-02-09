@@ -7,7 +7,13 @@ import { useState } from "react";
 import api from "../../config/axios";
 import toast from "react-hot-toast";
 
-const ChecklistRow = ({ peak, activeTab, onDelete, onVisit }) => {
+const ChecklistRow = ({
+  peak,
+  activeTab,
+  onDelete,
+  onVisit,
+  onPicturesUpdate,
+}) => {
   const [isDeleteModalOpen, setIsDeleteModalOpen] = useState(false);
   const [isShareModalOpen, setIsShareModalOpen] = useState(false);
   const [isAddPicturesModalOpen, setIsAddPicturesModalOpen] = useState(false);
@@ -16,6 +22,25 @@ const ChecklistRow = ({ peak, activeTab, onDelete, onVisit }) => {
   const [locationErrorMessage, setLocationErrorMessage] = useState("");
   const [locationErrorDistance, setLocationErrorDistance] = useState(null);
   const [isCheckingLocation, setIsCheckingLocation] = useState(false);
+
+  const handlePicturesModalClose = async () => {
+    // Refetch the peak's data to get updated pictures
+    try {
+      const token = localStorage.getItem("token");
+      const response = await api.get("/api/checklist", {
+        headers: { Authorization: `Bearer ${token}` },
+      });
+      const updatedPeak = response.data.checklist.find(
+        (item) => item.peakId._id === peak.peakId._id,
+      );
+      if (updatedPeak && onPicturesUpdate) {
+        onPicturesUpdate(peak.peakId._id, updatedPeak.pictures || []);
+      }
+    } catch (error) {
+      console.error("Error refreshing peak data:", error);
+    }
+    setIsAddPicturesModalOpen(false);
+  };
 
   const handleDeleteConfirm = () => {
     onDelete(peak.peakId._id);
@@ -235,9 +260,10 @@ const ChecklistRow = ({ peak, activeTab, onDelete, onVisit }) => {
 
       <AddPicturesModal
         isOpen={isAddPicturesModalOpen}
-        onClose={() => setIsAddPicturesModalOpen(false)}
+        onClose={handlePicturesModalClose}
         peakId={peak.peakId._id}
         peakName={peak.peakId.name}
+        existingPictures={peak.pictures || []}
       />
 
       <LocationErrorModal
