@@ -209,14 +209,14 @@ export async function addPicturesToVisitedPeak(req, res) {
   }
 
   // Find pictures to delete (pictures in DB that are not in the kept list)
-  // const picturesToDelete = checklistItem.pictures.filter(
-  //   (pic) => !existingPicturesToKeep.includes(pic),
-  // );
+  const picturesToDelete = checklistItem.pictures.filter(
+    (pic) => !existingPicturesToKeep.includes(pic),
+  );
 
   // Delete removed pictures from Firebase Storage
-  // if (picturesToDelete.length > 0) {
-  //   await deleteMultipleFromFirebase(picturesToDelete);
-  // }
+  if (picturesToDelete.length > 0) {
+    await deleteMultipleFromFirebase(picturesToDelete);
+  }
 
   // Update checklist item with new pictures array (replaces entire array)
   await Checklist.updateOne(

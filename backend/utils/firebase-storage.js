@@ -2,6 +2,44 @@ import { bucket } from "../config/firebase.js";
 import { v4 as uuidv4 } from "uuid";
 
 /**
+ * Copy an image from a URL to a new location in Firebase Storage
+ * @param {string} imageUrl - Source image URL
+ * @param {string} targetFolder - Target folder (e.g., 'forum-pictures', 'peak-pictures')
+ * @returns {Promise<string>} - New public URL of copied file
+ */
+export const copyImageToFirebase = async (imageUrl, targetFolder) => {
+  try {
+    // Download the image
+    const response = await fetch(imageUrl);
+    if (!response.ok) {
+      throw new Error(`Failed to fetch image: ${response.statusText}`);
+    }
+
+    const arrayBuffer = await response.arrayBuffer();
+    const buffer = Buffer.from(arrayBuffer);
+
+    // Get content type from response or default to jpeg
+    const contentType = response.headers.get("content-type") || "image/jpeg";
+
+    // Determine extension from content type
+    const extension = contentType.split("/")[1] || "jpg";
+
+    // Upload to new location
+    const newUrl = await uploadToFirebase(
+      buffer,
+      `copied-image.${extension}`,
+      targetFolder,
+      contentType,
+    );
+
+    return newUrl;
+  } catch (error) {
+    console.error("Error copying image to Firebase:", error);
+    throw new Error("Failed to copy image to Firebase Storage");
+  }
+};
+
+/**
  * Upload a file to Firebase Storage
  * @param {Buffer} fileBuffer - The file buffer
  * @param {string} fileName - Original file name

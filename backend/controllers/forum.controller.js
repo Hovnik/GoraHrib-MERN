@@ -7,6 +7,7 @@ import { executeTransaction } from "../utils/transaction-helper.js";
 import mongoose from "mongoose";
 import {
   uploadToFirebase,
+  copyImageToFirebase,
   deleteMultipleFromFirebase,
 } from "../utils/firebase-storage.js";
 
@@ -139,26 +140,19 @@ export async function createPost(req, res) {
   // 2. Existing URLs (req.body.pictures) - when sharing from visited peaks
   let pictureUrls = [];
 
-  // Handle new file uploads
-  if (req.files && req.files.length > 0) {
-    const uploadPromises = req.files.map((file) =>
-      uploadToFirebase(
-        file.buffer,
-        file.originalname,
-        "hiking-pictures",
-        file.mimetype,
-      ),
-    );
-    pictureUrls = await Promise.all(uploadPromises);
-  }
-
   // Handle existing Firebase URLs (from peak pictures)
+  // Copy them to create independent copies for the forum post
   if (pictures && Array.isArray(pictures) && pictures.length > 0) {
-    // Validate that they are strings (URLs)
     const validUrls = pictures.filter(
       (url) => typeof url === "string" && url.startsWith("https://"),
     );
-    pictureUrls = [...pictureUrls, ...validUrls];
+
+    // Copy each picture to forum-pictures folder
+    const copyPromises = validUrls.map((url) =>
+      copyImageToFirebase(url, "forum-pictures"),
+    );
+    const copiedUrls = await Promise.all(copyPromises);
+    pictureUrls = [...pictureUrls, ...copiedUrls];
   }
 
   const newPost = {
